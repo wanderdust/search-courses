@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the CourseList correctly 1`] = `
+<div>
+  <p>
+    Course list
+  </p>
+  <CourseListItem
+    course={
+      Object {
+        "description": "some description",
+        "price": "300",
+        "title": "Learn react",
+      }
+    }
+    key="[object Object]"
+  />
+  <CourseListItem
+    course={
+      Object {
+        "description": "some description",
+        "price": "50",
+        "title": "Advanced Java",
+      }
+    }
+    key="[object Object]"
+  />
+  <CourseListItem
+    course={
+      Object {
+        "description": "some description",
+        "price": "100",
+        "title": "Angular.js",
+      }
+    }
+    key="[object Object]"
+  />
+</div>
+`;

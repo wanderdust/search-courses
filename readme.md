@@ -1,1 +1,1 @@
-# Expensify app
+# Course search
