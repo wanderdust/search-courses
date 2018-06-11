@@ -9,7 +9,6 @@ app.use(express.static(publicPath));
 app.use(bodyParser.json());
 
 app.get("/courseslist", (req, res) => {
-    console.log("GET /courseslist");
     const dummyCourses = ["Learn react", "Python for begginners", "Angular.js"];
     res.send(dummyCourses);
 });
