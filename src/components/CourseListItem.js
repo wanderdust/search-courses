@@ -3,7 +3,7 @@ import React from "react";
 const CourseListItem = (props) => {
     return (
         <div>
-            <p>{props.course}</p>
+            <p>{props.course.title}</p>
         </div>
     );
 };

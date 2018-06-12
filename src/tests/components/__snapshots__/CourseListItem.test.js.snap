@@ -2,6 +2,8 @@
 
 exports[`should render the CourseListItem correctly 1`] = `
 <div>
-  <p />
+  <p>
+    Learn react
+  </p>
 </div>
 `;

@@ -5,14 +5,16 @@ const app = express();
 const publicPath = path.join(__dirname, "..", "public");
 const port = process.env.PORT || 3000;
 
+const {getVisibleCourses} = require("./selectors/courses");
+
 app.use(express.static(publicPath));
 app.use(bodyParser.json());
 
 app.get("/courseslist", (req, res) => {
     const textFilter = req.query.text;
-    const dummyCourses = ["Learn react", "Python for begginners", "Angular.js"];
-
-    res.send({courses: dummyCourses});
+    getVisibleCourses().then((courses) => {
+        res.send({courses: courses});
+    });
 });
 
 //Always send index.html regardless of the route.
