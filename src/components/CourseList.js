@@ -5,7 +5,7 @@ import CourseListItem from "./CourseListItem";
 export const CourseList = ({ courses }) => {
     return (
         <div>
-            <p>Course list</p>
+            <h4>Course list</h4>
             {courses.map((course) =>(
                 <CourseListItem key={course} course={course}/>
             ))}

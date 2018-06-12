@@ -6,7 +6,6 @@ import configureStore from "./store/configureStore";
 import "normalize.css/normalize.css";
 import "./styles/styles.scss";
 import "react-dates/lib/css/_datepicker.css";
-import { startSetCourses } from "./actions/courses";
 
 const store = configureStore();
 const jsx = (
@@ -14,7 +13,5 @@ const jsx = (
         <AppRouter />
     </Provider>
 );
-
-store.dispatch(startSetCourses());
 
 ReactDOM.render(jsx, document.getElementById('app'));

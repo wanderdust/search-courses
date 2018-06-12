@@ -2,9 +2,9 @@
 
 exports[`should render the CourseList correctly 1`] = `
 <div>
-  <p>
+  <h4>
     Course list
-  </p>
+  </h4>
   <CourseListItem
     course={
       Object {
