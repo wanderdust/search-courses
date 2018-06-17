@@ -7,16 +7,14 @@ const getUdacityCourses = (testUrl) => {
         .then((res) => {
             return res.data.courses.map((course) => ({
                 title: course.title,
-                expected_learning: "",
-                image: "",
                 summary: "",
                 price: "",
                 duration: "" 
-            }))
+            }));
         })
         .catch((e) => {
             console.log("Unable to fetch udacity data");
-            return []
+            return [];
         });
 };
 

@@ -3,8 +3,6 @@ const {getUdacityCourses} = require("../../apis/udacityCourses");
 test("should return formatted data from udacity api request", async () => {
     const data = {
         title: expect.anything(),
-        expected_learning: expect.anything(),
-        image: expect.anything(),
         summary: expect.anything(),
         price: expect.anything(),
         duration: expect.anything() 

@@ -1,11 +1,13 @@
-const {getUdacityCourses} = require("../apis/udacityCourses.js");
+const { getUdacityCourses } = require("../apis/udacityCourses.js");
+const { filterByText } = require("../selectors/filterByText");
 
-const getVisibleCourses = () => {
+const getVisibleCourses = (text) => {
     return Promise.all([getUdacityCourses()])
         .then((courses) => {
-            // Do some filtering and return courses filtered.
             const formattedCourses = [].concat(...courses);
-            return formattedCourses;
+            const visibleCourses = filterByText(formattedCourses, text);
+
+            return visibleCourses;
         })
         .catch((e) => {
             console.log(e);

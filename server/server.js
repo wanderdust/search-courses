@@ -5,7 +5,7 @@ const app = express();
 const publicPath = path.join(__dirname, "..", "public");
 const port = process.env.PORT || 3000;
 
-const {getVisibleCourses} = require("./selectors/courses");
+const { getVisibleCourses } = require("./selectors/courses");
 
 app.use(express.static(publicPath));
 app.use(bodyParser.json());
@@ -15,7 +15,7 @@ app.get("/courseslist", (req, res) => {
 
     console.log("fetching data...");
     
-    getVisibleCourses().then((courses) => {
+    getVisibleCourses(textFilter).then((courses) => {
         res.send({courses: courses});
     }).catch((error) => {
         console.log(error);
