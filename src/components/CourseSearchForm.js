@@ -1,8 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import { startSetCourses } from "../actions/courses";
+import { Link } from "react-router-dom";
 
-export class CourseListSearch extends React.Component {
+export class CourseSearchForm extends React.Component {
     state = {
         textFilter: ""
     };
@@ -14,8 +15,10 @@ export class CourseListSearch extends React.Component {
     handleOnSubmit = (e) => {
         e.preventDefault();
         const textFilter = this.state.textFilter;
-        
-        this.props.startSetCourses(textFilter);
+
+        if (textFilter.trim()) {
+            this.props.onSubmit(textFilter);
+        }  
     };
     render () {
         return (
@@ -38,4 +41,4 @@ const mapDispatchToProps = (dispatch) => ({
     startSetCourses: (textFilter) => dispatch(startSetCourses(textFilter))
 });
 
-export default connect(undefined, mapDispatchToProps)(CourseListSearch);
+export default connect(undefined, mapDispatchToProps)(CourseSearchForm);

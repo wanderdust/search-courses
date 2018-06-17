@@ -7,6 +7,7 @@ import LoginPage from "../components/LoginPage";
 import PrivateRoute from "../routers/PrivateRoute";
 import PublicRoute from "../routers/PublicRoute";
 import Header from "../components/Header";
+import SearchResultsPage from "../components/SearchResultsPage";
 
 export const history = createHistory();
 
@@ -16,6 +17,7 @@ const AppRouter = () => (
             <Header />
             <Switch>
                 <Route path="/" component={MainPage} exact={true}/>
+                <Route path="/search" component={SearchResultsPage} />
                 <Route component={NotFoundPage} />
             </Switch>
         </div>

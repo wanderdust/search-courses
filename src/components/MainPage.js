@@ -1,13 +1,10 @@
 import React from "react";
-import { connect } from "react-redux";
-import CourseList from "./CourseList";
-import CourseListSearch from "./CourseListSearch";
+import CourseSearchMain from "./CourseSearchMain";
 
-export const MainPage = () => {
+export const MainPage = ({ history }) => {
     return (
         <div>
-            <CourseListSearch />
-            <CourseList />
+            <CourseSearchMain history={history} />
         </div>
     );
 };

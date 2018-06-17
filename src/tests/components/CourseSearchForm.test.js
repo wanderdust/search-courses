@@ -1,19 +1,19 @@
 import React from "react";
-import { CourseListSearch } from "../../components/CourseListSearch";
+import { CourseSearchForm } from "../../components/CourseSearchForm";
 import { shallow } from "enzyme";
 import courses from "../fixtures/courses";
 
-let wrapper, startSetCourses;
+let wrapper, onSubmit;
 
 beforeEach(() => {
-    startSetCourses = jest.fn();
+    onSubmit = jest.fn();
     wrapper = shallow(
-        <CourseListSearch 
-            startSetCourses={startSetCourses}
+        <CourseSearchForm 
+            onSubmit={onSubmit}
         />);
 });
 
-test("should render CourseListSearch correctly", () => {
+test("should render CourseSearchForm correctly", () => {
     expect(wrapper).toMatchSnapshot();
 });
 
@@ -24,7 +24,7 @@ test("should call onTextChange with correct data", () => {
     wrapper.find("form").simulate("submit", {
         preventDefault: () => {}
     });
-    expect(startSetCourses).toHaveBeenCalledWith(text);
+    expect(onSubmit).toHaveBeenCalledWith(text);
 });
 
 test("should handle on text change", () => {

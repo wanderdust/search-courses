@@ -2,7 +2,6 @@
 
 exports[`should render expense dashboard page correctly 1`] = `
 <div>
-  <Connect(CourseListSearch) />
-  <Connect(CourseList) />
+  <Connect(CourseSearchMain) />
 </div>
 `;

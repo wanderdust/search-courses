@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CourseSearchMain correctly 1`] = `
+<div>
+  <Connect(CourseSearchForm)
+    onSubmit={[Function]}
+  />
+</div>
+`;
