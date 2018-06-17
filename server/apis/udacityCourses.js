@@ -1,7 +1,7 @@
 const axios = require("axios");
 
-const getUdacityCourses = () => {
-    const url = "https://www.udacity.com/public-api/v0/courses";
+const getUdacityCourses = (testUrl) => {
+    const url = testUrl || "https://www.udacity.com/public-api/v0/courses";
 
     return axios.get(url)
         .then((res) => {
@@ -15,9 +15,10 @@ const getUdacityCourses = () => {
             }))
         })
         .catch((e) => {
-            console.log(e)
+            console.log("Unable to fetch udacity data");
+            return []
         });
-}
+};
 
 module.exports = {
     getUdacityCourses

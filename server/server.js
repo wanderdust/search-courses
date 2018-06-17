@@ -12,8 +12,13 @@ app.use(bodyParser.json());
 
 app.get("/courseslist", (req, res) => {
     const textFilter = req.query.text;
+
+    console.log("fetching data...");
+    
     getVisibleCourses().then((courses) => {
         res.send({courses: courses});
+    }).catch((error) => {
+        console.log(error);
     });
 });
 

@@ -10,5 +10,5 @@ describe("GET /courselist", () => {
                 expect(typeof res.body.courses).toBe("object");
             })
             .end(done)
-    })
+    }, 20000)
 });

@@ -4,10 +4,11 @@ const getVisibleCourses = () => {
     return Promise.all([getUdacityCourses()])
         .then((courses) => {
             // Do some filtering and return courses filtered.
-            return courses[0];
+            const formattedCourses = [].concat(...courses);
+            return formattedCourses;
         })
         .catch((e) => {
-            console.log(e)
+            console.log(e);
         })
 };
 
