@@ -16,9 +16,12 @@ exports[`should render header correctly 1`] = `
         to="/"
       >
         <h1>
-          Boilerplate
+          CourseSearch
         </h1>
       </Link>
+      <Connect(CourseSearchHeader)
+        startLogout={[MockFunction]}
+      />
     </div>
   </div>
 </header>

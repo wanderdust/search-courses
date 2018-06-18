@@ -1,10 +1,10 @@
 import React from "react";
 import CourseSearchMain from "./CourseSearchMain";
 
-export const MainPage = ({ history }) => {
+export const MainPage = (props) => {
     return (
         <div>
-            <CourseSearchMain history={history} />
+            <CourseSearchMain {...props} />
         </div>
     );
 };

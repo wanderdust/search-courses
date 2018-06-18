@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { startSetCourses } from "../actions/courses";
-import { Link } from "react-router-dom";
+import { setSearchQuery } from "../actions/filters";
 
 export class CourseSearchForm extends React.Component {
     state = {
@@ -18,13 +18,14 @@ export class CourseSearchForm extends React.Component {
 
         if (textFilter.trim()) {
             this.props.onSubmit(textFilter);
+            this.props.setSearchQuery(textFilter);
         }  
     };
     render () {
         return (
             <form onSubmit={this.handleOnSubmit}>
                 <input
-                    value={this.props.textFilter}
+                    value={this.state.textFilter || this.props.searchQuery}
                     type="text"
                     autoFocus
                     placeholder="What are you looking for?"
@@ -37,8 +38,13 @@ export class CourseSearchForm extends React.Component {
     }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-    startSetCourses: (textFilter) => dispatch(startSetCourses(textFilter))
+const mapStateToProps = (state) => ({
+    searchQuery: state.filters.searchQuery
 });
 
-export default connect(undefined, mapDispatchToProps)(CourseSearchForm);
+const mapDispatchToProps = (dispatch) => ({
+    startSetCourses: (textFilter) => dispatch(startSetCourses(textFilter)),
+    setSearchQuery: (textFilter) => dispatch(setSearchQuery(textFilter))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CourseSearchForm);

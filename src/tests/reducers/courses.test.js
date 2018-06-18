@@ -9,4 +9,4 @@ test("should set the courses", () => {
     const state = coursesReducer({}, action);
 
     expect(state).toEqual(courses);
-})
+});

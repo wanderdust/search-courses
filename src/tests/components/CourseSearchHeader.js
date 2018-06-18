@@ -1,18 +1,18 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { CourseSearchList } from "../../components/CourseSearchList";
+import { CourseSearchHeader } from "../../components/CourseSearchHeader";
 
 let wrapper, startSetCourses;
 
 beforeEach(() => {
     startSetCourses = jest.fn();
     wrapper = shallow(
-        <CourseSearchList
+        <CourseSearchHeader
             startSetCourses={startSetCourses}
         />);
 });
 
-test("should render CourseSearchList correctly", () => {
+test("should render CourseSearchHeader correctly", () => {
     expect(wrapper).toMatchSnapshot();
 });
 

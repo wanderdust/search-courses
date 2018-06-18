@@ -13,7 +13,7 @@ exports[`should render the CourseList correctly 1`] = `
         "title": "Learn react",
       }
     }
-    key="[object Object]"
+    key="Learn react"
   />
   <CourseListItem
     course={
@@ -23,7 +23,7 @@ exports[`should render the CourseList correctly 1`] = `
         "title": "Advanced Java",
       }
     }
-    key="[object Object]"
+    key="Advanced Java"
   />
   <CourseListItem
     course={
@@ -33,7 +33,7 @@ exports[`should render the CourseList correctly 1`] = `
         "title": "Angular.js",
       }
     }
-    key="[object Object]"
+    key="Angular.js"
   />
 </div>
 `;

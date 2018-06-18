@@ -1,11 +1,12 @@
 import React from "react";
 import CourseList from "./CourseList";
-import CourseSearchList from "./CourseSearchList";
+import CourseSearchHeader from "./CourseSearchHeader";
+import { CourseListFilters } from "./CourseListFilters";
 
-export const SearchResultsPage = ({ history }) => {
+export const SearchResultsPage = () => {
     return (
         <div>
-            <CourseSearchList history={history}/>
+            <CourseListFilters />
             <CourseList />
         </div>
     );
