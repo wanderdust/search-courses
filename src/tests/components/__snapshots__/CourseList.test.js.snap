@@ -8,32 +8,38 @@ exports[`should render the CourseList correctly 1`] = `
   <CourseListItem
     course={
       Object {
-        "description": "some description",
+        "duration": "2",
         "price": "300",
+        "summary": "some summary",
         "title": "Learn react",
+        "uid": "1",
       }
     }
-    key="Learn react"
+    key="1"
   />
   <CourseListItem
     course={
       Object {
-        "description": "some description",
+        "duration": "2",
         "price": "50",
+        "summary": "some summary",
         "title": "Advanced Java",
+        "uid": "2",
       }
     }
-    key="Advanced Java"
+    key="2"
   />
   <CourseListItem
     course={
       Object {
-        "description": "some description",
+        "duration": "2",
         "price": "100",
+        "summary": "some summary",
         "title": "Angular.js",
+        "uid": "3",
       }
     }
-    key="Angular.js"
+    key="3"
   />
 </div>
 `;

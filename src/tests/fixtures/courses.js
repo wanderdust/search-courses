@@ -1,17 +1,23 @@
 export default [
     {
         title: "Learn react",
-        description: "some description",
-        price: "300"
+        summary: "some summary",
+        price: "300",
+        duration: "2",
+        uid: "1"
     },
     {
         title: "Advanced Java",
-        description: "some description",
-        price: "50"
+        summary: "some summary",
+        price: "50",
+        duration: "2",
+        uid: "2"
     },
     {
         title: "Angular.js",
-        description: "some description",
-        price: "100"
+        summary: "some summary",
+        price: "100",
+        duration: "2",
+        uid: "3"
     }
 ];

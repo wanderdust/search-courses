@@ -9,6 +9,7 @@ exports[`should render CourseSearchForm correctly 1`] = `
     onChange={[Function]}
     placeholder="What are you looking for?"
     type="text"
+    value="Hello world"
   />
   <button
     type="submit"

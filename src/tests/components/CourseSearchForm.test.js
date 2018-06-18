@@ -1,15 +1,22 @@
 import React from "react";
+import configureMockStore from "redux-mock-store";
+import thunk from "redux-thunk";
 import { CourseSearchForm } from "../../components/CourseSearchForm";
 import { shallow } from "enzyme";
+import { setSearchQuery } from "../../actions/filters";
 import courses from "../fixtures/courses";
 
-let wrapper, onSubmit, setSearchQuery;
+const uid = "this_is_my_test_uid";
+const createMockStore = configureMockStore([thunk]);
+let wrapper, onSubmit, store, searchQuery;
 
 beforeEach(() => {
-    setSearchQuery = jest.fn();
+    searchQuery = "Hello world";
+    store = createMockStore();
     onSubmit = jest.fn();
     wrapper = shallow(
-        <CourseSearchForm 
+        <CourseSearchForm
+            searchQuery={searchQuery}
             onSubmit={onSubmit}
             setSearchQuery={setSearchQuery}
         />);
@@ -19,14 +26,15 @@ test("should render CourseSearchForm correctly", () => {
     expect(wrapper).toMatchSnapshot();
 });
 
-test("should call onTextChange with correct data", () => {
+test("should call onTextChange with correct data", async () => {
     const text = "Hello world!";
 
-    wrapper.setState({textFilter: text});
-    wrapper.find("form").simulate("submit", {
-        preventDefault: () => {}
+    await store.dispatch(setSearchQuery(text));
+
+    expect(store.getActions()[0]).toEqual({
+        type: "SET_SEARCH_QUERY",
+        searchQuery: text
     });
-    expect(onSubmit).toHaveBeenCalledWith(text);
 });
 
 test("should handle on text change", () => {
@@ -40,13 +48,18 @@ test("should handle on text change", () => {
 });
 
 
-test("should handle on submit correctly", () => {
+test("should handle on submit correctly", async () => {
     const text = "Hello mama!";
 
-    wrapper.setState({textFilter: text});
+    await store.dispatch(setSearchQuery(text));
+
+    expect(store.getActions()[0]).toEqual({
+        type: "SET_SEARCH_QUERY",
+        searchQuery: text
+    });
 
     wrapper.find("form").simulate("submit", {
         preventDefault: () => {}
     });
-    expect(setSearchQuery).toHaveBeenCalledWith(text);
+    expect(onSubmit).toHaveBeenCalledWith(searchQuery);
 });

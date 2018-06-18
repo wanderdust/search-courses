@@ -4,17 +4,14 @@ import { startSetCourses } from "../actions/courses";
 import { setSearchQuery } from "../actions/filters";
 
 export class CourseSearchForm extends React.Component {
-    state = {
-        textFilter: ""
-    };
     onTextChange = (e) => {
         const textFilter = e.target.value;
 
-        this.setState(() => ({textFilter}));
+        this.props.setSearchQuery(textFilter);
     };
     handleOnSubmit = (e) => {
         e.preventDefault();
-        const textFilter = this.state.textFilter;
+        const textFilter = this.props.searchQuery;
 
         if (textFilter.trim()) {
             this.props.onSubmit(textFilter);
@@ -25,7 +22,7 @@ export class CourseSearchForm extends React.Component {
         return (
             <form onSubmit={this.handleOnSubmit}>
                 <input
-                    value={this.state.textFilter || this.props.searchQuery}
+                    value={this.props.searchQuery}
                     type="text"
                     autoFocus
                     placeholder="What are you looking for?"

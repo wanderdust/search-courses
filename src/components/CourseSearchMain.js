@@ -1,9 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
-import { startSetCourses } from "../actions/courses";
+import { startSetCourses, setCourses } from "../actions/courses";
+import { setSearchQuery } from "../actions/filters";
 import CourseSearchForm from "./CourseSearchForm";
 
 export class CourseSearchMain extends React.Component {
+    componentWillMount () {
+        this.props.setSearchQuery("");
+    };
     onSubmit = (textFilter) => {
         this.props.startSetCourses(textFilter);
         this.props.history.push("/search");
@@ -18,7 +22,9 @@ export class CourseSearchMain extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    startSetCourses: (textFilter) => dispatch(startSetCourses(textFilter))
+    startSetCourses: (textFilter) => dispatch(startSetCourses(textFilter)),
+    setCourses: (courses) => dispatch(setCourses(courses)),
+    setSearchQuery: (textFilter) => dispatch(setSearchQuery(textFilter))
 });
 
 export default connect(undefined, mapDispatchToProps)(CourseSearchMain);

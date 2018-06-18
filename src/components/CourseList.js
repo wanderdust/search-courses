@@ -7,7 +7,7 @@ export const CourseList = ({ courses }) => {
         <div>
             <h4>Course list</h4>
             {courses.map((course) =>(
-                <CourseListItem key={course.title} course={course}/>
+                <CourseListItem key={course.uid} course={course}/>
             ))}
         </div>
     );

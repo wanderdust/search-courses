@@ -1,6 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import { CourseSearchMain } from "../../components/CourseSearchMain";
+import { setSearchQuery } from "../../actions/filters";
 
 let wrapper, startSetCourses, history;
 
@@ -9,6 +10,7 @@ beforeEach(() => {
     history = { push: jest.fn() };
     wrapper = shallow(
         <CourseSearchMain
+            setSearchQuery={setSearchQuery}
             startSetCourses={startSetCourses}
             history={history}
         />);
