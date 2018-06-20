@@ -1,10 +1,16 @@
 const filterByText = (courses = [], text = "") => {
     return courses.filter((course) => {
-        const titleMatch = course.title.toLowerCase().includes(text.toLowerCase());
-        const bodyMatch = course.summary.toLowerCase().includes(text.toLowerCase());
-        const isIndianSpecific = course.title.toLowerCase().includes("india");
+        const keywords = text.split(" ").filter((e) => e.length > 0);
+        
+        const containsKeyword = keywords.map((keyword) => {
+            const titleMatch = new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(course.title.toLowerCase());
+            const bodyMatch = new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(course.summary.toLowerCase());
+            const isIndianSpecific = course.title.toLowerCase().includes("india");
 
-        return !isIndianSpecific && titleMatch || bodyMatch;
+            return !isIndianSpecific && titleMatch || bodyMatch;
+        });
+
+        return containsKeyword.includes(true);
     });
 };
 
