@@ -1,11 +1,12 @@
 const courses = [
     {
-        title: "Learn react",
+        title: "Learn angular",
         description: "this course is from test data. Angular",
         price: "300",
         duration: "",
         urlToCourse: "some_url",
         platform: "udacity",
+        numberOfKeywordsMatched: expect.anything(),
         uid: 1
     },
     {
@@ -15,6 +16,7 @@ const courses = [
         duration: "",
         urlToCourse: "some_url",
         platform: "udemy",
+        numberOfKeywordsMatched: expect.anything(),
         uid: 2
     },
     {
@@ -24,6 +26,7 @@ const courses = [
         duration: "",
         urlToCourse: "some_url",
         platform: "khan academy",
+        numberOfKeywordsMatched: expect.anything(),
         uid: 3
     }
 ];

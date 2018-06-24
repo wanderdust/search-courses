@@ -1,7 +1,7 @@
 const { filterByText } = require("../../selectors/filterByText");
 const { courses } = require("../fixtures/courses");
 
-test("should filter by text", () => {
+test("should filter by text and sort by keywords matched", () => {
     const filteredCourses = filterByText(courses, "angular");
 
     expect(filteredCourses).toEqual([
