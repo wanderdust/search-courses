@@ -3,9 +3,11 @@ const {getKhanAcademyCourses} = require("../../apis/khanAcademyCourses");
 test("should return formatted data from Khan Academy api request", async () => {
     const data = {
         title: expect.anything(),
-        summary: expect.anything(),
-        price: "0",
+        description: expect.anything(),
+        price: 0,
         duration: expect.anything(),
+        urlToCourse: expect.anything(),
+        platform: expect.anything(),
         uid: expect.anything()
     }
     const khanAcademyCourses = await getKhanAcademyCourses();

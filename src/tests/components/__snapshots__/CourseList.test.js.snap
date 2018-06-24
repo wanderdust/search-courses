@@ -9,10 +9,12 @@ exports[`should render the CourseList correctly 1`] = `
     course={
       Object {
         "duration": "2",
+        "platform": "udacity",
         "price": "300",
         "summary": "some summary",
         "title": "Learn react",
         "uid": "1",
+        "urlToCourse": "some_url",
       }
     }
     key="1"
@@ -21,10 +23,12 @@ exports[`should render the CourseList correctly 1`] = `
     course={
       Object {
         "duration": "2",
+        "platform": "udemy",
         "price": "50",
         "summary": "some summary",
         "title": "Advanced Java",
         "uid": "2",
+        "urlToCourse": "some_url",
       }
     }
     key="2"
@@ -33,10 +37,12 @@ exports[`should render the CourseList correctly 1`] = `
     course={
       Object {
         "duration": "2",
+        "platform": "khan academy",
         "price": "100",
         "summary": "some summary",
         "title": "Angular.js",
         "uid": "3",
+        "urlToCourse": "some_url",
       }
     }
     key="3"

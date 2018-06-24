@@ -4,7 +4,7 @@ const filterByText = (courses = [], text = "") => {
         
         const containsKeyword = keywords.map((keyword) => {
             const titleMatch = new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(course.title.toLowerCase());
-            const bodyMatch = new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(course.summary.toLowerCase());
+            const bodyMatch = new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(course.description.toLowerCase());
             const isIndianSpecific = course.title.toLowerCase().includes("india");
 
             return !isIndianSpecific && titleMatch || bodyMatch;

@@ -10,9 +10,11 @@ const getUdacityCourses = (testUrl) => {
         .then((res) => {
             return res.data.courses.map((course) => ({
                 title: course.title,
-                summary: "",
-                price: "",
+                description: course.summary,
+                price: 0,
                 duration: "",
+                urlToCourse: course.homepage,
+                platform: "Udacity",
                 uid: uid()
             }));
         })

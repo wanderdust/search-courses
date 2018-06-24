@@ -1,21 +1,30 @@
 const courses = [
     {
         title: "Learn react",
-        summary: "this course is from test data. Angular",
+        description: "this course is from test data. Angular",
         price: "300",
-        duration: ""
+        duration: "",
+        urlToCourse: "some_url",
+        platform: "udacity",
+        uid: 1
     },
     {
         title: "Advanced Java",
-        summary: "some summary",
+        description: "some description",
         price: "50",
-        duration: ""
+        duration: "",
+        urlToCourse: "some_url",
+        platform: "udemy",
+        uid: 2
     },
     {
         title: "Angular.js",
-        summary: "some summary",
+        description: "some description",
         price: "100",
-        duration: ""
+        duration: "",
+        urlToCourse: "some_url",
+        platform: "khan academy",
+        uid: 3
     }
 ];
 

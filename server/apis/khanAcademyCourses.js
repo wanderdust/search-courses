@@ -19,9 +19,11 @@ const getKhanAcademyCourses = (testUrl) => {
             return courses.map((course) => {
                 return {
                     title: `${course.parent_title} - ${course.title}`,
-                    summary: course.description,
-                    price: "0",
+                    description: course.description,
+                    price: 0,
                     duration: "",
+                    urlToCourse: course.ka_url,
+                    platform: "Khan Academy",
                     uid: uid()
                 }
             });

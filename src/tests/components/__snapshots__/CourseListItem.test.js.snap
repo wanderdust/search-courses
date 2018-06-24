@@ -2,8 +2,21 @@
 
 exports[`should render the CourseListItem correctly 1`] = `
 <div>
-  <p>
+  <h3>
     Learn react
+  </h3>
+  <p />
+  <p>
+    price: 
+    300
   </p>
+  <p>
+    udacity
+  </p>
+  <a
+    href="some_url"
+  >
+    url_to_course
+  </a>
 </div>
 `;
