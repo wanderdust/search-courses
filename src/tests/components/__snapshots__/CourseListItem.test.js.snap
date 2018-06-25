@@ -18,8 +18,5 @@ exports[`should render the CourseListItem correctly 1`] = `
   >
     url_to_course
   </a>
-  <p>
-    Number of matches: 
-  </p>
 </div>
 `;

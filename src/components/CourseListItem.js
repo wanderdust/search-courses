@@ -7,7 +7,7 @@ const CourseListItem = ({course}) => {
             <p>{course.description}</p>
             <p>price: {course.price === 0 ? "free" : course.price}</p>
             <p>{course.platform}</p>
-            <a href={course.urlToCourse}>url_to_course</a>
+            <a target="_blank" href={course.urlToCourse}>url_to_course</a>
         </div>
     );
 };

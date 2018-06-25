@@ -1,6 +1,6 @@
 const { getUdacityCourses } = require("../apis/udacityCourses");
 const { getKhanAcademyCourses } = require("../apis/khanAcademyCourses");
-const { filterByText } = require("../selectors/filterByText");
+const { FilterByText } = require("../selectors/filterByText");
 
 const getVisibleCourses = (text) => {
     
@@ -10,13 +10,14 @@ const getVisibleCourses = (text) => {
     ])
         .then((courses) => {
             const formattedCourses = [].concat(...courses);
-            const visibleCourses = filterByText(formattedCourses, text);
+            const filterByText = new FilterByText(formattedCourses, text);
+            const visibleCourses = filterByText.sortedByRelevance;
 
             return visibleCourses;
         })
         .catch((e) => {
             console.log(e);
-        })
+        });
 };
 
 module.exports = {

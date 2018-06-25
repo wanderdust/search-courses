@@ -10,8 +10,8 @@ const courses = [
         uid: 1
     },
     {
-        title: "Advanced Java",
-        description: "some description",
+        title: "Advanced Java and",
+        description: "some description guacamole",
         price: "50",
         duration: "",
         urlToCourse: "some_url",
@@ -20,7 +20,7 @@ const courses = [
         uid: 2
     },
     {
-        title: "Angular.js",
+        title: "Angular.js and Guacamole",
         description: "some description",
         price: "100",
         duration: "",
