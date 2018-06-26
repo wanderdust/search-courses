@@ -2,8 +2,8 @@ class FilterByText {
     constructor (courses = [], text = "") {
         const keywords = this.keywords(text);
         const matchingCourses = this.matchingCourses(courses, keywords);
-        const keywordsMatchedPerCourse = this.keywordsMatchedPerCourse(matchingCourses, keywords);
-        this.sortedByRelevance = this.sortByRelevance(keywordsMatchedPerCourse);
+        const relevance = this.setRelevance(matchingCourses, keywords);
+        this.sortedByRelevance = this.sortByRelevance(relevance);
     }
 
     keywords (text) {
@@ -28,10 +28,17 @@ class FilterByText {
             return containsKeyword.includes(true);
         });
     }
-
-    keywordsMatchedPerCourse (matchingCourses, keywords) {
+    /*
+    * setRelevance:
+    * - If it finds a word match in the title returns a relevance of 2. 
+    * - If it finds a word match in the body return a relevance of 1.
+    * - If no word is matched returns 0.
+    * - If all keywords are matched in a course adds more points
+    * - All the points get added in the end to decide how relevant the course is.
+    */
+    setRelevance (matchingCourses, keywords) {
         return matchingCourses.map((course) => {
-    
+            
             const numberOfKeywordsMatched = keywords.map((keyword) => {
                 const titleMatches = course.title.split(" ").map((word) => (
                     new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(word.toLowerCase()) ? 2 : 0
@@ -41,20 +48,31 @@ class FilterByText {
                 ));
         
                 return titleMatches.concat(bodyMatches).reduce((accumulator, currentValue) => accumulator + currentValue);
-        
-            }).reduce((accumulator, currentValue) => (
+            });
+
+            const multipleKeywordsMatch = this.multipleKeywordsMatch(numberOfKeywordsMatched).concat(numberOfKeywordsMatched);
+            
+            const relevance = multipleKeywordsMatch.reduce((accumulator, currentValue) => (
                 accumulator + currentValue
             ));
         
             return {
                 ...course,
-                numberOfKeywordsMatched
+                numberOfKeywordsMatched: relevance
             };
         });
     }
 
-    sortByRelevance (keywordsMatchedPerCourse) {
-        return keywordsMatchedPerCourse.sort((a, b) => b.numberOfKeywordsMatched - a.numberOfKeywordsMatched);
+    multipleKeywordsMatch (matches) {
+        const matchedWords = matches.filter((match) => {
+            return match !== 0;
+        });
+
+        return matchedWords.length > 1 ? [matchedWords.length] : [0];
+    }
+
+    sortByRelevance (course) {
+        return course.sort((a, b) => b.numberOfKeywordsMatched - a.numberOfKeywordsMatched);
     }
 };
 

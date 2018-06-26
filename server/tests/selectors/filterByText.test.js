@@ -48,7 +48,7 @@ test("should retrun only the courses with the matching words", () => {
     ]);
 });
 
-test("should return the number of keywordMatches in the course", () => {
+test("should return how relevant the course is depending on the keword matches in the course", () => {
     const keywords = ["GUACAMOLE", "cheese"];
     //Matching keywords in the title count double.
     const courses = [{
@@ -59,11 +59,19 @@ test("should return the number of keywordMatches in the course", () => {
         urlToCourse: "some_url",
         platform: "udemy",
         uid: 2
+    }, {
+        title: "Java",
+        description: "some description guacamole and nachos with",
+        price: "50",
+        duration: "",
+        urlToCourse: "some_url",
+        platform: "udemy",
+        uid: 2
     }];
 
-    const keywordMatches = filterByText.keywordsMatchedPerCourse(courses, keywords);
+    const setRelevance = filterByText.setRelevance(courses, keywords);
 
-    expect(keywordMatches[0].numberOfKeywordsMatched).toBe(5);
+    expect(setRelevance[0].numberOfKeywordsMatched).toBe(7);
 });
 
 test("should sort the result by the amount of keyowords matched", () => {
@@ -79,4 +87,21 @@ test("should sort the result by the amount of keyowords matched", () => {
         {numberOfKeywordsMatched: 9},
         {numberOfKeywordsMatched: 1}
     ])
+});
+
+test("should add more relevance to courses that match 2 or more keywords", () => {
+    const oneMatch = [2, 0];
+    const twoMatches = [2, 2];
+    const threeMatches = [1, 3, 4];
+    const twoOutOfThreeMatches = [0, 1, 2];
+
+    const checkDoubleMatchOne = filterByText.multipleKeywordsMatch(oneMatch);
+    const checkDoubleMatchTwo = filterByText.multipleKeywordsMatch(twoMatches);
+    const checkDoubleMatchThree = filterByText.multipleKeywordsMatch(threeMatches);
+    const checkDoubleMatchFour = filterByText.multipleKeywordsMatch(twoOutOfThreeMatches);
+
+    expect(checkDoubleMatchOne).toEqual([0]);
+    expect(checkDoubleMatchTwo).toEqual([2]);
+    expect(checkDoubleMatchThree).toEqual([3]);
+    expect(checkDoubleMatchFour).toEqual([2]);
 });
