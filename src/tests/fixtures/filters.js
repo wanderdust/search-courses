@@ -1,7 +1,9 @@
 export const defaultFilters = {
-    searchQuery: ""
+    searchQuery: "",
+    currentPage: "1"
 };
 
 export const filters = {
-    searchQuery: "Hakuna matata"
+    searchQuery: "Hakuna matata",
+    currentPage: "9"
 }

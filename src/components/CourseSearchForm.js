@@ -16,7 +16,7 @@ export class CourseSearchForm extends React.Component {
         if (textFilter.trim()) {
             this.props.onSubmit(textFilter);
             this.props.setSearchQuery(textFilter);
-        }  
+        }
     };
     render () {
         return (

@@ -1,5 +1,6 @@
 const filtersDefaultState = {
-    searchQuery: ""
+    searchQuery: "",
+    currentPage: 1
 };
 
 const filtersReducer = (state = filtersDefaultState, action) => {
@@ -8,6 +9,11 @@ const filtersReducer = (state = filtersDefaultState, action) => {
             return {
                 ...state,
                 searchQuery: action.searchQuery
+            };
+        case "SET_CURRENT_PAGE":
+            return {
+                ...state,
+                currentPage: action.currentPage
             };
         default: 
             return state;

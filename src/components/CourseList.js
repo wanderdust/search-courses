@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import CourseListItem from "./CourseListItem";
+import currentPageCourses from "../selectors/currentPageCourses";
 
 export const CourseList = ({ courses }) => {
     return (
@@ -14,7 +15,7 @@ export const CourseList = ({ courses }) => {
 };
 
 const mapStateToProps = (state) => ({
-    courses: state.courses
+    courses: currentPageCourses(state.courses, state.filters.currentPage)
 });
 
 export default connect(mapStateToProps)(CourseList);
