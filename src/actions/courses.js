@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const setCourses = (courses) => ({
+export const setCourses = (courses = []) => ({
     type: "SET_COURSES",
     courses
 });

@@ -12,6 +12,9 @@ test("should create the correct setCourses action", () => {
     });
 });
 
-test("should set up the state with the correct data", () => {
-
+test("should create the correct setCourses action if no data is passed", () => {
+    expect(setCourses()).toEqual({
+        type: "SET_COURSES",
+        courses: []
+    });
 });

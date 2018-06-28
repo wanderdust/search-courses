@@ -1,3 +1,5 @@
+const {englishPrepositions} = require("../utils/prepositions");
+
 class FilterByText {
     constructor (courses = [], text = "") {
         const keywords = this.keywords(text);
@@ -9,8 +11,9 @@ class FilterByText {
     keywords (text) {
         return text.split(" ").filter((keyword) => {
             const lowerCaseKeyword = keyword.toLowerCase();
+            const isPreposition = (keyword, prepositions) => prepositions.includes(keyword);
 
-            return keyword.length > 0 && lowerCaseKeyword !== "and" && lowerCaseKeyword !== "of";
+            return keyword.length > 0 && !isPreposition(lowerCaseKeyword, englishPrepositions);
         });
     }
 

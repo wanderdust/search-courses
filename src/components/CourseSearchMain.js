@@ -23,7 +23,6 @@ export class CourseSearchMain extends React.Component {
 
 const mapDispatchToProps = (dispatch) => ({
     startSetCourses: (textFilter) => dispatch(startSetCourses(textFilter)),
-    setCourses: (courses) => dispatch(setCourses(courses)),
     setSearchQuery: (textFilter) => dispatch(setSearchQuery(textFilter))
 });
 
