@@ -7,7 +7,7 @@ const courses = [
         urlToCourse: "some_url",
         platform: "udacity",
         numberOfKeywordsMatched: expect.anything(),
-        uid: 1
+        id: 1
     },
     {
         title: "Advanced Java and",
@@ -17,7 +17,7 @@ const courses = [
         urlToCourse: "some_url",
         platform: "udemy",
         numberOfKeywordsMatched: expect.anything(),
-        uid: 2
+        id: 2
     },
     {
         title: "Angular.js and Guacamole",
@@ -27,7 +27,7 @@ const courses = [
         urlToCourse: "some_url",
         platform: "khan academy",
         numberOfKeywordsMatched: expect.anything(),
-        uid: 3
+        id:3
     }
 ];
 

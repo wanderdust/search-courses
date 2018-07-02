@@ -6,7 +6,7 @@ const publicPath = path.join(__dirname, "..", "public");
 const port = process.env.PORT || 3000;
 
 const { getVisibleCourses } = require("./selectors/courses");
-const { courseUpdater } = require("./updater/courseUpdater");
+const { courseUpdater, getApiData } = require("./updater/courseUpdater");
 
 app.use(express.static(publicPath));
 app.use(bodyParser.json());
@@ -21,7 +21,9 @@ app.get("/courseslist", (req, res) => {
     });
 });
 
-courseUpdater();
+getApiData().then((courses) => {
+    courseUpdater(courses);
+})
 
 //Always send index.html regardless of the route.
 app.get("*", (req, res) => {

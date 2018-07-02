@@ -7,8 +7,7 @@ test("should return formatted data from Khan Academy api request", async () => {
         price: 0,
         duration: expect.anything(),
         urlToCourse: expect.anything(),
-        platform: expect.anything(),
-        uid: expect.anything()
+        platform: expect.anything()
     }
     const khanAcademyCourses = await getKhanAcademyCourses();
     expect(khanAcademyCourses[0]).toEqual(data);

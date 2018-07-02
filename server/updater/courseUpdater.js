@@ -3,29 +3,32 @@ const { getKhanAcademyCourses } = require("../apis/khanAcademyCourses");
 const { FilterByText } = require("../selectors/filterByText");
 const { database } = require("../firebase/firebase");
 
-const courseUpdater = () => {
-    console.log("Updating database data...");
-
+const getApiData = () => {
     return Promise.all([
         getUdacityCourses(),
         getKhanAcademyCourses()
     ])
     .then((courses) => {
-        const formattedCourses = [].concat(...courses);
-
-        database.ref('courses/').set(null);
-        formattedCourses.forEach((course) => {
-            database.ref(`courses/`).push(course).catch((e) => {
-                console.log(e)
-            });
-        });
-        console.log("Finished updating database data.");
+        return [].concat(...courses);
     })
     .catch((e) => {
-        console.log("Error updating the database", e);
+        console.log("Error fetching the data from the apis:", e);
     });
+}
+
+const courseUpdater = (courses) => {
+    console.log("Updating database data...");
+
+    database.ref('courses/').set(null);
+    courses.forEach((course) => {
+        database.ref(`courses/`).push(course).catch((e) => {
+            console.log(e)
+        });
+    });
+    console.log("Database updated.");
 };
 
 module.exports = {
-    courseUpdater
+    courseUpdater,
+    getApiData
 };

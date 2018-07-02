@@ -6,7 +6,7 @@ export default [
         duration: "2",
         urlToCourse: "some_url",
         platform: "udacity",
-        uid: "1"
+        id: "1"
     },
     {
         title: "Advanced Java",
@@ -15,7 +15,7 @@ export default [
         duration: "2",
         urlToCourse: "some_url",
         platform: "udemy",
-        uid: "2"
+        id: "2"
     },
     {
         title: "Angular.js",
@@ -24,7 +24,7 @@ export default [
         duration: "2",
         urlToCourse: "some_url",
         platform: "khan academy",
-        uid: "3"
+        id: "3"
     }
 ];
 
@@ -38,7 +38,7 @@ export const longCourseList = [
         duration: "2",
         urlToCourse: "some_url",
         platform: "udacity",
-        uid: "1"
+        id: "1"
     },
     {
         title: "Advanced Java",
@@ -47,7 +47,7 @@ export const longCourseList = [
         duration: "2",
         urlToCourse: "some_url",
         platform: "udemy",
-        uid: "2"
+        id: "2"
     },
     {
         title: "Angular.js",
@@ -56,7 +56,7 @@ export const longCourseList = [
         duration: "2",
         urlToCourse: "some_url",
         platform: "khan academy",
-        uid: "3"
+        id: "3"
     },
     {
         title: "Learn react",
@@ -65,7 +65,7 @@ export const longCourseList = [
         duration: "2",
         urlToCourse: "some_url",
         platform: "udacity",
-        uid: "4"
+        id: "4"
     },
     {
         title: "Learn react",
@@ -74,7 +74,7 @@ export const longCourseList = [
         duration: "2",
         urlToCourse: "some_url",
         platform: "udacity",
-        uid: "5"
+        id: "5"
     },
     {
         title: "Learn react",
@@ -83,7 +83,7 @@ export const longCourseList = [
         duration: "2",
         urlToCourse: "some_url",
         platform: "udacity",
-        uid: "6"
+        id: "6"
     },
     {
         title: "Learn react",
@@ -92,7 +92,7 @@ export const longCourseList = [
         duration: "2",
         urlToCourse: "some_url",
         platform: "udacity",
-        uid: "7"
+        id: "7"
     },
     {
         title: "Learn react",
@@ -101,7 +101,7 @@ export const longCourseList = [
         duration: "2",
         urlToCourse: "some_url",
         platform: "udacity",
-        uid: "8"
+        id: "8"
     },
     {
         title: "Learn react",
@@ -110,7 +110,7 @@ export const longCourseList = [
         duration: "2",
         urlToCourse: "some_url",
         platform: "udacity",
-        uid: "9"
+        id: "9"
     },
     {
         title: "Learn react",
@@ -119,7 +119,7 @@ export const longCourseList = [
         duration: "2",
         urlToCourse: "some_url",
         platform: "udacity",
-        uid: "10"
+        id: "10"
     },
     {
         title: "Learn react",
@@ -128,7 +128,7 @@ export const longCourseList = [
         duration: "2",
         urlToCourse: "some_url",
         platform: "udacity",
-        uid: "11"
+        id: "11"
     },
     {
         title: "Learn react",
@@ -137,7 +137,7 @@ export const longCourseList = [
         duration: "2",
         urlToCourse: "some_url",
         platform: "udacity",
-        uid: "12"
+        id: "12"
     },
     {
         title: "Learn react",
@@ -146,7 +146,7 @@ export const longCourseList = [
         duration: "2",
         urlToCourse: "some_url",
         platform: "udacity",
-        uid: "12"
+        id: "12"
     },
     {
         title: "Learn react",
@@ -155,6 +155,6 @@ export const longCourseList = [
         duration: "2",
         urlToCourse: "some_url",
         platform: "udacity",
-        uid: "13"
+        id: "13"
     }
 ];

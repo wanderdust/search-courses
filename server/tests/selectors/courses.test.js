@@ -1,6 +1,18 @@
 const { getVisibleCourses } = require("../../selectors/courses");
+const { database } = require("../../firebase/firebase");
+const { courses } = require("../fixtures/courses");
 
-test("should request data from api and return an array", async () => {
+beforeEach((done) => {
+    const courseData = {};
+
+    courses.forEach(({ id, title, description, price, duration, urlToCourse, platform }) => {
+        courseData[id] = { title, description, price, duration, urlToCourse, platform };
+    });
+
+    database.ref(`courses`).set(courseData).then(() => done());
+});
+
+test("should request data from firebase and return an array", async () => {
     const courses = await getVisibleCourses();
-    expect(Array.isArray(courses)).toBeTruthy();
+    expect(courses).toEqual(courses);
 }, 20000);

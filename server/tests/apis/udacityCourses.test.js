@@ -7,8 +7,7 @@ test("should return formatted data from udacity api request", async () => {
         price: expect.anything(),
         duration: expect.anything(),
         urlToCourse: expect.anything(),
-        platform: expect.anything(),
-        uid: expect.anything()
+        platform: expect.anything()
     }
     const udacityCourses = await getUdacityCourses();
     expect(udacityCourses[0]).toEqual(data);

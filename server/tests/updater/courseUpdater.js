@@ -1,1 +1,0 @@
-const { courseUpdater } = require("../updater/courseUpdater");
