@@ -8,16 +8,16 @@ const getVisibleCourses = (text) => {
         getUdacityCourses(),
         getKhanAcademyCourses()
     ])
-        .then((courses) => {
-            const formattedCourses = [].concat(...courses);
-            const filterByText = new FilterByText(formattedCourses, text);
-            const visibleCourses = filterByText.sortedByRelevance;
+    .then((courses) => {
+        const formattedCourses = [].concat(...courses);
+        const filterByText = new FilterByText(formattedCourses, text);
+        const visibleCourses = filterByText.sortedByRelevance;
 
-            return visibleCourses;
-        })
-        .catch((e) => {
-            console.log(e);
-        });
+        return visibleCourses;
+    })
+    .catch((e) => {
+        console.log(e);
+    });
 };
 
 module.exports = {

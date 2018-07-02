@@ -36,7 +36,7 @@ class FilterByText {
     * - If it finds a word match in the title returns a relevance of 2. 
     * - If it finds a word match in the body return a relevance of 1.
     * - If no word is matched returns 0.
-    * - If all keywords are matched in a course adds more points
+    * - If all keywords are matched in a course adds more points.
     * - All the points get added in the end to decide how relevant the course is.
     */
     setRelevance (matchingCourses, keywords) {
@@ -66,6 +66,7 @@ class FilterByText {
         });
     }
 
+    // Checks if multiple or all the keywords match in the same course.
     multipleKeywordsMatch (matches) {
         const matchedWords = matches.filter((match) => {
             return match !== 0;
