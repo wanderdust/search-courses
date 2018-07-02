@@ -1,4 +1,3 @@
-const uid = require("uid");
 const axios = require("axios");
 
 const getKhanAcademyCourses = (testUrl) => {
@@ -23,8 +22,7 @@ const getKhanAcademyCourses = (testUrl) => {
                     price: 0,
                     duration: "",
                     urlToCourse: course.ka_url,
-                    platform: "Khan Academy",
-                    uid: uid()
+                    platform: "Khan Academy"
                 }
             });
         })

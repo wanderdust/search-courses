@@ -1,4 +1,3 @@
-const uid = require("uid");
 const axios = require("axios");
 
 const getUdacityCourses = (testUrl) => {
@@ -14,8 +13,7 @@ const getUdacityCourses = (testUrl) => {
                 price: 0,
                 duration: "",
                 urlToCourse: course.homepage,
-                platform: "Udacity",
-                uid: uid()
+                platform: "Udacity"
             }));
         })
         .catch((e) => {

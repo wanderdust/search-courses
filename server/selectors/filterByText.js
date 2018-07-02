@@ -19,7 +19,6 @@ class FilterByText {
 
     matchingCourses (courses, keywords) {
         return courses.filter((course) => {
-            
             const containsKeyword = keywords.map((keyword) => {
                 const titleMatch = new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(course.title.toLowerCase());
                 const bodyMatch = new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(course.description.toLowerCase());
