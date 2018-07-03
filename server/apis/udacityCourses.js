@@ -4,12 +4,12 @@ const getUdacityCourses = (testUrl) => {
     const url = testUrl || "https://www.udacity.com/public-api/v0/courses";
 
     return axios.get(url, {
-        timeout: 15000
+        timeout: 50000
         })
         .then((res) => {
             return res.data.courses.map((course) => ({
                 title: course.title,
-                description: course.summary,
+                description: course.short_summary,
                 price: 0,
                 duration: "",
                 urlToCourse: course.homepage,

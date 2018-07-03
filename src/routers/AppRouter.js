@@ -16,8 +16,8 @@ const AppRouter = () => (
         <div>
             <Header history={history} />
             <Switch>
-                <Route path="/" component={MainPage} exact={true}/>
-                <Route path="/search" component={SearchResultsPage} />
+                <Route path="/" component={MainPage} exact={true} />
+                <Route path="/search/:category?" component={SearchResultsPage} />
                 <Route component={NotFoundPage} />
             </Switch>
         </div>

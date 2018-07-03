@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 import CourseListItem from "./CourseListItem";
 import currentPageCourses from "../selectors/currentPageCourses";
 
-export const CourseList = ({ courses }) => {
+export const CourseList = ({ currentPageCourses, courses }) => {
     return (
         <div>
-            <h4>Course list</h4>
-            {courses.map((course) =>(
+            <h4>{courses.length} courses found</h4>
+            {currentPageCourses.map((course) =>(
                 <CourseListItem key={course.id} course={course}/>
             ))}
         </div>
@@ -15,7 +15,8 @@ export const CourseList = ({ courses }) => {
 };
 
 const mapStateToProps = (state) => ({
-    courses: currentPageCourses(state.courses, state.filters.currentPage)
+    currentPageCourses: currentPageCourses(state.courses, state.filters.currentPage),
+    courses: state.courses
 });
 
 export default connect(mapStateToProps)(CourseList);

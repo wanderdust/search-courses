@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { startLogout } from "../actions/auth";
 import CourseSearchHeader from "./CourseSearchHeader";
+import Categories from "./Categories";
 
 const Header = (props) => {
     return (
@@ -12,6 +13,7 @@ const Header = (props) => {
                     <Link className="header__title" to="/">
                         <h1>CourseSearch</h1>
                     </Link>
+                    <Categories {...props}/>
                     <CourseSearchHeader {...props}/>
                 </div>
             </div>

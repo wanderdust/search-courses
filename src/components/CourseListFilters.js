@@ -5,7 +5,9 @@ export class CourseListFilters extends React.Component {
     render () {
         return (
             <div>
-                Filters
+                <select>
+                    <option value="relevance">Relevance</option>
+                </select>
             </div>
         );
     }
