@@ -8,17 +8,21 @@ import courses from "../fixtures/courses";
 
 const uid = "this_is_my_test_uid";
 const createMockStore = configureMockStore([thunk]);
-let wrapper, onSubmit, store, searchQuery;
+let wrapper, onSubmit, store, searchQuery, setCurrentPage, setCurrentCategory;
 
 beforeEach(() => {
     searchQuery = "Hello world";
     store = createMockStore();
     onSubmit = jest.fn();
+    setCurrentPage=jest.fn();
+    setCurrentCategory=jest.fn();
     wrapper = shallow(
         <CourseSearchForm
             searchQuery={searchQuery}
             onSubmit={onSubmit}
             setSearchQuery={setSearchQuery}
+            setCurrentPage={setCurrentPage}
+            setCurrentCategory={setCurrentCategory}
         />);
 });
 

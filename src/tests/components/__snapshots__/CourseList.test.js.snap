@@ -3,7 +3,8 @@
 exports[`should render the CourseList correctly 1`] = `
 <div>
   <h4>
-    Course list
+    3
+     courses found
   </h4>
   <CourseListItem
     course={
