@@ -5,13 +5,61 @@ export const topics = [
         id: uid(),
         name: "Programming",
         purpose: "programming",
-        tags: "programming java javascript python computing web developer developer development frontend backend app e-business videogames node.js"
+        tags: "programming java javascript python computing web developer developer development frontend backend app e-business videogames node.js",
+        subTopics: [
+            {
+                id: uid(),
+                name: "Javascript",
+                purpose: "javascript",
+                tags: "javascript frontend front-end web-developer",
+                subTopics: null
+            },
+            {
+                id: uid(),
+                name: "Python",
+                purpose: "python",
+                tags: "python",
+            },
+            {
+                id: uid(),
+                name: "Java",
+                purpose: "java",
+                tags: "java",
+            },
+            {
+                id: uid(),
+                name: "C#",
+                purpose: "c-sharp",
+                tags: "C\#",
+            },
+            {
+                id: uid(),
+                name: "C++",
+                purpose: "c++",
+                tags: "c\+\+",
+            },
+            {
+                id: uid(),
+                name: "Swift",
+                purpose: "swift",
+                tags: "swift",
+            },
+        ]
     },
     {
         id: uid(),
         name: "Business",
         purpose: "business",
-        tags: "sales finances accounting business law b2b b2c"
+        tags: "sales finances accounting business law b2b b2c",
+        subTopics: [
+            {
+                id: uid(),
+                name: "Marketing",
+                purpose: "marketing",
+                tags: "marketing",
+                subTopics: null
+            }
+        ]
     },
     {
         id: uid(),

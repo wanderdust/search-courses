@@ -2,6 +2,12 @@
 
 exports[`should render CourseListFilters correctly 1`] = `
 <div>
-  Filters
+  <select>
+    <option
+      value="relevance"
+    >
+      Relevance
+    </option>
+  </select>
 </div>
 `;

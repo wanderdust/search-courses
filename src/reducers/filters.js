@@ -1,6 +1,7 @@
 const filtersDefaultState = {
     searchQuery: "",
-    currentPage: 1
+    currentPage: 1,
+    currentCategory: ""
 };
 
 const filtersReducer = (state = filtersDefaultState, action) => {
@@ -14,6 +15,11 @@ const filtersReducer = (state = filtersDefaultState, action) => {
             return {
                 ...state,
                 currentPage: action.currentPage
+            };
+        case "SET_CURRENT_CATEGORY":
+            return {
+                ...state,
+                currentCategory: action.currentCategory
             };
         default: 
             return state;

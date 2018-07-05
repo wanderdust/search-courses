@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { startSetCourses } from "../actions/courses";
-import { setSearchQuery, setCurrentPage } from "../actions/filters";
+import { setSearchQuery, setCurrentPage, setCurrentCategory } from "../actions/filters";
 
 export class CourseSearchForm extends React.Component {
     onTextChange = (e) => {
@@ -17,6 +16,7 @@ export class CourseSearchForm extends React.Component {
             this.props.onSubmit(textFilter);
             this.props.setSearchQuery(textFilter);
             this.props.setCurrentPage();
+            this.props.setCurrentCategory();
         }
     };
     render () {
@@ -41,9 +41,9 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    startSetCourses: (textFilter) => dispatch(startSetCourses(textFilter)),
     setSearchQuery: (textFilter) => dispatch(setSearchQuery(textFilter)),
-    setCurrentPage: (page) => dispatch(setCurrentPage(page))
+    setCurrentPage: (page) => dispatch(setCurrentPage(page)),
+    setCurrentCategory: (category) => dispatch(setCurrentCategory(category)) 
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CourseSearchForm);

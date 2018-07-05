@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { startLogout } from "../actions/auth";
 import CourseSearchHeader from "./CourseSearchHeader";
-import Categories from "./Categories";
+import DropdownForm from "./DropdownForm";
+import { topics } from "../utils/categories";
 
 const Header = (props) => {
     return (
@@ -13,7 +14,7 @@ const Header = (props) => {
                     <Link className="header__title" to="/">
                         <h1>CourseSearch</h1>
                     </Link>
-                    <Categories {...props}/>
+                    <DropdownForm {...props} listItems={topics} dropdownTitle="categories"/>
                     <CourseSearchHeader {...props}/>
                 </div>
             </div>

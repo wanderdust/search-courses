@@ -31,3 +31,18 @@ test("should set the currentPage", () => {
         currentPage
     });
 });
+
+test("should set the currentCategory", () => {
+    const currentCategory = "javascript";
+
+    const action = {
+        type: "SET_CURRENT_CATEGORY",
+        currentCategory
+    };
+    const state = filtersReducer(filters, action);
+
+    expect(state).toEqual({
+        ...filters,
+        currentCategory
+    });
+});

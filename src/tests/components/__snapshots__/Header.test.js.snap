@@ -19,6 +19,116 @@ exports[`should render header correctly 1`] = `
           CourseSearch
         </h1>
       </Link>
+      <DropdownForm
+        dropdownTitle="categories"
+        listItems={
+          Array [
+            Object {
+              "id": "gmvpuvo",
+              "name": "Programming",
+              "purpose": "programming",
+              "subTopics": Array [
+                Object {
+                  "id": "xwjwcjl",
+                  "name": "Javascript",
+                  "purpose": "javascript",
+                  "subTopics": null,
+                  "tags": "javascript frontend front-end web-developer",
+                },
+                Object {
+                  "id": "fll8qiq",
+                  "name": "Python",
+                  "purpose": "python",
+                  "tags": "python",
+                },
+                Object {
+                  "id": "48ph898",
+                  "name": "Java",
+                  "purpose": "java",
+                  "tags": "java",
+                },
+                Object {
+                  "id": "vi5nx7o",
+                  "name": "C#",
+                  "purpose": "c-sharp",
+                  "tags": "C#",
+                },
+                Object {
+                  "id": "kq5long",
+                  "name": "C++",
+                  "purpose": "c++",
+                  "tags": "c++",
+                },
+                Object {
+                  "id": "dwa7rh2",
+                  "name": "Swift",
+                  "purpose": "swift",
+                  "tags": "swift",
+                },
+              ],
+              "tags": "programming java javascript python computing web developer developer development frontend backend app e-business videogames node.js",
+            },
+            Object {
+              "id": "uf5ymr5",
+              "name": "Business",
+              "purpose": "business",
+              "subTopics": Array [
+                Object {
+                  "id": "b8kxc99",
+                  "name": "Marketing",
+                  "purpose": "marketing",
+                  "subTopics": null,
+                  "tags": "marketing",
+                },
+              ],
+              "tags": "sales finances accounting business law b2b b2c",
+            },
+            Object {
+              "id": "p5m1per",
+              "name": "Personal growth",
+              "purpose": "personal-growth",
+              "tags": "leadership happiness religion hobbies motivation",
+            },
+            Object {
+              "id": "oah9jfq",
+              "name": "Design",
+              "purpose": "design",
+              "tags": "design",
+            },
+            Object {
+              "id": "6geylym",
+              "name": "Marketing",
+              "purpose": "marketing",
+              "tags": "marketing advertising relations",
+            },
+            Object {
+              "id": "n7m0pvi",
+              "name": "Photography",
+              "purpose": "photography",
+              "tags": "photography ",
+            },
+            Object {
+              "id": "85dtu6v",
+              "name": "Health & Fitness",
+              "purpose": "health-fitness",
+              "tags": "health fitness yoga nutrition meditation sports",
+            },
+            Object {
+              "id": "tf00mb5",
+              "name": "Academic studies",
+              "purpose": "academic-studies",
+              "tags": "math science humanities",
+            },
+            Object {
+              "id": "3584jj4",
+              "name": "Languages",
+              "purpose": "languages",
+              "tags": "english spanish german arabic japanese portuguese chinese russian latin hebrew italian",
+            },
+          ]
+        }
+        startLogout={[MockFunction]}
+      />
       <Connect(CourseSearchHeader)
         startLogout={[MockFunction]}
       />

@@ -3,6 +3,11 @@ export const setSearchQuery = (searchQuery = "") => ({
     searchQuery
 });
 
+export const setCurrentCategory = (currentCategory = "") => ({
+    type: "SET_CURRENT_CATEGORY",
+    currentCategory
+});
+
 export const setCurrentPage = (currentPage = 1) => ({
     type: "SET_CURRENT_PAGE",
     currentPage

@@ -9,8 +9,8 @@ import { topics } from "../utils/categories";
 
 export const SearchResultsPage = (props) => {
     return (
-        <div>
-            {!!props.match.params.category && <CategoriesHeader category={props.category}/>}
+        <div> 
+            {!!props.category && <CategoriesHeader category={props.category}/>}
             {props.coursesLength > 0 && <CourseListFilters />}
             <CourseList />
             <PagesLinks />
@@ -20,7 +20,7 @@ export const SearchResultsPage = (props) => {
 
 const mapStateToProps = (state, props) => ({
     coursesLength: state.courses.length,
-    category: topics.find((topic) => topic.purpose === props.match.params.category)
+    category: state.filters.currentCategory
 });
 
 export default connect(mapStateToProps)(SearchResultsPage);
