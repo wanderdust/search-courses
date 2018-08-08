@@ -1,3 +1,7 @@
+/* 
+* Component with a loader gif/message.
+*/
+
 import React from "react";
  
 const LoadingPage = () => (

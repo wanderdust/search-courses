@@ -1,3 +1,7 @@
+/* 
+* Form for search inputs.
+*/
+
 import React from "react";
 import { connect } from "react-redux";
 import { setSearchQuery, setCurrentPage, setCurrentCategory } from "../actions/filters";

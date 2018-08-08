@@ -1,21 +1,27 @@
-.dropdown:hover .dropdown__menu {
-    display: block;
-}
+// .dropdown:hover .dropdown__menu {
+//     display: block;
+// }
 
-.dropdown {
-    position: relative;
-}
+// .dropdown {
+//     position: relative;
+// }
 
 .dropdown__menu {
     background-color: $off-white;
-    display: none;
     position: absolute;
-    top: 100%;
 }
 
-.dropdown__menu > ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-}
+// .dropdown__menu ul {
+//     display: flex;
+//     flex-direction: column;
+//     list-style: none;
+//     padding: 0;
+// }
+
+// .dropdown__item {
+//     display: flex;
+// }
+
+// .dropdown__item > p {
+//    margin: $xs-size;
+// }

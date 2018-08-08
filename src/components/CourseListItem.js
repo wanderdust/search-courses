@@ -1,3 +1,7 @@
+/* 
+* Individual course result information.
+*/
+
 import React from "react";
 
 const CourseListItem = ({course}) => {

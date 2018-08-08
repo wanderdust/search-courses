@@ -1,3 +1,8 @@
+/* 
+* Search input for the header of the page.
+* Uses searchForm component.
+*/
+
 import React from "react";
 import { connect } from "react-redux";
 import { startSetCourses } from "../actions/courses";

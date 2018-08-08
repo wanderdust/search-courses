@@ -1,3 +1,7 @@
+/* 
+* Search results page with all the listed courses.
+*/
+
 import React from "react";
 import { connect } from "react-redux";
 import CourseList from "./CourseList";

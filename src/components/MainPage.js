@@ -1,3 +1,7 @@
+/* 
+* Front Page Component
+*/
+
 import React from "react";
 import CourseSearchMain from "./CourseSearchMain";
 
