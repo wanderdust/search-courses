@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render DropDownItem correctly 1`] = `
+<div
+  className="category-item"
+  onClick={[Function]}
+>
+  test_name
+</div>
+`;

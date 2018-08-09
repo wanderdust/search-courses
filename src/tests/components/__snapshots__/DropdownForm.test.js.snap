@@ -1,0 +1,636 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render DropDownForm correctly 1`] = `
+<div
+  className="dropdown__container"
+>
+  <DropdownMenu
+    align="left"
+    animAlign={null}
+    animate={false}
+    className={null}
+    close={[Function]}
+    closeOnInsideClick={true}
+    closeOnOutsideClick={true}
+    enterTimeout={0}
+    inverse={false}
+    isOpen={false}
+    leaveTimeout={0}
+    menuAlign={null}
+    size={null}
+    textAlign={null}
+    toggle={
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Categories
+      </button>
+    }
+    upwards={false}
+  >
+    <div
+      key="some_random_uid"
+    >
+      <NestedDropdownMenu
+        animate={false}
+        delay={0}
+        direction="right"
+        enterTimeout={150}
+        leaveTimeout={150}
+        nested="reverse"
+        openOnMouseover={true}
+        toggle={
+          <Connect(DropDownItem)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "blank",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            id="some_random_uid"
+            name="Programming"
+            purpose="programming"
+            subTopics={
+              Array [
+                Object {
+                  "id": "some_random_uid",
+                  "name": "Javascript",
+                  "purpose": "javascript",
+                  "subTopics": null,
+                  "tags": "javascript frontend front-end web-developer",
+                },
+                Object {
+                  "id": "some_random_uid",
+                  "name": "Python",
+                  "purpose": "python",
+                  "tags": "python",
+                },
+                Object {
+                  "id": "some_random_uid",
+                  "name": "Java",
+                  "purpose": "java",
+                  "tags": "java",
+                },
+                Object {
+                  "id": "some_random_uid",
+                  "name": "C#",
+                  "purpose": "c-sharp",
+                  "tags": "C#",
+                },
+                Object {
+                  "id": "some_random_uid",
+                  "name": "C++",
+                  "purpose": "c++",
+                  "tags": "c++",
+                },
+                Object {
+                  "id": "some_random_uid",
+                  "name": "Swift",
+                  "purpose": "swift",
+                  "tags": "swift",
+                },
+              ]
+            }
+            tags="programming java javascript python computing web developer developer development frontend backend app e-business videogames node.js"
+          />
+        }
+        upwards={false}
+      >
+        <li
+          key="some_random_uid"
+        >
+           
+          <Connect(DropDownItem)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "blank",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            id="some_random_uid"
+            name="Javascript"
+            purpose="javascript"
+            subTopics={null}
+            tags="javascript frontend front-end web-developer"
+          />
+           
+        </li>
+        <li
+          key="some_random_uid"
+        >
+           
+          <Connect(DropDownItem)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "blank",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            id="some_random_uid"
+            name="Python"
+            purpose="python"
+            tags="python"
+          />
+           
+        </li>
+        <li
+          key="some_random_uid"
+        >
+           
+          <Connect(DropDownItem)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "blank",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            id="some_random_uid"
+            name="Java"
+            purpose="java"
+            tags="java"
+          />
+           
+        </li>
+        <li
+          key="some_random_uid"
+        >
+           
+          <Connect(DropDownItem)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "blank",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            id="some_random_uid"
+            name="C#"
+            purpose="c-sharp"
+            tags="C#"
+          />
+           
+        </li>
+        <li
+          key="some_random_uid"
+        >
+           
+          <Connect(DropDownItem)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "blank",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            id="some_random_uid"
+            name="C++"
+            purpose="c++"
+            tags="c++"
+          />
+           
+        </li>
+        <li
+          key="some_random_uid"
+        >
+           
+          <Connect(DropDownItem)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "blank",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            id="some_random_uid"
+            name="Swift"
+            purpose="swift"
+            tags="swift"
+          />
+           
+        </li>
+      </NestedDropdownMenu>
+    </div>
+    <div
+      key="some_random_uid"
+    >
+      <NestedDropdownMenu
+        animate={false}
+        delay={0}
+        direction="right"
+        enterTimeout={150}
+        leaveTimeout={150}
+        nested="reverse"
+        openOnMouseover={true}
+        toggle={
+          <Connect(DropDownItem)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "blank",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            id="some_random_uid"
+            name="Business"
+            purpose="business"
+            subTopics={
+              Array [
+                Object {
+                  "id": "some_random_uid",
+                  "name": "Marketing",
+                  "purpose": "marketing",
+                  "subTopics": null,
+                  "tags": "marketing",
+                },
+              ]
+            }
+            tags="sales finances accounting business law b2b b2c"
+          />
+        }
+        upwards={false}
+      >
+        <li
+          key="some_random_uid"
+        >
+           
+          <Connect(DropDownItem)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "blank",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            id="some_random_uid"
+            name="Marketing"
+            purpose="marketing"
+            subTopics={null}
+            tags="marketing"
+          />
+           
+        </li>
+      </NestedDropdownMenu>
+    </div>
+    <div
+      key="some_random_uid"
+    >
+      <div>
+        <li>
+          <Connect(DropDownItem)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "blank",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            id="some_random_uid"
+            name="Personal growth"
+            purpose="personal-growth"
+            tags="leadership happiness religion hobbies motivation"
+          />
+        </li>
+      </div>
+    </div>
+    <div
+      key="some_random_uid"
+    >
+      <div>
+        <li>
+          <Connect(DropDownItem)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "blank",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            id="some_random_uid"
+            name="Design"
+            purpose="design"
+            tags="design"
+          />
+        </li>
+      </div>
+    </div>
+    <div
+      key="some_random_uid"
+    >
+      <div>
+        <li>
+          <Connect(DropDownItem)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "blank",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            id="some_random_uid"
+            name="Marketing"
+            purpose="marketing"
+            tags="marketing advertising relations"
+          />
+        </li>
+      </div>
+    </div>
+    <div
+      key="some_random_uid"
+    >
+      <div>
+        <li>
+          <Connect(DropDownItem)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "blank",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            id="some_random_uid"
+            name="Photography"
+            purpose="photography"
+            tags="photography "
+          />
+        </li>
+      </div>
+    </div>
+    <div
+      key="some_random_uid"
+    >
+      <div>
+        <li>
+          <Connect(DropDownItem)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "blank",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            id="some_random_uid"
+            name="Health & Fitness"
+            purpose="health-fitness"
+            tags="health fitness yoga nutrition meditation sports"
+          />
+        </li>
+      </div>
+    </div>
+    <div
+      key="some_random_uid"
+    >
+      <div>
+        <li>
+          <Connect(DropDownItem)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "blank",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            id="some_random_uid"
+            name="Academic studies"
+            purpose="academic-studies"
+            tags="math science humanities"
+          />
+        </li>
+      </div>
+    </div>
+    <div
+      key="some_random_uid"
+    >
+      <div>
+        <li>
+          <Connect(DropDownItem)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "blank",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            id="some_random_uid"
+            name="Languages"
+            purpose="languages"
+            tags="english spanish german arabic japanese portuguese chinese russian latin hebrew italian"
+          />
+        </li>
+      </div>
+    </div>
+  </DropdownMenu>
+</div>
+`;

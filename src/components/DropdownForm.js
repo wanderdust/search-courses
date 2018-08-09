@@ -14,37 +14,42 @@ export class DropdownForm extends React.Component {
         this.setState({ isMenuOpen: !this.state.isMenuOpen });
     }
 
-    close = () => {
+    handleClose = () => {
         this.setState({ isMenuOpen: false });
     }
     
     render () {
-        const menuOptions = {
-            isOpen: this.state.isMenuOpen,
-            close: this.close,
-            toggle: <button type="button" onClick={this.handleToggle}>Categories</button>,
-            align: 'right',
-            className: "dropdown__menu"
-          };
-
         return (
-            <div>
-                <DropdownMenu {...menuOptions}>
-                    {this.props.listItems.map((topic) => {
-                        const nestedProps = {
-                            toggle:<DropDownItem {...topic}/>
-                        };
-
+            <div className="dropdown__container">
+                <DropdownMenu 
+                    align="left"
+                    animate={false}
+                    close={this.handleClose}
+                    enterTimeout={0}
+                    isOpen={this.state.isMenuOpen}
+                    leaveTimeout={0}
+                    toggle={<button type="button" onClick={this.handleToggle}>Categories</button>}
+                >
+                    {this.props.categories.map((category) => {
                         return (
-                            <div key={topic.id}>
+                            <div key={category.id}>
                                 {
-                                    !topic.subTopics &&
-                                    <DropDownItem {...topic}/> ||
-                                    <NestedDropdownMenu {...nestedProps}>
-                                       {topic.subTopics.map((subTopic) => {
-                                           return <li key={subTopic.id}> <DropDownItem {...subTopic}/> </li>
-                                       })}
-                                    </NestedDropdownMenu>
+                                    !category.subTopics &&
+                                    (
+                                        <div>
+                                            <li><DropDownItem history={history} {...category}/></li>
+                                        </div>
+                                    ) ||
+                                    (
+                                        <NestedDropdownMenu 
+                                            toggle={<DropDownItem history={history} {...category}/>}
+                                            delay={0}
+                                        >
+                                            {category.subTopics.map((subTopic) => {
+                                                return <li key={subTopic.id}> <DropDownItem history={history} {...subTopic}/> </li>
+                                            })}
+                                        </NestedDropdownMenu>
+                                    )
                                 }
                             </div>
                         )

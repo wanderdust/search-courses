@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 import { startLogout } from "../actions/auth";
 import CourseSearchHeader from "./CourseSearchHeader";
 import DropdownForm from "./DropdownForm";
-import { topics } from "../utils/categories";
+import { categories } from "../utils/categories";
 
 const Header = (props) => {
     return (
@@ -18,7 +18,7 @@ const Header = (props) => {
                     <Link className="header__title" to="/">
                         <h1>CourseSearch</h1>
                     </Link>
-                    <DropdownForm {...props} listItems={topics} dropdownTitle="categories"/>
+                    <DropdownForm {...props} categories={categories} dropdownTitle="categories"/>
                     <CourseSearchHeader {...props}/>
                 </div>
             </div>
