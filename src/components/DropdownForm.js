@@ -9,7 +9,7 @@ import DropDownItem from "./DropDownItem";
 
 export class DropdownForm extends React.Component {
     state = {isMenuOpen: false}
-
+    
     handleToggle = () => {
         this.setState({ isMenuOpen: !this.state.isMenuOpen });
     }
