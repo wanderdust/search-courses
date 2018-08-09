@@ -1,4 +1,5 @@
 import axios from "axios";
+import { setCurrentPage } from "./filters";
 
 export const setCourses = (courses = []) => ({
     type: "SET_COURSES",
@@ -7,6 +8,8 @@ export const setCourses = (courses = []) => ({
 
 export const startSetCourses = (textFilter) => {
     return (dispatch, getState) => {
+        dispatch(setCurrentPage(1));
+        
         return axios.get("/courseslist", {
             params: {
                 text: textFilter

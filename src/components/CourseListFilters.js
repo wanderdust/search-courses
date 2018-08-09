@@ -11,6 +11,7 @@ export class CourseListFilters extends React.Component {
             <div>
                 <select>
                     <option value="relevance">Relevance</option>
+                    <option value="price">Price</option>
                 </select>
             </div>
         );
