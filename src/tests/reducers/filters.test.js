@@ -46,3 +46,45 @@ test("should set the currentCategory", () => {
         currentCategory
     });
 });
+
+test("should set the sortBy by cheapest first", () => {
+    const sortBy = "cheapest_first";
+
+    const action = {
+        type: "SORT_BY_CHEAPEST"
+    };
+    const state = filtersReducer(filters, action);
+
+    expect(state).toEqual({
+        ...filters,
+        sortBy
+    });
+});
+
+test("should set the sortBy by expensive first", () => {
+    const sortBy = "expensive_first";
+
+    const action = {
+        type: "SORT_BY_EXPENSIVE"
+    };
+    const state = filtersReducer(filters, action);
+
+    expect(state).toEqual({
+        ...filters,
+        sortBy
+    });
+});
+
+test("should set the sortBy by relevance", () => {
+    const sortBy = "relevance";
+
+    const action = {
+        type: "SORT_BY_RELEVANCE"
+    };
+    const state = filtersReducer(filters, action);
+
+    expect(state).toEqual({
+        ...filters,
+        sortBy
+    });
+});

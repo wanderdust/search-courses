@@ -4,8 +4,7 @@ class FilterByText {
     constructor (courses = [], text = "") {
         const keywords = this.keywords(text);
         const matchingCourses = this.matchingCourses(courses, keywords);
-        const relevance = this.setRelevance(matchingCourses, keywords);
-        this.sortedByRelevance = this.sortByRelevance(relevance);
+        this.visibleCourses = this.setRelevance(matchingCourses, keywords);
     }
 
     keywords (text) {
@@ -72,10 +71,6 @@ class FilterByText {
         });
 
         return matchedWords.length > 1 ? [matchedWords.length] : [0];
-    }
-
-    sortByRelevance (course) {
-        return course.sort((a, b) => b.numberOfKeywordsMatched - a.numberOfKeywordsMatched);
     }
 };
 

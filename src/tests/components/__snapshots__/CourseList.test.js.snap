@@ -11,6 +11,7 @@ exports[`should render the CourseList correctly 1`] = `
       Object {
         "duration": "2",
         "id": "1",
+        "numberOfKeywordsMatched": 2,
         "platform": "udacity",
         "price": "300",
         "summary": "some summary",
@@ -25,6 +26,7 @@ exports[`should render the CourseList correctly 1`] = `
       Object {
         "duration": "2",
         "id": "2",
+        "numberOfKeywordsMatched": 3,
         "platform": "udemy",
         "price": "50",
         "summary": "some summary",
@@ -39,6 +41,7 @@ exports[`should render the CourseList correctly 1`] = `
       Object {
         "duration": "2",
         "id": "3",
+        "numberOfKeywordsMatched": 2,
         "platform": "khan academy",
         "price": "100",
         "summary": "some summary",

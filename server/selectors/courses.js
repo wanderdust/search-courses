@@ -19,7 +19,7 @@ const getVisibleCourses = (text) => {
         })
         .then((courses) => {
             const filterByText = new FilterByText(courses, text);
-            const visibleCourses = filterByText.sortedByRelevance;
+            const visibleCourses = filterByText.visibleCourses;
 
             return visibleCourses;
         })

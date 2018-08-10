@@ -1,7 +1,8 @@
 const filtersDefaultState = {
     searchQuery: "",
     currentPage: 1,
-    currentCategory: ""
+    currentCategory: "",
+    sortBy: "relevance"
 };
 
 const filtersReducer = (state = filtersDefaultState, action) => {
@@ -21,6 +22,21 @@ const filtersReducer = (state = filtersDefaultState, action) => {
                 ...state,
                 currentCategory: action.currentCategory
             };
+        case "SORT_BY_RELEVANCE":
+            return {
+                ...state,
+                sortBy: "relevance"
+            }
+        case "SORT_BY_CHEAPEST":
+            return {
+                ...state,
+                sortBy: "cheapest_first"
+            }
+        case "SORT_BY_EXPENSIVE":
+            return {
+                ...state,
+                sortBy: "expensive_first"
+            }
         default: 
             return state;
     }

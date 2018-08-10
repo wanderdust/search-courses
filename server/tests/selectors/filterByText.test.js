@@ -7,17 +7,6 @@ beforeEach(() => {
     filterByText = new FilterByText(courses, "angular");
 });
 
-test("should filter by text and sort by keywords matched", () => {
-    
-    const sortedByRelevance = filterByText.sortedByRelevance;
-
-    expect(sortedByRelevance).toEqual([
-        courses[0],
-        courses[2]
-    ]);
-});
-
-
 test("should split the keywords individually", () => {
     const text = "World history";
 
@@ -74,20 +63,6 @@ test("should return how relevant the course is depending on the keword matches i
     expect(setRelevance[0].numberOfKeywordsMatched).toBe(7);
 });
 
-test("should sort the result by the amount of keyowords matched", () => {
-    const testCourses = [
-        {numberOfKeywordsMatched: 1},
-        {numberOfKeywordsMatched: 15},
-        {numberOfKeywordsMatched: 9}
-    ];
-    const sortedByRelevance = filterByText.sortByRelevance(testCourses);
-
-    expect(sortedByRelevance).toEqual([
-        {numberOfKeywordsMatched: 15},
-        {numberOfKeywordsMatched: 9},
-        {numberOfKeywordsMatched: 1}
-    ])
-});
 
 test("should add more relevance to courses that match 2 or more keywords", () => {
     const oneMatch = [2, 0];

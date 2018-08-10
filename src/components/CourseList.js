@@ -6,6 +6,7 @@ import React from "react";
 import { connect } from "react-redux";
 import CourseListItem from "./CourseListItem";
 import currentPageCourses from "../selectors/currentPageCourses";
+import sortBy from "../selectors/sortBy";
 
 export const CourseList = ({ currentPageCourses, courses }) => {
     return (
@@ -18,10 +19,14 @@ export const CourseList = ({ currentPageCourses, courses }) => {
     );
 };
 
-const mapStateToProps = (state) => ({
-    currentPageCourses: currentPageCourses(state.courses, state.filters.currentPage),
-    courses: state.courses
-});
+const mapStateToProps = (state) => {
+    const sortedCourses = sortBy(state.courses, state.filters.sortBy);
+
+    return {
+        currentPageCourses: currentPageCourses(sortedCourses, state.filters.currentPage),
+        courses: sortedCourses
+   }
+};
 
 export default connect(mapStateToProps)(CourseList);
 

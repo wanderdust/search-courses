@@ -8,7 +8,7 @@ import CourseList from "./CourseList";
 import CourseSearchHeader from "./CourseSearchHeader";
 import CategoriesHeader from "./CategoriesHeader";
 import PagesLinks from "./PagesLinks";
-import { CourseListFilters } from "./CourseListFilters";
+import CourseListFilters from "./CourseListFilters";
 import { topics } from "../utils/categories";
 
 export const SearchResultsPage = (props) => {

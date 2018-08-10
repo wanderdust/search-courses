@@ -2,11 +2,24 @@
 
 exports[`should render CourseListFilters correctly 1`] = `
 <div>
-  <select>
+  <select
+    onChange={[Function]}
+    value="relevance"
+  >
     <option
       value="relevance"
     >
       Relevance
+    </option>
+    <option
+      value="cheapest_first"
+    >
+      Cheapest first
+    </option>
+    <option
+      value="expensive_first"
+    >
+      Most expensive first
     </option>
   </select>
 </div>

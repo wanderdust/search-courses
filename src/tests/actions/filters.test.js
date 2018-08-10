@@ -1,6 +1,13 @@
 import configureMockStore from "redux-mock-store";
 import thunk from "redux-thunk";
-import { setSearchQuery, setCurrentPage, setCurrentCategory } from "../../actions/filters";
+import { 
+    setSearchQuery,
+    setCurrentPage,
+    setCurrentCategory,
+    sortByCheapest,
+    sortByExpensive,
+    sortByRelevance
+} from "../../actions/filters";
 
 const createMockStore = configureMockStore([thunk]);
 
@@ -25,5 +32,23 @@ test("should create the correct setCurrentPage action", () => {
     expect(setCurrentPage(currentPage)).toEqual({
         type:"SET_CURRENT_PAGE",
         currentPage
+    });
+});
+
+test("should create the correct sortByRelevance action", () => {
+    expect(sortByRelevance()).toEqual({
+        type:"SORT_BY_RELEVANCE"
+    });
+});
+
+test("should create the correct sortByCheapest action", () => {
+    expect(sortByCheapest()).toEqual({
+        type:"SORT_BY_CHEAPEST"
+    });
+});
+
+test("should create the correct sortByExpensive action", () => {
+    expect(sortByExpensive()).toEqual({
+        type:"SORT_BY_EXPENSIVE"
     });
 });
