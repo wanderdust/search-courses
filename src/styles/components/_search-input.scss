@@ -1,0 +1,9 @@
+.search-wrapper {
+    flex: 1;
+}
+
+.search-wrapper__form {
+    display: flex;
+    margin: 0 $s-size;
+    width: 100%;
+}

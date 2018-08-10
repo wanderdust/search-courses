@@ -1,5 +1,11 @@
 .content-container {
+    margin: 0 $m-size;
+    margin: 0 auto;
+    max-width: 90rem;
+}
+
+.content-container--main{
+    margin: 0 $m-size;
     margin: 0 auto;
     padding: 0 $m-size;
-    max-width: 80rem;
 }

@@ -7,7 +7,7 @@ import CourseSearchMain from "./CourseSearchMain";
 
 export const MainPage = (props) => {
     return (
-        <div>
+        <div className="content-container">
             <CourseSearchMain {...props} />
         </div>
     );

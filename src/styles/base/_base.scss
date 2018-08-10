@@ -18,6 +18,10 @@ button {
     cursor: pointer;
 }
 
+p {
+    margin: $s-size 0;
+}
+
 button:disabled {
     cursor: default
 }

@@ -1,0 +1,22 @@
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.icon-small {
+    margin: $xs-size;
+    height: 2.4rem;
+    width: auto;
+}
+
+.icon-medium {
+    margin: $xs-size;
+    height: 3.6rem;
+    width: auto;
+}
+
+.icon-large {
+    margin: $xs-size;
+    height: 4.8rem;
+    width: auto;
+}

@@ -13,7 +13,7 @@ import { topics } from "../utils/categories";
 
 export const SearchResultsPage = (props) => {
     return (
-        <div> 
+        <div className="content-container content-container--main"> 
             {!!props.category && <CategoriesHeader category={props.category}/>}
             {props.coursesLength > 0 && <CourseListFilters />}
             <CourseList />

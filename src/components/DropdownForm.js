@@ -20,7 +20,7 @@ export class DropdownForm extends React.Component {
     
     render () {
         return (
-            <div className="dropdown__container">
+            <div className="header-element">
                 <DropdownMenu 
                     align="left"
                     animate={false}
@@ -28,7 +28,12 @@ export class DropdownForm extends React.Component {
                     enterTimeout={0}
                     isOpen={this.state.isMenuOpen}
                     leaveTimeout={0}
-                    toggle={<button type="button" onClick={this.handleToggle}>Categories</button>}
+                    toggle={
+                        <div className="icon-container" onClick={this.handleToggle}>
+                            <img className="icon-small" src="../../images/categories_icon.svg"></img>
+                            <p>Categories</p>
+                        </div>
+                    }
                 >
                     {this.props.categories.map((category) => {
                         return (

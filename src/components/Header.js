@@ -15,7 +15,7 @@ const Header = (props) => {
         <header className="header">
             <div className="content-container">
                 <div className="header__content">
-                    <Link className="header__title" to="/">
+                    <Link className="header__title header-element" to="/">
                         <h1>CourseSearch</h1>
                     </Link>
                     <DropdownForm {...props} categories={categories} dropdownTitle="categories"/>

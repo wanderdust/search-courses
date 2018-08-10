@@ -20,9 +20,7 @@ export class CourseSearchHeader extends React.Component {
     };
     render () {
         return (
-            <div>
-                <CourseSearchForm onSubmit={this.onSubmit} />
-            </div>
+            <CourseSearchForm onSubmit={this.onSubmit} />
         );
     }
 }

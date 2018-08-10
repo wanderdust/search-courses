@@ -1,11 +1,11 @@
 .header {
-    background: $off-white;
+    background: #fff;
+    box-shadow: $bottom-shadow;
 }
 
 .header__content {
     align-items: center;
     display: flex;
-    justify-content: space-between;
     padding: $s-size 0;
 }
 

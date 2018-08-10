@@ -25,17 +25,22 @@ export class CourseSearchForm extends React.Component {
     };
     render () {
         return (
-            <form onSubmit={this.handleOnSubmit}>
-                <input
-                    value={this.props.searchQuery}
-                    type="text"
-                    autoFocus
-                    placeholder="What are you looking for?"
-                    onChange={this.onTextChange}
-                >
-                </input>
-                <button type="submit">Search</button>
-            </form>
+            <div className="search-wrapper header-element">
+                <form className="search-wrapper__form" onSubmit={this.handleOnSubmit}>
+                    <input
+                        className="text-input"
+                        value={this.props.searchQuery}
+                        type="text"
+                        autoFocus
+                        placeholder="What are you looking for?"
+                        onChange={this.onTextChange}
+                    >
+                    </input>
+                    <button className="button button--search" type="submit">
+                        <i className="material-icons">search</i>
+                    </button>
+                </form>
+            </div>
         );
     }
 }
