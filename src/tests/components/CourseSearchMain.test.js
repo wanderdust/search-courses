@@ -3,13 +3,15 @@ import { shallow } from "enzyme";
 import { CourseSearchMain } from "../../components/CourseSearchMain";
 import { setSearchQuery } from "../../actions/filters";
 
-let wrapper, startSetCourses, history;
+let wrapper, startSetCourses, history, currentPage;
 
 beforeEach(() => {
+    currentPage = 7;
     startSetCourses = jest.fn();
     history = { push: jest.fn() };
     wrapper = shallow(
         <CourseSearchMain
+            currentPage={currentPage}
             setSearchQuery={setSearchQuery}
             startSetCourses={startSetCourses}
             history={history}
@@ -26,5 +28,5 @@ test("should handle onSubmit correctly", () => {
 
     wrapper.find("Connect(CourseSearchForm)").prop("onSubmit")(text);
     expect(startSetCourses).toHaveBeenCalledWith(text);
-    expect(history.push).toHaveBeenCalledWith("/search");
+    expect(history.push).toHaveBeenCalledWith(`/search/query/${currentPage}`);
 });

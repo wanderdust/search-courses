@@ -3,37 +3,28 @@
 */
 
 import React from "react";
+import { NavLink } from 'react-router-dom'
 import { connect } from "react-redux";
-import { setCurrentPage } from "../actions/filters";
 import getVisiblePagesLinks from "../selectors/pagesLinks";
+import PageLink from "./PageLink";
 
-export class PagesLinks extends React.Component {
-    handleOnClick = (e) => {
-        const currentPage = parseInt(e.target.innerHTML, 10);
-        this.props.setCurrentPage(currentPage);
-    };
-
-    render () {
-        return (
-            <div>
-                {this.props.pagesLinks.map((pageLink) => (
-                    <div key={pageLink} onClick={(this.handleOnClick)}>{pageLink}</div>
-                ))}
-            </div>
-        )
-    }
+export const PagesLinks = (props) => {
+    return (
+        <ul className="links-wrapper pages-links">
+            {props.pagesLinks.map((pageLink) => (
+                <li key={pageLink}>
+                    <PageLink pageNumber={pageLink}/>
+                </li>
+            ))}
+        </ul>
+    )
 };
 
 const mapStateToProps = (state) => ({
     pagesLinks: getVisiblePagesLinks(state.courses)
 });
 
-const mapDispatchToProps = (dispatch) => ({
-    setCurrentPage: (page) => dispatch(setCurrentPage(page))
-});
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(PagesLinks);
+export default connect(mapStateToProps)(PagesLinks);
 
 
 

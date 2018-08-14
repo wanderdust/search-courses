@@ -6,6 +6,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { startSetCourses } from "../actions/courses";
+import { currentPage } from "../actions/filters";
 import CourseSearchForm from "./CourseSearchForm";
 
 export class CourseSearchHeader extends React.Component {
@@ -15,7 +16,7 @@ export class CourseSearchHeader extends React.Component {
         this.props.startSetCourses(textFilter);
         
         if (history.location.pathname !== "/search") {
-            history.push("/search");
+            history.push(`/search/query/${this.props.currentPage}`);
         }
     };
     render () {
@@ -25,8 +26,12 @@ export class CourseSearchHeader extends React.Component {
     }
 }
 
+const mapStateToProps = (state) => ({
+    currentPage: state.filters.currentPage
+});
+
 const mapDispatchToProps = (dispatch) => ({
     startSetCourses: (textFilter) => dispatch(startSetCourses(textFilter))
 });
 
-export default connect(undefined, mapDispatchToProps)(CourseSearchHeader);
+export default connect(mapStateToProps, mapDispatchToProps)(CourseSearchHeader);

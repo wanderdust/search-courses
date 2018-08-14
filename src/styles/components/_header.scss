@@ -16,3 +16,10 @@
         margin: 0;
     }
 }
+
+.header-element {
+    display: flex;
+    padding: $m-size;
+    max-height: 10rem;
+    cursor: pointer;
+}

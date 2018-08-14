@@ -1,0 +1,21 @@
+.links-wrapper {
+    display: flex;
+}
+
+.pages-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.page-link {
+    margin: 1px;
+    padding: $s-size;
+    color: black;
+    border: 1px solid #dedfe0
+}
+
+.page-link--active, 
+.page-link:hover {
+    color: white;
+    background: $blue;
+}

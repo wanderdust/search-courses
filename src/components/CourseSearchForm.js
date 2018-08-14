@@ -20,7 +20,7 @@ export class CourseSearchForm extends React.Component {
             this.props.onSubmit(textFilter);
             this.props.setSearchQuery(textFilter);
             this.props.setCurrentPage();
-            this.props.setCurrentCategory();
+            this.props.setCurrentCategory("query");
         }
     };
     render () {
