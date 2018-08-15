@@ -1,12 +1,18 @@
 .content-container {
-    margin: 0 $m-size;
     margin: 0 auto;
 }
 
 .content-container--header {
-    max-width: 90rem;
+    margin: 0 $xs-size;
 }
 
 .content-container--main{
     padding: 0 $xl-size;
+}
+
+//Desktop
+@media (min-width: $desktop-breakpoint) {
+    .content-container--header {
+        margin: 0 auto;
+    }
 }

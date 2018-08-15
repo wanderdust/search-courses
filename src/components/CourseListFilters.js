@@ -21,6 +21,7 @@ export class CourseListFilters extends React.Component {
         return (
             <div>
                 <select
+                    className="select"
                     value={this.props.filters.sortBy}
                     onChange={this.onSortChange}
                 >

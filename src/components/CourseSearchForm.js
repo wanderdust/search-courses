@@ -12,21 +12,25 @@ export class CourseSearchForm extends React.Component {
 
         this.props.setSearchQuery(textFilter);
     };
+
     handleOnSubmit = (e) => {
         e.preventDefault();
         const textFilter = this.props.searchQuery;
-
+        
         if (textFilter.trim()) {
             this.props.onSubmit(textFilter);
             this.props.setSearchQuery(textFilter);
             this.props.setCurrentPage();
             this.props.setCurrentCategory("query");
         }
+
+        if (this.props.handleClose) {
+            this.props.handleClose();
+        }
     };
     render () {
         return (
-            <div className="search-wrapper header-element">
-                <form className="search-wrapper__form" onSubmit={this.handleOnSubmit}>
+                <form className={`search-wrapper__form ${this.props.formClass}`} onSubmit={this.handleOnSubmit}>
                     <input
                         className="text-input"
                         value={this.props.searchQuery}
@@ -40,7 +44,6 @@ export class CourseSearchForm extends React.Component {
                         <i className="material-icons">search</i>
                     </button>
                 </form>
-            </div>
         );
     }
 }

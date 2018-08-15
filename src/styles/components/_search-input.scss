@@ -1,9 +1,20 @@
-.search-wrapper {
-    flex: 1;
-}
-
 .search-wrapper__form {
     display: flex;
-    margin: 0 $s-size;
     width: 100%;
+}
+
+.search-header-mobile {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+//Desktop
+@media (min-width: $desktop-breakpoint) {
+    .search-header-mobile {
+        position: relative;
+        display: flex;
+    }
+    
 }

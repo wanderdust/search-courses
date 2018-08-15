@@ -1,31 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render CourseSearchForm correctly 1`] = `
-<div
-  className="search-wrapper header-element"
+<form
+  className="search-wrapper__form undefined"
+  onSubmit={[Function]}
 >
-  <form
-    className="search-wrapper__form"
-    onSubmit={[Function]}
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="What are you looking for?"
+    type="text"
+    value="Hello world"
+  />
+  <button
+    className="button button--search"
+    type="submit"
   >
-    <input
-      autoFocus={true}
-      className="text-input"
-      onChange={[Function]}
-      placeholder="What are you looking for?"
-      type="text"
-      value="Hello world"
-    />
-    <button
-      className="button button--search"
-      type="submit"
+    <i
+      className="material-icons"
     >
-      <i
-        className="material-icons"
-      >
-        search
-      </i>
-    </button>
-  </form>
-</div>
+      search
+    </i>
+  </button>
+</form>
 `;

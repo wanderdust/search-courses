@@ -3,6 +3,7 @@
 exports[`should render CourseListFilters correctly 1`] = `
 <div>
   <select
+    className="select"
     onChange={[Function]}
     value="relevance"
   >

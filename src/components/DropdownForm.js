@@ -31,7 +31,7 @@ export class DropdownForm extends React.Component {
                     toggle={
                         <div className="icon-container" onClick={this.handleToggle}>
                             <img className="icon-small" src="../../images/categories_icon.svg"></img>
-                            <p>Categories</p>
+                            <p className="icon-container__text show-for-desktop">Categories</p>
                         </div>
                     }
                 >

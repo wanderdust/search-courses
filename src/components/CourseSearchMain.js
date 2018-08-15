@@ -19,8 +19,11 @@ export class CourseSearchMain extends React.Component {
     };
     render () {
         return (
-            <div>
-                <CourseSearchForm onSubmit={this.onSubmit} />
+            <div className="search-wrapper search-main">
+                <h1 className="search-main__header">Find all the online courses from every website</h1>
+                <div className="search-main__input">
+                    <CourseSearchForm onSubmit={this.onSubmit} formClass=""/>
+                </div>
             </div>
         );
     }

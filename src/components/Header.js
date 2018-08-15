@@ -15,11 +15,11 @@ const Header = (props) => {
         <header className="header">
             <div className="content-container content-container--header">
                 <div className="header__content">
+                    <DropdownForm {...props} categories={categories} dropdownTitle="categories"/>
                     <Link className="header__title header-element" to="/">
                         <h1>CourseSearch</h1>
                     </Link>
                     <CourseSearchHeader {...props}/>
-                    <DropdownForm {...props} categories={categories} dropdownTitle="categories"/>
                 </div>
             </div>
         </header>

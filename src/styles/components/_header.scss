@@ -1,12 +1,14 @@
 .header {
     background: #fff;
     box-shadow: $bottom-shadow;
+    position: relative;
 }
 
 .header__content {
     align-items: center;
     display: flex;
     padding: $s-size 0;
+    justify-content: space-between;
 }
 
 .header__title {
@@ -19,7 +21,18 @@
 
 .header-element {
     display: flex;
-    padding: $m-size;
+    padding: $xs-size;
     max-height: 10rem;
     cursor: pointer;
+}
+
+//Desktop
+@media (min-width: $desktop-breakpoint) {
+    .header__content {
+        padding: $s-size 7rem;
+    }
+
+    .header-element {
+        padding: $m-size;
+    }
 }

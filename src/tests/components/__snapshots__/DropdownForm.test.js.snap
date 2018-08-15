@@ -28,7 +28,9 @@ exports[`should render DropDownForm correctly 1`] = `
           className="icon-small"
           src="../../images/categories_icon.svg"
         />
-        <p>
+        <p
+          className="icon-container__text show-for-desktop"
+        >
           Categories
         </p>
       </div>

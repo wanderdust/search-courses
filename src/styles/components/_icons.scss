@@ -3,6 +3,10 @@
     align-items: center;
 }
 
+.icon-container__text {
+    font-size: $font-size-medium;
+}
+
 .icon-small {
     margin: $xs-size;
     height: 2.4rem;

@@ -2,7 +2,7 @@
     border: 1px solid #dedfe0;
     font-size: $font-size-medium;
     font-weight: 300;
-    height: 46px;
+    height: 50px;
     padding: $s-size;
     flex-grow: 1;
 }
@@ -15,4 +15,11 @@
 .textarea {
     @extend .text-input;
     height: 10rem;
+}
+
+//Desktop
+@media (min-width: $desktop-breakpoint) {
+    .text-input {
+        min-width:  20rem;
+    }
 }

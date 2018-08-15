@@ -1,0 +1,47 @@
+.main-page {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.search-main {
+    align-items: center;
+    background: rgb(177, 175, 175);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 90rem;
+    padding: $m-size;
+}
+
+.search-main__header {
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.search-main__input {
+    width: 100%;
+    display: flex;
+    max-width: 80rem;
+    padding: $s-size;
+}
+
+//Desktop
+@media (min-width: $desktop-breakpoint) {
+    .main-page {
+        display: block;
+        margin: 10vh 0 0 0;
+    }
+
+    .search-main {
+        min-width: 60rem;
+        padding: $xl-size;
+    }
+
+    .search-main__header {
+        font-size: 4.5rem;
+    }
+}

@@ -3,7 +3,7 @@
 exports[`should render CategoriesHeader correctly 1`] = `
 <div>
   <div>
-    Showing categories for: 
+    Showing results for: 
     Programming
   </div>
 </div>
