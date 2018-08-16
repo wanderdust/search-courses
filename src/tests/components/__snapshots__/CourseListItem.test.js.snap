@@ -1,23 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render the CourseListItem correctly 1`] = `
-<div>
-  <h3>
-    Learn react
-  </h3>
-  <p />
-  <p>
-    price: 
-    300
-  </p>
-  <p>
-    udacity
-  </p>
+<div
+  className="course-card-wrapper"
+>
   <a
     href="some_url"
     target="_blank"
   >
-    url_to_course
+    <div
+      className="course-card__img-container"
+    >
+      <img />
+    </div>
+    <div
+      className="course-card__content"
+    >
+      <h4>
+        Learn react
+      </h4>
+      <p
+        className="show-for-desktop"
+      />
+      <div
+        className="course-card__content__footer"
+      >
+        <div
+          className="course-card__content__footer__price-container"
+        >
+          <p>
+            300
+          </p>
+        </div>
+        <div
+          className="icon-container partner-logo-container"
+        >
+          <img
+            src="/../../images/undefined"
+          />
+        </div>
+      </div>
+    </div>
   </a>
 </div>
 `;

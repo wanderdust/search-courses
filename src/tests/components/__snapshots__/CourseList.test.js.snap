@@ -6,50 +6,54 @@ exports[`should render the CourseList correctly 1`] = `
     3
      courses found
   </h4>
-  <CourseListItem
-    course={
-      Object {
-        "duration": "2",
-        "id": "1",
-        "numberOfKeywordsMatched": 2,
-        "platform": "udacity",
-        "price": "300",
-        "summary": "some summary",
-        "title": "Learn react",
-        "urlToCourse": "some_url",
+  <div
+    className="course-list"
+  >
+    <CourseListItem
+      course={
+        Object {
+          "duration": "2",
+          "id": "1",
+          "numberOfKeywordsMatched": 2,
+          "platform": "udacity",
+          "price": "300",
+          "summary": "some summary",
+          "title": "Learn react",
+          "urlToCourse": "some_url",
+        }
       }
-    }
-    key="1"
-  />
-  <CourseListItem
-    course={
-      Object {
-        "duration": "2",
-        "id": "2",
-        "numberOfKeywordsMatched": 3,
-        "platform": "udemy",
-        "price": "50",
-        "summary": "some summary",
-        "title": "Advanced Java",
-        "urlToCourse": "some_url",
+      key="1"
+    />
+    <CourseListItem
+      course={
+        Object {
+          "duration": "2",
+          "id": "2",
+          "numberOfKeywordsMatched": 3,
+          "platform": "udemy",
+          "price": "50",
+          "summary": "some summary",
+          "title": "Advanced Java",
+          "urlToCourse": "some_url",
+        }
       }
-    }
-    key="2"
-  />
-  <CourseListItem
-    course={
-      Object {
-        "duration": "2",
-        "id": "3",
-        "numberOfKeywordsMatched": 2,
-        "platform": "khan academy",
-        "price": "100",
-        "summary": "some summary",
-        "title": "Angular.js",
-        "urlToCourse": "some_url",
+      key="2"
+    />
+    <CourseListItem
+      course={
+        Object {
+          "duration": "2",
+          "id": "3",
+          "numberOfKeywordsMatched": 2,
+          "platform": "khan academy",
+          "price": "100",
+          "summary": "some summary",
+          "title": "Angular.js",
+          "urlToCourse": "some_url",
+        }
       }
-    }
-    key="3"
-  />
+      key="3"
+    />
+  </div>
 </div>
 `;

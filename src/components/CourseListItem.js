@@ -6,12 +6,31 @@ import React from "react";
 
 const CourseListItem = ({course}) => {
     return (
-        <div>
-            <h3>{course.title}</h3>
-            <p>{course.description}</p>
-            <p>price: {course.price === 0 ? "free" : course.price}</p>
-            <p>{course.platform}</p>
-            <a target="_blank" href={course.urlToCourse}>url_to_course</a>
+        <div className="course-card-wrapper">
+
+            <a target="_blank" href={course.urlToCourse}>
+
+                <div className="course-card__img-container">
+                    <img />
+                </div>
+
+                <div className="course-card__content">
+                    <h4>{course.title}</h4>
+                    <p className="show-for-desktop">{course.description}</p>
+
+                    <div className="course-card__content__footer">
+                        <div className="course-card__content__footer__price-container">
+                            <p>{course.price === 0 ? "Free" : course.price}</p>
+                        </div>
+
+                        <div className="icon-container partner-logo-container">
+                            <img src={`/../../images/${course.logo}`} />
+                        </div>
+                    </div>
+                </div>
+
+            </a>
+
         </div>
     );
 };

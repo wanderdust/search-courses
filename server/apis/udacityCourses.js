@@ -13,7 +13,8 @@ const getUdacityCourses = (testUrl) => {
                 price: 0,
                 duration: "",
                 urlToCourse: course.homepage,
-                platform: "Udacity"
+                platform: "Udacity",
+                logo: "udacity-logo.png"
             }));
         })
         .catch((e) => {

@@ -12,9 +12,11 @@ export const CourseList = ({ currentPageCourses, courses }) => {
     return (
         <div>
             <h4>{courses.length} courses found</h4>
-            {currentPageCourses.map((course) =>(
-                <CourseListItem key={course.id} course={course}/>
-            ))}
+            <div className="course-list">
+                {currentPageCourses.map((course) =>(
+                    <CourseListItem key={course.id} course={course}/>
+                ))}
+            </div>
         </div>
     );
 };

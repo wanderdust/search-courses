@@ -22,7 +22,8 @@ const getKhanAcademyCourses = (testUrl) => {
                     price: 0,
                     duration: "",
                     urlToCourse: course.ka_url,
-                    platform: "Khan Academy"
+                    platform: "Khan Academy",
+                    logo: "khan-academy-logo.png"
                 }
             });
         })
