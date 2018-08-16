@@ -1,8 +1,12 @@
-.links-wrapper {
+.pagination-wrapper {
     display: flex;
+    padding: $m-size;
 }
 
-.pages-links {
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     list-style-type: none;
     padding: 0;
 }

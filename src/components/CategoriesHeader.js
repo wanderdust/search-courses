@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 
 export const CategoriesHeader = (props) => {
     return (
-        <div>
-            <div>Showing results for: {props.category}</div>
+        <div className="search_results_page__categories">
+            <div>Category: <span>{props.category}</span></div>
         </div>
     );
 };

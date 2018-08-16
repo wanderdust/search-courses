@@ -5,7 +5,7 @@ export const categories = [
         id: uid(),
         name: "Programming",
         purpose: "programming",
-        tags: "programming java javascript python computing web developer developer development frontend backend app e-business videogames node.js",
+        tags: "programming java javascript python computing web developer developer dev frontend backend app e-business videogames node.js node",
         subTopics: [
             {
                 id: uid(),
@@ -50,7 +50,7 @@ export const categories = [
         id: uid(),
         name: "Business",
         purpose: "business",
-        tags: "sales finances accounting business law b2b b2c",
+        tags: "sales finances accounting business law b2b b2c enterpreneur enterpreneurship",
         subTopics: [
             {
                 id: uid(),
@@ -77,7 +77,7 @@ export const categories = [
         id: uid(),
         name: "Marketing",
         purpose: "marketing",
-        tags: "marketing advertising relations"
+        tags: "marketing advertising relations publicity ads"
     },
     {
         id: uid(),
@@ -101,6 +101,6 @@ export const categories = [
         id: uid(),
         name: "Languages",
         purpose: "languages",
-        tags: "english spanish german arabic japanese portuguese chinese russian latin hebrew italian"
+        tags: "spanish german arabic japanese portuguese chinese russian latin hebrew italian"
     }
 ];

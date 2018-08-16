@@ -10,13 +10,15 @@ import PageLink from "./PageLink";
 
 export const PagesLinks = (props) => {
     return (
-        <ul className="links-wrapper pages-links">
-            {props.pagesLinks.map((pageLink) => (
-                <li key={pageLink}>
-                    <PageLink pageNumber={pageLink}/>
-                </li>
-            ))}
-        </ul>
+        <div className="pagination-wrapper">
+            <ul className="pagination">
+                {props.pagesLinks.map((pageLink) => (
+                    <li key={pageLink}>
+                        <PageLink pageNumber={pageLink}/>
+                    </li>
+                ))}
+            </ul>
+        </div>
     )
 };
 

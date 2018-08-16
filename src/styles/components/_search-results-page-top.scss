@@ -1,0 +1,20 @@
+.search-results-page__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $s-size;
+    border-bottom: lighten(gray, 40%) 1px solid;
+
+    @media (min-width: $desktop-breakpoint) {
+        flex-direction: row;
+        padding: $l-size $l-size $s-size $l-size;
+    }
+}
+
+.search_results_page__categories {
+    font-size: $font-size-large;
+
+    span {
+        font-weight: bold;
+    }
+}

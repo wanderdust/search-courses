@@ -8,25 +8,29 @@ import CourseListItem from "./CourseListItem";
 import currentPageCourses from "../selectors/currentPageCourses";
 import sortBy from "../selectors/sortBy";
 
-export const CourseList = ({ currentPageCourses, courses }) => {
-    return (
-        <div>
-            <h4>{courses.length} courses found</h4>
-            <div className="course-list">
-                {currentPageCourses.map((course) =>(
-                    <CourseListItem key={course.id} course={course}/>
-                ))}
+export class CourseList extends React.Component {
+    componentDidUpdate() {
+        window.scrollTo(0, 0)
+    }
+    
+    render () {
+        return (
+            <div>
+                <div className="course-list">
+                    {this.props.currentPageCourses.map((course) =>(
+                        <CourseListItem key={course.id} course={course}/>
+                    ))}
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
 };
 
 const mapStateToProps = (state) => {
     const sortedCourses = sortBy(state.courses, state.filters.sortBy);
 
     return {
-        currentPageCourses: currentPageCourses(sortedCourses, state.filters.currentPage),
-        courses: sortedCourses
+        currentPageCourses: currentPageCourses(sortedCourses, state.filters.currentPage)
    }
 };
 
