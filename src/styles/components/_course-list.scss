@@ -5,14 +5,14 @@
 }
 
 .course-card-wrapper {
-    margin-top: $m-size;
+    margin-top: $l-size;
 
     //Option A
-    border-radius: 1rem;
-    box-shadow: $full-shadow;
+    // border-radius: 1rem;
+    // box-shadow: $full-shadow;
     
     // Option B
-    // border-bottom: lighten($gray, 40%) 1px solid;
+    border-bottom: lighten($gray, 40%) 1px solid;
 }
 
 .course-card-wrapper > a {

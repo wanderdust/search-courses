@@ -21,6 +21,7 @@ const CourseListItem = ({course}) => {
                     <div className="course-card__content__footer">
                         <div className="course-card__content__footer__price-container">
                             <p>{course.price === 0 ? "Free" : course.price}</p>
+                            <p>{course.duration }</p>
                         </div>
 
                         <div className="icon-container partner-logo-container">

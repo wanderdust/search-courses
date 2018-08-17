@@ -17,12 +17,14 @@ export const PagesLinks = (props) => {
                         <PageLink pageNumber={pageLink}/>
                     </li>
                 ))}
+
             </ul>
         </div>
     )
 };
 
 const mapStateToProps = (state) => ({
+    currentPage: state.filters.currentPage,
     pagesLinks: getVisiblePagesLinks(state.courses)
 });
 
