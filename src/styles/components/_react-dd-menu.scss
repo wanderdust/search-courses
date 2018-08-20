@@ -304,12 +304,12 @@
   .dd-menu .dd-menu-items ul li > *:focus, .dd-menu .dd-menu-items ol li:hover:not([role="separator"]):not(.separator),
   .dd-menu .dd-menu-items ol li > *:focus {
     color: #000;
-    background-color: #bdc3c7;
+    background-color: $off-white;
     outline: none;
   }
   /* line 55, ../src/scss/_dd-menu.scss */
   .dd-menu .dd-menu-items ul li > *:not(.dd-item-ignore), .dd-menu .dd-menu-items ol li > *:not(.dd-item-ignore) {
-    display: block;
+    display: flex;
     width: auto;
     min-width: 100%;
     padding: $xs-size $s-size;

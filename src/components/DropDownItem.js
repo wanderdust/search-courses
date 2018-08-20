@@ -16,7 +16,14 @@ export class DropDownItem extends React.Component {
 
     render () {
         return (
-            <div className="category-item" onClick={this.handleOnClick}>{this.props.name}</div>
+            <div className="category-item" onClick={this.handleOnClick}>
+                { !!this.props.icon && 
+                    <div className="icon-container">
+                        <img className="icon-small" src={`../../images/icons/${this.props.icon}.svg`}></img>
+                    </div>
+                }
+                <p>{this.props.name}</p>
+            </div>
         )
     }
 };

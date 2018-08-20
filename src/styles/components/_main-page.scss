@@ -4,11 +4,11 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    background: $off-white;
 }
 
 .search-main {
     align-items: center;
-    background: rgb(177, 175, 175);
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -23,17 +23,28 @@
 }
 
 .search-main__input {
+    height: 9rem;
     width: 100%;
     display: flex;
-    max-width: 80rem;
+    max-width: 75rem;
     padding: $s-size;
+}
+
+.search-main__input .icon {
+    margin: $xs-size;
+    height: 3.6rem;
+    width: auto;
+}
+
+.search-main__input .button {
+    background: white;
 }
 
 //Desktop
 @media (min-width: $desktop-breakpoint) {
     .main-page {
         display: block;
-        margin: 10vh 0 0 0;
+        padding: 10vh 0 0 0;
     }
 
     .search-main {

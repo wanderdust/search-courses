@@ -46,7 +46,7 @@ export class CourseSearchHeader extends React.Component {
                     <CourseSearchForm onSubmit={this.onSubmit} formClass=""/>
                 </div>
 
-                <div className="show-for-mobile" onKeyUp={this.handleOnKeyUp}>
+                <div className="show-for-mobile search-mobile" onKeyUp={this.handleOnKeyUp}>
                     { this.state.isSearchOpen && 
                         <CourseSearchForm 
                             onSubmit={this.onSubmit} 

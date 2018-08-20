@@ -7,12 +7,18 @@ class FilterByText {
         this.visibleCourses = this.setRelevance(matchingCourses, keywords);
     }
 
+    escapeRegExp(text) {
+        return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+      }
+
     keywords (text) {
         return text.split(" ").filter((keyword) => {
             const lowerCaseKeyword = keyword.toLowerCase();
             const isPreposition = (keyword, prepositions) => prepositions.includes(keyword);
 
             return keyword.length > 0 && !isPreposition(lowerCaseKeyword, englishPrepositions);
+        }).map((keyword) => {
+            return this.escapeRegExp(keyword);
         });
     }
 

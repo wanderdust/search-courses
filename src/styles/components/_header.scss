@@ -1,5 +1,5 @@
 .header {
-    background: #fff;
+    background: linear-gradient(to right, #1a9767, #29a8c4);
     box-shadow: $bottom-shadow;
     position: relative;
 }
@@ -12,18 +12,28 @@
 }
 
 .header__title {
-    color: $dark-gray;
+    color: white;
     text-decoration: none;
     h1 {
+        font-size: 3rem;
         margin: 0;
     }
 }
 
 .header-element {
     display: flex;
+    justify-content: center;
     padding: $xs-size;
     max-height: 10rem;
     cursor: pointer;
+}
+
+.header-element--categories {
+    color: white;
+
+    p {
+        font-size: $font-size-medium;
+    }
 }
 
 //Desktop
@@ -34,5 +44,9 @@
 
     .header-element {
         padding: $m-size;
+    }
+
+    .header__title > h1 {
+        font-size: 4rem;
     }
 }

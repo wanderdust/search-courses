@@ -10,12 +10,12 @@
    width="24"
    height="24"
    viewBox="0 0 24 24"
-   id="svg4794"
+   id="svg4790"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="categories_icon.svg">
+   sodipodi:docname="academic-icon.svg">
   <metadata
-     id="metadata4804">
+     id="metadata4800">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -26,7 +26,7 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs4802" />
+     id="defs4798" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -38,7 +38,7 @@
      inkscape:pageshadow="2"
      inkscape:window-width="1855"
      inkscape:window-height="1056"
-     id="namedview4800"
+     id="namedview4796"
      showgrid="false"
      inkscape:zoom="38.291667"
      inkscape:cx="12"
@@ -46,13 +46,13 @@
      inkscape:window-x="65"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg4794" />
-  <path
-     d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"
-     id="path4796"
-     style="fill:#ffffff" />
+     inkscape:current-layer="svg4790" />
   <path
      d="M0 0h24v24H0z"
      fill="none"
-     id="path4798" />
+     id="path4792" />
+  <path
+     d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"
+     id="path4794"
+     style="fill:#1a9767;fill-opacity:1" />
 </svg>

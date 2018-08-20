@@ -10,6 +10,12 @@
     right: 0;
 }
 
+.search-mobile {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
 //Desktop
 @media (min-width: $desktop-breakpoint) {
     .search-header-mobile {

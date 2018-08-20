@@ -1,5 +1,5 @@
 .button {
-    background: $blue;
+    background: $green;
     border: none;
     color: white;
     display: inline-block;
@@ -11,7 +11,9 @@
 }
 
 .button--search {
-    padding: $xs-size $s-size;
+    background: white;
+    border: 1px solid #dedfe0;
+    border-left: none;
 }
 
 .button--link {

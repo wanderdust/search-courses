@@ -20,7 +20,7 @@ export class DropdownForm extends React.Component {
     
     render () {
         return (
-            <div className="header-element">
+            <div className="header-element header-element--categories">
                 <DropdownMenu 
                     align="left"
                     animate={false}
@@ -30,7 +30,7 @@ export class DropdownForm extends React.Component {
                     leaveTimeout={0}
                     toggle={
                         <div className="icon-container" onClick={this.handleToggle}>
-                            <img className="icon-small" src="../../images/categories_icon.svg"></img>
+                            <img className="icon-medium" src="../../images/categories_icon.svg"></img>
                             <p className="icon-container__text show-for-desktop">Categories</p>
                         </div>
                     }
