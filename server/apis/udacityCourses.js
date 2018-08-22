@@ -4,7 +4,7 @@ const getUdacityCourses = (testUrl) => {
     const url = testUrl || "https://www.udacity.com/public-api/v0/courses";
 
     return axios.get(url, {
-        timeout: 50000
+        timeout: 500000
         })
         .then((res) => {
             const includesDuration = () => {

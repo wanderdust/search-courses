@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from 'react-router-dom'
 import { connect } from "react-redux";
-import { setCurrentPage, currentPage, currentCategory } from "../actions/filters";
+import { setCurrentPage } from "../actions/filters";
 
 export class PageLink extends React.Component {
     handleOnClick = (e) => {

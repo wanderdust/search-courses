@@ -20,6 +20,9 @@ export class CourseSearchMain extends React.Component {
     render () {
         return (
             <div className="search-wrapper search-main">
+                <div className="search-main__logo-container">
+                    <img src="../../images/coursesearch-logo.png" />
+                </div>
                 <div className="search-main__input">
                     <CourseSearchForm onSubmit={this.onSubmit} formClass=""/>
                 </div>

@@ -5,6 +5,8 @@ exports[`should render DropDownItem correctly 1`] = `
   className="category-item"
   onClick={[Function]}
 >
-  test_name
+  <p>
+    test_name
+  </p>
 </div>
 `;

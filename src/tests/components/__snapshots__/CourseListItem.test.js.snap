@@ -31,6 +31,9 @@ exports[`should render the CourseListItem correctly 1`] = `
           <p>
             300
           </p>
+          <p>
+            2
+          </p>
         </div>
         <div
           className="icon-container partner-logo-container"

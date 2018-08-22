@@ -13,13 +13,18 @@
     flex-direction: column;
     margin: 0 auto;
     max-width: 90rem;
-    padding: $m-size;
+    padding: $xs-size;
 }
 
-.search-main__header {
-    color: white;
-    font-size: 4rem;
-    text-align: center;
+
+
+.search-main__logo-container {
+    padding: $l-size;
+}
+
+.search-main__logo-container > img {
+    height: 5rem;
+    width: auto;
 }
 
 .search-main__input {
@@ -52,7 +57,8 @@
         padding: $xl-size;
     }
 
-    .search-main__header {
-        font-size: 4.5rem;
+    .search-main__logo-container > img {
+        height: 8rem;
+        width: auto;
     }
 }

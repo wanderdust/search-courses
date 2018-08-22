@@ -17,11 +17,10 @@ exports[`should render CourseSearchForm correctly 1`] = `
     className="button button--search"
     type="submit"
   >
-    <i
-      className="material-icons"
-    >
-      search
-    </i>
+    <img
+      className="icon"
+      src="../../images/search-icon.svg"
+    />
   </button>
 </form>
 `;
