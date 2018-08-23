@@ -16,11 +16,12 @@ const getKhanAcademyCourses = (testUrl) => {
             const courses = [].concat(...topics);
 
             return courses.map((course) => {
+                const duration = course.children.length !== 0 ? `${course.children.length} classes` : "";
                 return {
                     title: `${course.parent_title} - ${course.title}`,
                     description: course.description,
                     price: 0,
-                    duration: "",
+                    duration,
                     urlToCourse: course.ka_url,
                     platform: "Khan Academy",
                     logo: "khan-academy-logo.png"

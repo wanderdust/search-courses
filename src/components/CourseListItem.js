@@ -19,10 +19,17 @@ const CourseListItem = ({course}) => {
                     <p className="show-for-desktop">{course.description}</p>
 
                     <div className="course-card__content__footer">
-                        <div className="course-card__content__footer__price-container">
-                            <p>{course.price === 0 ? "Free" : course.price}</p>
-                            <p>{course.duration }</p>
+                        <div className="course-card__content__footer__data">
+                            <div><p>{course.price === 0 ? "Free" : course.price}</p></div>
+
+                            { course.duration != "" &&
+                                <div className="">
+                                    <p>{course.duration}</p>
+                                </div>
+                            }
                         </div>
+
+                       
 
                         <div className="icon-container partner-logo-container">
                             <img src={`/../../images/${course.logo}`} />

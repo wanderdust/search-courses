@@ -47,20 +47,22 @@
     h4 {
         font-size: $font-size-small;
         margin: 0 0 $s-size 0;
+        padding: 0 $xs-size;
     }
 }
 
 .course-card__content__footer {
+    align-items: center;
     display: flex;
     flex-direction: row;
     flex-grow: 1;
     justify-content: space-between;
-
-    
 }
 
-.course-card__content__footer__price-container {
-    p {
+.course-card__content__footer__data {
+    display: flex;
+    flex-direction: column;
+    > div {
         font-weight: bold;
         font-size: $font-size-medium;
         margin: $xs-size;
@@ -98,8 +100,12 @@
     }
     
 
-    .course-card__content__footer__price-container > p {
-        margin: $s-size 0;
+    .course-card__content__footer__data {
+        flex-direction: row;
+        > div {
+            margin: $s-size 0;
+            margin-right: $m-size;
+        }
     }
     
 }
