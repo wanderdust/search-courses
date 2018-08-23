@@ -26,11 +26,15 @@
 }
 
 .course-card__img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: $s-size 0 0 $s-size;
     min-width: 100px;
     max-width: 100px;
     height: 56px;
-    border: solid 1px;
+    // border: solid 1px;
+    overflow: hidden;
 }
 
 .course-card__content {

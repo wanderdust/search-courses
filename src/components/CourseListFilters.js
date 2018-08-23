@@ -1,7 +1,3 @@
-/* 
-* Filters to re-arrange the courses resutls.
-*/
-
 import React from "react";
 import { connect } from "react-redux";
 import { sortByRelevance, sortByCheapest, sortByExpensive } from "./../actions/filters";

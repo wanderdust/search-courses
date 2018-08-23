@@ -1,11 +1,5 @@
-/* 
-* Header Component.
-*/
-
 import React from "react";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import { startLogout } from "../actions/auth";
 import CourseSearchHeader from "./CourseSearchHeader";
 import DropdownForm from "./DropdownForm";
 import { categories } from "../utils/categories";
@@ -23,7 +17,7 @@ const Header = (props) => {
                 </div>
             </div>
         </header>
-    )
+    );
 };
 
 export default Header;

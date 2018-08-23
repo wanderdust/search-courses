@@ -1,11 +1,7 @@
-/* 
-* Form for dropdown menus (individual item).
-*/
-
 import React from "react";
 import { connect } from "react-redux";
 import { startSetCourses } from "../actions/courses";
-import { setCurrentCategory, currentPage } from "../actions/filters";
+import { setCurrentCategory } from "../actions/filters";
 
 export class DropDownItem extends React.Component {
     handleOnClick = () => {

@@ -1,14 +1,7 @@
-/* 
-* Search input for the header of the page.
-* Uses searchForm component.
-*/
-
 import React from "react";
 import { connect } from "react-redux";
 import { startSetCourses } from "../actions/courses";
-import { currentPage } from "../actions/filters";
 import CourseSearchForm from "./CourseSearchForm";
-import DropdownMenu from 'react-dd-menu';
 
 export class CourseSearchHeader extends React.Component {
     state = {isSearchOpen: false}

@@ -1,14 +1,8 @@
-/* 
-* Search results page with all the listed courses.
-*/
-
 import React from "react";
 import { connect } from "react-redux";
 import CourseList from "./CourseList";
 import PagesLinks from "./PagesLinks";
 import SearchResultsPageTop from "./SearchResultsPageTop";
-import NoResultsFoundPage from "./NoResultsFoundPage";
-import LoadingPage from "./LoadingPage";
 
 export const SearchResultsPage = (props) => {
     return (

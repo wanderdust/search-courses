@@ -1,10 +1,6 @@
-/* 
-* Form for dropdown menus.
-*/
-
 import React from "react";
 import DropdownMenu, { NestedDropdownMenu } from "react-dd-menu";
-import AppRouter, { history } from "../routers/AppRouter";
+import { history } from "../routers/AppRouter";
 import DropDownItem from "./DropDownItem";
 
 export class DropdownForm extends React.Component {

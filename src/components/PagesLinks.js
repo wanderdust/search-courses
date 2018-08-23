@@ -1,7 +1,3 @@
-/* 
-* The number of pages with more results at the bottom of the list.
-*/
-
 import React from "react";
 import { connect } from "react-redux";
 import {getVisiblePagesLinks, getCurrentPagination} from "../selectors/pagesLinks";

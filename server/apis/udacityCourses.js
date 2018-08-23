@@ -26,6 +26,7 @@ const getUdacityCourses = (testUrl) => {
                     duration,
                     urlToCourse: course.homepage,
                     platform: "Udacity",
+                    image: course.image,
                     logo: "udacity-logo.png"
                 }
             }).filter((course) => course);

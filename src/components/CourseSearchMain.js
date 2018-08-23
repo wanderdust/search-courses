@@ -1,12 +1,7 @@
-/* 
-* Search input for the main page Component.
-* Uses searchForm component.
-*/
-
 import React from "react";
 import { connect } from "react-redux";
-import { startSetCourses, setCourses } from "../actions/courses";
-import { setSearchQuery, currentPage } from "../actions/filters";
+import { startSetCourses } from "../actions/courses";
+import { setSearchQuery } from "../actions/filters";
 import CourseSearchForm from "./CourseSearchForm";
 
 export class CourseSearchMain extends React.Component {

@@ -1,7 +1,3 @@
-/* 
-* Individual course result information.
-*/
-
 import React from "react";
 
 const CourseListItem = ({course}) => {
@@ -11,7 +7,7 @@ const CourseListItem = ({course}) => {
             <a target="_blank" href={course.urlToCourse}>
 
                 <div className="course-card__img-container">
-                    <img />
+                    <img className="image" src={!!course.image ? `${course.image}` : "../../images/course-placeholder.png"}/>
                 </div>
 
                 <div className="course-card__content">

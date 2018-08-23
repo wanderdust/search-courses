@@ -1,7 +1,3 @@
-/* 
-* List of all the courses searched.
-*/
-
 import React from "react";
 import { connect } from "react-redux";
 import CourseListItem from "./CourseListItem";
