@@ -7,7 +7,7 @@ const CourseListItem = ({course}) => {
             <a target="_blank" href={course.urlToCourse}>
 
                 <div className="course-card__img-container">
-                    <img className="image" src={!!course.image ? `${course.image}` : "../../images/course-placeholder.png"}/>
+                    <img className="image" src={!!course.image ? `${course.image}` : "../../images/course-placeholder.png"} alt="course image placeholder"/>
                 </div>
 
                 <div className="course-card__content">
@@ -28,7 +28,7 @@ const CourseListItem = ({course}) => {
                        
 
                         <div className="icon-container partner-logo-container">
-                            <img src={`/../../images/${course.logo}`} />
+                            <img src={`/../../images/${course.logo}`} alt="partner logo"/>
                         </div>
                     </div>
                 </div>

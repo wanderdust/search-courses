@@ -43,6 +43,8 @@ a {
     color: inherit;
 }
 
-image {
+.image {
+    max-width: 100%;
+    height: auto;
     flex: 1;
 }
