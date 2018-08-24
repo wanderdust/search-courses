@@ -2,8 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const NotFoundPage = () => (
-    <div>
-        404! - <Link to="/">Go home</Link>
+    <div className="failed-search-wrapper">
+        <div className="failed-search">
+            <h1 className="failed-search__title--404">404</h1>
+            <div className="failed-search__text--404">
+                <div className="failed-search__text--404__text-top">
+                    <p>This is embarrasing; this page does not exist...</p>
+                </div>
+                <div className="failed-search__text--404__text-bottom">
+                    <p className="show-for-desktop">Let's return to the </p>
+                    <Link to="/">
+                        <h4>home page</h4>
+                    </Link>
+                </div>
+            </div>
+        </div>
     </div>
 );
 
