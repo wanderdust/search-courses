@@ -4,17 +4,20 @@ import CourseList from "./CourseList";
 import PagesLinks from "./PagesLinks";
 import SearchResultsPageTop from "./SearchResultsPageTop";
 import NoResultsFoundPage from "./NoResultsFoundPage";
+import LoadingPage from "./LoadingPage";
 
 export const SearchResultsPage = (props) => {
     return (
-        <div className="content-container"> 
-         {props.hasFoundResults ? (
-            <div className="search-results-page">
-                {props.coursesLength > 0  && <SearchResultsPageTop />}
-                <CourseList />
-                <PagesLinks />
-            </div>
-         ) : <NoResultsFoundPage /> }
+        <div className="content-container">
+        {props.hasFoundResults === "pending" && <LoadingPage /> }
+        {props.hasFoundResults ? (
+                <div className="search-results-page">
+                    {props.coursesLength > 0  && <SearchResultsPageTop />}
+                    <CourseList />
+                    <PagesLinks />
+                </div>
+            ) : <NoResultsFoundPage /> 
+        }
             
         </div>
     );

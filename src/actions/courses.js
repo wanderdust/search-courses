@@ -8,7 +8,10 @@ export const setCourses = (courses = {courseList: [], hasFoundResults: true }) =
 
 export const startSetCourses = (textFilter) => {
     return (dispatch, getState) => {
+        const courseList = getState().courses.courseList;
+
         dispatch(setCurrentPage(1));
+        dispatch(setCourses({courseList, hasFoundResults: "pending"}));
         
         return axios.get("/courseslist", {
             params: {
