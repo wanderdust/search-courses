@@ -3,22 +3,27 @@ import { connect } from "react-redux";
 import CourseList from "./CourseList";
 import PagesLinks from "./PagesLinks";
 import SearchResultsPageTop from "./SearchResultsPageTop";
+import NoResultsFoundPage from "./NoResultsFoundPage";
 
 export const SearchResultsPage = (props) => {
     return (
         <div className="content-container"> 
+         {props.hasFoundResults ? (
             <div className="search-results-page">
                 {props.coursesLength > 0  && <SearchResultsPageTop />}
                 <CourseList />
                 <PagesLinks />
             </div>
+         ) : <NoResultsFoundPage /> }
+            
         </div>
     );
 };
 
 const mapStateToProps = (state, props) => ({
-    coursesLength: state.courses.length,
-    currentCategory: state.filters.currentCategory
+    coursesLength: state.courses.courseList.length,
+    currentCategory: state.filters.currentCategory,
+    hasFoundResults: state.courses.hasFoundResults
 });
 
 export default connect(mapStateToProps)(SearchResultsPage);

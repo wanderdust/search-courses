@@ -1,0 +1,26 @@
+.failed-search-wrapper {
+    margin: $l-size 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.failed-search {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: $m-size;
+}
+
+.failed-search__title {
+    font-size: $font-size-medium;
+}
+
+//Desktop
+@media (min-width: $desktop-breakpoint) {
+    .failed-search__title {
+        font-size: $font-size-x-large;
+    }
+}

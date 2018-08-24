@@ -23,7 +23,7 @@ export class CourseList extends React.Component {
 };
 
 const mapStateToProps = (state) => {
-    const sortedCourses = sortBy(state.courses, state.filters.sortBy);
+    const sortedCourses = sortBy(state.courses.courseList, state.filters.sortBy);
 
     return {
         currentPageCourses: currentPageCourses(sortedCourses, state.filters.currentPage)

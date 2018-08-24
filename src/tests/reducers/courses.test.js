@@ -1,12 +1,17 @@
 import coursesReducer from "../../reducers/courses";
 import courses from "../fixtures/courses";
 
-test("should set the courses", () => {
+test("should set the courses for courseList and hasFoundResults", () => {
+    const data =  {
+        courseList: courses,
+        hasFoundResults: true
+    };
+
     const action = {
         type: "SET_COURSES",
-        courses
+        courses: data
     };
     const state = coursesReducer({}, action);
 
-    expect(state).toEqual(courses);
+    expect(state).toEqual(data);
 });

@@ -7,7 +7,7 @@ describe("GET /courselist", () => {
             .get("/courseslist")
             .expect(200)
             .expect((res) => {
-                expect(typeof res.body.courses).toBe("object");
+                expect(typeof res.body).toBe("object");
             })
             .end(done)
     }, 20000)

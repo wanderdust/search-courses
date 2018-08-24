@@ -19,7 +19,7 @@ export const SearchResultsPageTop = (props) => {
 };
 
 const mapStateToProps = (state, props) => ({
-    coursesLength: state.courses.length,
+    coursesLength: state.courses.courseList.length,
     category: state.filters.currentCategory
 });
 

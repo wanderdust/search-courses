@@ -11,7 +11,11 @@ exports[`should render the CourseListItem correctly 1`] = `
     <div
       className="course-card__img-container"
     >
-      <img />
+      <img
+        alt="course image placeholder"
+        className="image"
+        src="../../images/course-placeholder.png"
+      />
     </div>
     <div
       className="course-card__content"
@@ -26,19 +30,26 @@ exports[`should render the CourseListItem correctly 1`] = `
         className="course-card__content__footer"
       >
         <div
-          className="course-card__content__footer__price-container"
+          className="course-card__content__footer__data"
         >
-          <p>
-            300
-          </p>
-          <p>
-            2
-          </p>
+          <div>
+            <p>
+              300
+            </p>
+          </div>
+          <div
+            className=""
+          >
+            <p>
+              2
+            </p>
+          </div>
         </div>
         <div
           className="icon-container partner-logo-container"
         >
           <img
+            alt="partner logo"
             src="/../../images/undefined"
           />
         </div>

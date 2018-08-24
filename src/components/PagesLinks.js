@@ -68,7 +68,7 @@ export class PagesLinks extends React.Component  {
 
 const mapStateToProps = (state) => {
         const currentPage = state.filters.currentPage;
-        const pagesLinks = getVisiblePagesLinks(state.courses);
+        const pagesLinks = getVisiblePagesLinks(state.courses.courseList);
 
         return {
             currentPage,

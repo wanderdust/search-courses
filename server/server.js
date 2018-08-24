@@ -15,7 +15,9 @@ app.get("/courseslist", (req, res) => {
     const textFilter = req.query.text;
     
     getVisibleCourses(textFilter).then((courses) => {
-        res.send({courses: courses});
+        const hasFoundResults = courses.length > 0;
+    
+        res.send({courseList: courses, hasFoundResults});
     }).catch((error) => {
         console.log(error);
     });
