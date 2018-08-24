@@ -1,17 +1,21 @@
 import axios from "axios";
 import { setCurrentPage } from "./filters";
 
-export const setCourses = (courses = {courseList: [], hasFoundResults: true }) => ({
+export const setCourses = (courseList = []) => ({
     type: "SET_COURSES",
-    courses
+    courseList
 });
+
+export const setHasFoundResults = (hasFoundResults = true) => ({
+    type: "SET_HAS_FOUND_RESULTS",
+    hasFoundResults
+})
 
 export const startSetCourses = (textFilter) => {
     return (dispatch, getState) => {
-        const courseList = getState().courses.courseList;
-
         dispatch(setCurrentPage(1));
-        dispatch(setCourses({courseList, hasFoundResults: "pending"}));
+        dispatch(setCourses([]));
+        dispatch(setHasFoundResults("pending"));
         
         return axios.get("/courseslist", {
             params: {
@@ -19,7 +23,8 @@ export const startSetCourses = (textFilter) => {
             }
         })
         .then((response) => {
-            dispatch(setCourses(response.data));
+            dispatch(setCourses(response.data.courseList));
+            dispatch(setHasFoundResults(response.data.hasFoundResults));
         })
         .catch((e) => {
             console.log(e);

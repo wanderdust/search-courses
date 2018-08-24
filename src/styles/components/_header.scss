@@ -35,6 +35,7 @@
         font-size: $font-size-medium;
     }
 }
+  
 
 //Desktop
 @media (min-width: $desktop-breakpoint) {
@@ -48,5 +49,16 @@
 
     .header__title > h1 {
         font-size: 4rem;
+    }
+}
+
+//Medium point between desktop and mobile
+@media (max-width:52rem) and (min-width: $desktop-breakpoint) {
+    .header-element {
+        padding: $s-size;
+    }
+
+    .header__title > h1 {
+        font-size: 3rem;
     }
 }

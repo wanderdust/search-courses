@@ -8,9 +8,13 @@ const coursesReducer = (state = coursesReducerDefaultState, action) => {
         case "SET_COURSES":
             return {
                 ...state,
-                courseList: action.courses.courseList,
-                hasFoundResults: action.courses.hasFoundResults
+                courseList: action.courseList,
             };
+        case "SET_HAS_FOUND_RESULTS":
+            return {
+                ...state,
+                hasFoundResults: action.hasFoundResults
+            }
         default: 
             return state;
     }

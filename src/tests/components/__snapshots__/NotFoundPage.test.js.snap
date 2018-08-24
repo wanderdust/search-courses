@@ -1,13 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render 404 page correctly 1`] = `
-<div>
-  404! - 
-  <Link
-    replace={false}
-    to="/"
+<div
+  className="failed-search-wrapper"
+>
+  <div
+    className="failed-search"
   >
-    Go home
-  </Link>
+    <h1
+      className="failed-search__title--404"
+    >
+      404
+    </h1>
+    <div
+      className="failed-search__text--404"
+    >
+      <div
+        className="failed-search__text--404__text-top"
+      >
+        <p>
+          This is embarrasing; this page does not exist...
+        </p>
+      </div>
+      <div
+        className="failed-search__text--404__text-bottom"
+      >
+        <p
+          className="show-for-desktop"
+        >
+          Let's return to the 
+        </p>
+        <Link
+          replace={false}
+          to="/"
+        >
+          <h4>
+            home page
+          </h4>
+        </Link>
+      </div>
+    </div>
+  </div>
 </div>
 `;
