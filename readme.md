@@ -1,3 +1,5 @@
+Live: [CourseSearch](https://course-search-app.herokuapp.com/)
+
 # How to set up:
 
 1. Install all packages with the command:
