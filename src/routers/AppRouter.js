@@ -7,6 +7,7 @@ import LoginPage from "../components/LoginPage";
 import PrivateRoute from "../routers/PrivateRoute";
 import PublicRoute from "../routers/PublicRoute";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import SearchResultsPage from "../components/SearchResultsPage";
 
 export const history = createHistory();
@@ -15,11 +16,14 @@ const AppRouter = () => (
     <Router history={history}>
         <div className="app__container">
             <Header history={history} />
-            <Switch>
-                <Route path="/" component={MainPage} exact={true} />
-                <Route path="/search/:category/:page" component={SearchResultsPage} />
-                <Route component={NotFoundPage} />
-            </Switch>
+            <div className="body-content content-container">
+                <Switch>
+                    <Route path="/" component={MainPage} exact={true} />
+                    <Route path="/search/:category/:page" component={SearchResultsPage} />
+                    <Route component={NotFoundPage} />
+                </Switch>
+            </div>
+            <Footer />
         </div>
     </Router>
 );

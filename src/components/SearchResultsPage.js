@@ -8,7 +8,7 @@ import LoadingPage from "./LoadingPage";
 
 export const SearchResultsPage = (props) => {
     return (
-        <div className="content-container">
+        <div>
         {props.hasFoundResults === "pending" && <LoadingPage /> }
         {props.hasFoundResults ? (
                 <div className="search-results-page">

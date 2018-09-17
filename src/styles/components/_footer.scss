@@ -1,0 +1,26 @@
+.footer {
+    background: linear-gradient(to right, $green, $turquoise);
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.footer__links {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__links > a {
+    padding: $s-size;
+}
+
+.footer__copyright {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__copyright > span {
+    padding: $s-size;
+}

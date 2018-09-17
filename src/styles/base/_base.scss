@@ -5,7 +5,6 @@
 html {
     // 1 rem is 16px. By doing this we convert 1rem to 10px.
     font-size: 62.5%;
-    height: 100%;
 }
 
 body {
@@ -13,17 +12,16 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: $m-size;
     line-height: 1.6;
-    height: 100%;
+    background-color: $off-white;
 }
 
-#app {
-    height: 100%;
+.body-content {
+    min-height:90vh;
 }
 
 .app__container {
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 button {
