@@ -7,7 +7,7 @@ export class DropDownItem extends React.Component {
     handleOnClick = () => {
         this.props.startSetCourses(this.props.tags);
         this.props.setCurrentCategory(this.props.name);
-        this.props.history.push(`/search/${this.props.name}/${this.props.currentPage}`);
+        this.props.history.push(`/search/${this.props.purpose}/${this.props.currentPage}`);
     }
 
     render () {

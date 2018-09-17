@@ -2,34 +2,37 @@ const {englishPrepositions} = require("../utils/prepositions");
 
 class FilterByText {
     constructor (courses = [], text = "") {
-        const keywords = this.keywords(text);
-        const matchingCourses = this.matchingCourses(courses, keywords);
+        const keywords = this.getKeywords(text);
+        const matchingCourses = this.findMatchingCourses(courses, keywords);
         this.visibleCourses = this.setRelevance(matchingCourses, keywords);
     }
 
     escapeRegExp(text) {
         return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
       }
-
-    keywords (text) {
+    
+    // Gets the search keywords and puts them into an array.
+    getKeywords (text) {
         return text.split(" ").filter((keyword) => {
             const lowerCaseKeyword = keyword.toLowerCase();
+            //Discards prepositions as keywords.
             const isPreposition = (keyword, prepositions) => prepositions.includes(keyword);
 
             return keyword.length > 0 && !isPreposition(lowerCaseKeyword, englishPrepositions);
         }).map((keyword) => {
+            //Finds special characters and escapes them.
             return this.escapeRegExp(keyword);
         });
     }
 
-    matchingCourses (courses, keywords) {
+    //Returns only matching courses from the keywords.
+    findMatchingCourses (courses, keywords) {
         return courses.filter((course) => {
             const containsKeyword = keywords.map((keyword) => {
                 const titleMatch = new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(course.title.toLowerCase());
                 const bodyMatch = new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(course.description.toLowerCase());
-                const isIndianSpecific = course.title.toLowerCase().includes("india");
         
-                return !isIndianSpecific && titleMatch || bodyMatch;
+                return titleMatch || bodyMatch;
             });
 
             return containsKeyword.includes(true);
@@ -53,7 +56,8 @@ class FilterByText {
                 const bodyMatches = course.description.split(" ").map((word) => (
                     new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(word.toLowerCase()) ? 1 : 0
                 ));
-        
+                
+                // Returns the total relevance adding title matches with body matches.
                 return titleMatches.concat(bodyMatches).reduce((accumulator, currentValue) => accumulator + currentValue);
             });
 

@@ -10,7 +10,7 @@ beforeEach(() => {
 test("should split the keywords individually", () => {
     const text = "World history";
 
-    const keywords = filterByText.keywords(text);
+    const keywords = filterByText.getKeywords(text);
 
     expect(keywords).toEqual([
         "World", "history"
@@ -20,7 +20,7 @@ test("should split the keywords individually", () => {
 test("should split the keywords individually and omit AND and OF", () => {
     const text = "History oF Art And Math";
 
-    const keywords = filterByText.keywords(text);
+    const keywords = filterByText.getKeywords(text);
 
     expect(keywords).toEqual([
         "History", "Art", "Math"
@@ -29,7 +29,7 @@ test("should split the keywords individually and omit AND and OF", () => {
 
 test("should retrun only the courses with the matching words", () => {
     const keywords = ["GUACAMOLE"];
-    const matchingCourses = filterByText.matchingCourses(courses, keywords);
+    const matchingCourses = filterByText.findMatchingCourses(courses, keywords);
 
     expect(matchingCourses).toEqual([
         courses[1],
