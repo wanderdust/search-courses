@@ -1,8 +1,9 @@
 import React from "react";
+import CircularProgress from '@material-ui/core/CircularProgress';
  
 const LoadingPage = () => (
     <div className="loader">
-        <img className="loader__image" src="/images/loader.gif"/>
+        <CircularProgress color="inherit"/>
     </div>
 );
 
