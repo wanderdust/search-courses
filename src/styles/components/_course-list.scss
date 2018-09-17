@@ -21,7 +21,7 @@
     flex-direction: row;
     transition: background .3s ease;
     &:hover {
-        background-color: $off-white;
+        background-color: darken($off-white, 2%);
     }
 }
 

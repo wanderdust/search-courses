@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    flex-direction: column;
 }
 
 .search-main {
@@ -14,8 +15,6 @@
     max-width: 90rem;
     padding: $xs-size;
 }
-
-
 
 .search-main__logo-container {
     padding: $l-size;
