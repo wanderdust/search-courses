@@ -1,4 +1,4 @@
-Live: [CourseSearch](https://course-search-app.herokuapp.com/)
+Live: [CourseSearch](http://www.coursesearch.net/)
 
 # How to set up:
 
