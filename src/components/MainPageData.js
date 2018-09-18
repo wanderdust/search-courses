@@ -7,7 +7,7 @@ export const MainPageData = (props) => {
            <DataCard
             image={"/../../images/icons/search-icon-outline.svg"}
             title={"Search"}
-            description={"Search different courses from different websites."}
+            description={"Search courses from many different websites."}
             />
            <DataCard
             image={"/../../images/icons/visibility-icon.svg"}
@@ -17,7 +17,7 @@ export const MainPageData = (props) => {
            <DataCard
             image={"/../../images/icons/academic-icon-outline.svg"}
             title={"Enroll"}
-            description={"Develop your skills and become a the professional you want to be."}
+            description={"Develop your skills and become the professional you want to be."}
            />
         </div>
     );

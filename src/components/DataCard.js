@@ -6,7 +6,7 @@ export const DataCard = (props) => {
             <div className="icon-container">
                 <img className="icon-xlarge" src={props.image} alt="instructions" />
             </div>
-            <h2>{props.title}</h2>
+            <h2 className="data-card__title">{props.title}</h2>
             <p>{props.description}</p>
         </div>
     );

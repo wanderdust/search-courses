@@ -8,7 +8,7 @@ const Footer = (props) => {
                 <Link to="/">
                     <p>Home</p>
                 </Link>
-                <Link to="/">
+                <Link to="/contact">
                     <p>Contact</p>
                 </Link>
                 <Link to="/">

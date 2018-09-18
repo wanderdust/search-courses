@@ -9,7 +9,7 @@ export const SearchResultsPageTop = (props) => {
         <div className="search-results-page__top">
             <div>
                 {props.category !== "query" && <CategoriesHeader category={props.category}/>}
-                <h4>{props.coursesLength} courses found</h4>
+                <h4 className="search-results-page__top__title">{props.coursesLength} courses found</h4>
             </div>
             <div>
                 <CourseListFilters />

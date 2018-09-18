@@ -28,7 +28,7 @@ export class CourseSearchForm extends React.Component {
         return (
                 <form className={`search-wrapper__form ${this.props.formClass}`} onSubmit={this.handleOnSubmit}>
                     <input
-                        className="text-input"
+                        className="text-input text-input--search"
                         value={this.props.searchQuery}
                         type="text"
                         autoFocus

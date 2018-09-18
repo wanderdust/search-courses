@@ -9,18 +9,21 @@
     margin: $xs-size;
     padding: $xs-size;
     display: flex;
+    flex:1;
     flex-direction: column;
     text-align:center;
     align-items: center;
-    justify-content: center;
-    color: $gray;
+    color: lighten($green, 2%);
+}
+
+.data-card__title {
+    color: darken($green, 5%);
 }
 
 
 @media (min-width: $desktop-breakpoint) {
     .data-cards {
         flex-direction: row;
-        justify-content: center;
     }
 
     .data-card {

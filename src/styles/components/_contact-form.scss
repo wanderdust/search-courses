@@ -1,0 +1,23 @@
+.contact-form {
+    margin-top: $header-margin;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form__input {
+    display: flex;
+    margin-bottom: $m-size;
+    flex-grow: 1;
+    min-width: 25rem;
+}
+
+.contact-form > textarea {
+    height: 30rem;
+}
+
+//Desktop
+@media (min-width: $desktop-breakpoint) {
+    .contact-form__input {
+        width: 50rem;
+    }
+}

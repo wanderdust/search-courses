@@ -9,6 +9,7 @@ import PublicRoute from "../routers/PublicRoute";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SearchResultsPage from "../components/SearchResultsPage";
+import ContactPage from "../components/ContactPage";
 
 export const history = createHistory();
 
@@ -20,6 +21,7 @@ const AppRouter = () => (
                 <Switch>
                     <Route path="/" component={MainPage} exact={true} />
                     <Route path="/search/:category/:page" component={SearchResultsPage} />
+                    <Route path="/contact" component={ContactPage} exact={true} />
                     <Route component={NotFoundPage} />
                 </Switch>
             </div>
