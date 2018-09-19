@@ -37,6 +37,7 @@
     "moment": "^2.22.1",
     "node-cron": "^1.2.1",
     "node-sass": "^4.9.0",
+    "nodemailer": "^4.6.8",
     "normalize.css": "^8.0.0",
     "npm": "^6.3.0",
     "numeral": "^2.0.6",

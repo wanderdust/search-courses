@@ -17,7 +17,7 @@ export const startSetCourses = (textFilter) => {
         dispatch(setCourses([]));
         dispatch(setHasFoundResults("pending"));
         
-        return axios.get("/courseslist", {
+        return axios.get("/api/courseslist", {
             params: {
                 text: textFilter
             }

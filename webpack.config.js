@@ -84,7 +84,7 @@ module.exports = (env) => {
             historyApiFallback: true,
             publicPath: "/dist/",
             proxy: {
-                "/courseslist": "http://localhost:3000"
+                "/api": "http://localhost:3000"
             }
         }
     }
