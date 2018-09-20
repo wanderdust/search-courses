@@ -4,9 +4,8 @@ exports[`should render LoadingPage correctly 1`] = `
 <div
   className="loader"
 >
-  <img
-    className="loader__image"
-    src="/images/loader.gif"
+  <WithStyles(CircularProgress)
+    color="inherit"
   />
 </div>
 `;

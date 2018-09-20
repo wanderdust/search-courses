@@ -4,9 +4,9 @@ exports[`should render the CourseListItem correctly 1`] = `
 <div
   className="course-card-wrapper"
 >
-  <a
-    href="some_url"
-    target="_blank"
+  <Link
+    replace={false}
+    to="/course/1"
   >
     <div
       className="course-card__img-container"
@@ -55,6 +55,6 @@ exports[`should render the CourseListItem correctly 1`] = `
         </div>
       </div>
     </div>
-  </a>
+  </Link>
 </div>
 `;

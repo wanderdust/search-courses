@@ -4,7 +4,9 @@ exports[`should render CategoriesHeader correctly 1`] = `
 <div
   className="search_results_page__categories"
 >
-  <div>
+  <div
+    className="search-results-page__top__title"
+  >
     Category: 
     <span>
       Programming

@@ -2,8 +2,9 @@
 
 exports[`should render expense dashboard page correctly 1`] = `
 <div
-  className="content-container main-page"
+  className="main-page"
 >
   <Connect(CourseSearchMain) />
+  <MainPageData />
 </div>
 `;

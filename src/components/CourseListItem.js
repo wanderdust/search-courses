@@ -1,10 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CourseListItem = ({course}) => {
     return (
         <div className="course-card-wrapper">
-
-            <a target="_blank" href={course.urlToCourse}>
+            <Link to={`/course/${course.id}`}>
 
                 <div className="course-card__img-container">
                     <img className="image" src={!!course.image ? `${course.image}` : "../../images/course-placeholder.png"} alt="course image placeholder"/>
@@ -33,7 +33,7 @@ const CourseListItem = ({course}) => {
                     </div>
                 </div>
 
-            </a>
+            </Link>
 
         </div>
     );

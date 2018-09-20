@@ -7,7 +7,7 @@ exports[`should render CourseSearchForm correctly 1`] = `
 >
   <input
     autoFocus={true}
-    className="text-input"
+    className="text-input text-input--search"
     onChange={[Function]}
     placeholder="What are you looking for?"
     type="text"

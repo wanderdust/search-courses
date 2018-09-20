@@ -4,11 +4,12 @@ const express = require("express");
 const app = express();
 const publicPath = path.join(__dirname, "..", "public");
 const port = process.env.PORT || 3000;
-var nodemailer = require('nodemailer');
+const { database } = require("./firebase/firebase");
 
 
 const { getVisibleCourses } = require("./selectors/courses");
 const { updateInterval } = require("./updater/updateInterval");
+const { sendEmail } = require("./utils/sendEmail")
 
 
 app.use(express.static(publicPath));
@@ -26,33 +27,21 @@ app.get("/api/courseslist", (req, res) => {
     });
 });
 
-app.post("/api/contactus", (req, res) => {
-    var transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'pablol03@ucm.es',
-            pass: process.env.EMAIL_PASS
-        }
+app.get("/api/course/:courseId", (req, res) => {
+    const courseId = req.params.courseId;
+    
+    database.ref(`courses/${courseId}`).once("value").then((snapshot) => {
+        res.status(200).send({course: snapshot.val()});
     });
-
-    var mailOptions = {
-        from: `${req.body.email}`,
-        to: 'pablo.lopez.santori@gmail.com',
-        subject: 'Course Search - Contact us',
-        text: `${req.body.text}`,
-        html: `<h3>${req.body.name}</h3> <p>${req.body.text}</p>`
-    };
-
-    transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-            res.status(400).send({email_sent: false});
-        } else {
-            res.status(200).send({email_sent: true});
-        }
-    }); 
 });
 
-updateInterval();
+//Sends an email to me.
+app.post("/api/contactus", (req, res) => {
+   sendEmail(req, res);
+});
+
+//Updates the database
+//updateInterval();
 
 //Always send index.html regardless of the route.
 app.get("*", (req, res) => {
