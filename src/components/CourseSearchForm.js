@@ -37,7 +37,7 @@ export class CourseSearchForm extends React.Component {
                     >
                     </input>
                     <button className="button button--search" type="submit">
-                        <img src="../../images/search-icon.svg" className="icon"/                                                                                                                                                                                                  >
+                        <img src="../../images/search-icon.svg" className="icon" alt="Magnifier glass icon"/                                                                                                                                                                                            >
                     </button>
                 </form>
         );

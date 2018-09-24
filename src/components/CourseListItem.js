@@ -12,7 +12,7 @@ const CourseListItem = ({course}) => {
 
                 <div className="course-card__content">
                     <h4>{course.title}</h4>
-                    <p className="show-for-desktop">{course.description}</p>
+                    <p className="show-for-desktop">{course.shortSummary}</p>
 
                     <div className="course-card__content__footer">
                         <div className="course-card__content__footer__data">
@@ -24,9 +24,7 @@ const CourseListItem = ({course}) => {
                                 </div>
                             }
                         </div>
-
-                       
-
+                        
                         <div className="icon-container partner-logo-container">
                             <img src={`/../../images/${course.logo}`} alt="partner logo"/>
                         </div>

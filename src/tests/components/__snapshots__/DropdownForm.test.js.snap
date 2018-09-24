@@ -25,6 +25,7 @@ exports[`should render DropDownForm correctly 1`] = `
         onClick={[Function]}
       >
         <img
+          alt="categories icon dropdown"
           className="icon-medium"
           src="../../images/categories_icon.svg"
         />

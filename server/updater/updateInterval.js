@@ -4,6 +4,7 @@ const { courseUpdater, getApiData } = require("./courseUpdater");
 // Update database once everytime the server starts.
 getApiData().then((courses) => {
     courseUpdater(courses);
+    //console.log("Database update interrupted by Admin ;)")
 });
 
 const updateInterval = () => {

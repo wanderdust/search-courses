@@ -19,7 +19,7 @@ const getKhanAcademyCourses = (testUrl) => {
                 const duration = course.children.length !== 0 ? `${course.children.length} classes` : "";
                 return {
                     title: `${course.parent_title} - ${course.title}`,
-                    description: course.description,
+                    shortSummary: course.description,
                     price: 0,
                     duration,
                     urlToCourse: course.ka_url,

@@ -30,7 +30,7 @@ class FilterByText {
         return courses.filter((course) => {
             const containsKeyword = keywords.map((keyword) => {
                 const titleMatch = new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(course.title.toLowerCase());
-                const bodyMatch = new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(course.description.toLowerCase());
+                const bodyMatch = new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(course.shortSummary.toLowerCase());
         
                 return titleMatch || bodyMatch;
             });
@@ -53,7 +53,7 @@ class FilterByText {
                 const titleMatches = course.title.split(" ").map((word) => (
                     new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(word.toLowerCase()) ? 2 : 0
                 ));
-                const bodyMatches = course.description.split(" ").map((word) => (
+                const bodyMatches = course.shortSummary.split(" ").map((word) => (
                     new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(word.toLowerCase()) ? 1 : 0
                 ));
                 

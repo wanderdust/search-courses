@@ -18,6 +18,7 @@ exports[`should render CourseSearchForm correctly 1`] = `
     type="submit"
   >
     <img
+      alt="Magnifier glass icon"
       className="icon"
       src="../../images/search-icon.svg"
     />

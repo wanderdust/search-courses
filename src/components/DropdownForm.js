@@ -26,7 +26,7 @@ export class DropdownForm extends React.Component {
                     leaveTimeout={0}
                     toggle={
                         <div className="icon-container" onClick={this.handleToggle}>
-                            <img className="icon-medium" src="../../images/categories_icon.svg"></img>
+                            <img className="icon-medium" src="../../images/categories_icon.svg" alt="categories icon dropdown"></img>
                             <p className="icon-container__text show-for-desktop">Categories</p>
                         </div>
                     }

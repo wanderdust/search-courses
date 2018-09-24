@@ -41,7 +41,7 @@ app.post("/api/contactus", (req, res) => {
 });
 
 //Updates the database
-//updateInterval();
+updateInterval();
 
 //Always send index.html regardless of the route.
 app.get("*", (req, res) => {

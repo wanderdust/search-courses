@@ -21,13 +21,19 @@ const getUdacityCourses = (testUrl) => {
 
                 return {
                     title: course.title,
-                    description: course.short_summary,
+                    shortSummary: course.short_summary,
+                    fullDescription: course.summary.replace(/^#*#/, '$1 $2'),
                     price: 0,
                     duration,
                     urlToCourse: course.homepage,
                     platform: "Udacity",
                     image: course.image,
-                    logo: "udacity-logo.png"
+                    logo: "udacity-logo.png",
+                    syllabus: course.syllabus,
+                    level: course.level,
+                    platform: "Udacity",
+                    aboutPlatform: "",
+                    certificate: false
                 }
             }).filter((course) => course);
         })
