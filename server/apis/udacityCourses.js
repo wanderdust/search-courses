@@ -17,7 +17,7 @@ const getUdacityCourses = (testUrl) => {
                 }
 
                 const parseMarkDown = (string) => {
-                    return string.replace(/###/g, '\$& ');
+                    return string.replace(/####|###|##|#/g, '\$& ');
                 }
 
                 const includesDuration = () => {

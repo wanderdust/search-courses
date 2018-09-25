@@ -40,8 +40,10 @@ class FilterByText {
     }
     /*
     * setRelevance:
-    * - If it finds a word match in the title returns a relevance of 2. 
-    * - If it finds a word match in the body return a relevance of 1.
+    * - If it finds a word match in the title returns a relevance of 3. 
+    * - If it finds a word match in the short description return a relevance of 2.
+    * - If it finds a word match in the full description return a relevance of 1.
+    * - If it finds a word match in the syllabus return a relevance of 1.
     * - If no word is matched returns 0.
     * - If all keywords are matched in a course adds more points.
     * - All the points get added in the end to decide how relevant the course is.
@@ -51,14 +53,26 @@ class FilterByText {
             
             const numberOfKeywordsMatched = keywords.map((keyword) => {
                 const titleMatches = course.title.split(" ").map((word) => (
+                    new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(word.toLowerCase()) ? 3 : 0
+                ));
+                const shortDescriptionMatches = course.shortSummary.split(" ").map((word) => (
                     new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(word.toLowerCase()) ? 2 : 0
                 ));
-                const bodyMatches = course.shortSummary.split(" ").map((word) => (
+
+                const fullDescriptionMatches = course.fullDescription.split(" ").map((word) => (
+                    new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(word.toLowerCase()) ? 1 : 0
+                ));
+
+                const syllabusMatches = course.syllabus.split(" ").map((word) => (
                     new RegExp("\\b" + keyword.toLowerCase() + "\\b").test(word.toLowerCase()) ? 1 : 0
                 ));
                 
                 // Returns the total relevance adding title matches with body matches.
-                return titleMatches.concat(bodyMatches).reduce((accumulator, currentValue) => accumulator + currentValue);
+                return titleMatches
+                    .concat(shortDescriptionMatches)
+                    .concat(fullDescriptionMatches)
+                    .concat(syllabusMatches)
+                    .reduce((accumulator, currentValue) => accumulator + currentValue);
             });
 
             const multipleKeywordsMatch = this.multipleKeywordsMatch(numberOfKeywordsMatched).concat(numberOfKeywordsMatched);
@@ -66,7 +80,7 @@ class FilterByText {
             const relevance = multipleKeywordsMatch.reduce((accumulator, currentValue) => (
                 accumulator + currentValue
             ));
-        
+
             return {
                 ...course,
                 numberOfKeywordsMatched: relevance
