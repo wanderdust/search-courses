@@ -27,17 +27,24 @@
     justify-content: center;
     padding: $xs-size;
     max-height: 10rem;
-    cursor: pointer;
 }
 
 .header-element--categories {
     color: white;
+    justify-content: flex-start;
 
     p {
         font-size: $font-size-medium;
     }
 }
-  
+
+.header-element--search {
+    justify-content: flex-end;
+}
+
+.pointer {
+    cursor: pointer; 
+}
 
 //Desktop
 @media (min-width: $desktop-breakpoint) {

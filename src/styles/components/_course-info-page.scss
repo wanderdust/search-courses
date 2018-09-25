@@ -9,21 +9,27 @@
 }
 
 .col--right {
-    min-width: 360px;
     box-shadow: $full-shadow;
     height: 100%;
     padding: 5px;
     border-radius: 5px;
 }
 
+.title-header-block > h1 {
+    font-size: $font-size-x-large;
+}
+
 .summary-details {
-    display: flex;
-    flex-direction: column;
     padding: $s-size;
 }
 
 .summary-details__item {
     margin: $s-size 0;
+    display: flex;
+}
+
+.summary-details__item__data {
+    padding: 0 $s-size;
 }
 
 .summary-details__link-to-course > .button {
@@ -34,8 +40,21 @@
     width: 100%;
 }
 
+.description-block {
+    margin-top: $xl-size;
+}
+
+.syllabus > h2, .syllabus > h3 {
+    font-size: 2rem;
+    margin: $s-size 0;
+}
+
 //Desktop
 @media (min-width: $desktop-breakpoint) {
+    .title-header-block > h1 {
+        font-size: 3rem;
+    }
+
     .course-info {
         flex-direction: row;
         padding: $s-size $xl-size;
@@ -46,6 +65,13 @@
     }
 
     .col--right {
-        width: 300px;
+        min-width: 360px;
+    }
+}
+
+//Medium point between desktop and mobile
+@media (max-width:$tablet-breakpoint) and (min-width: $desktop-breakpoint) {
+    .col--right {
+        min-width: 250px;
     }
 }

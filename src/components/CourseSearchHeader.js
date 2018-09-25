@@ -33,7 +33,7 @@ export class CourseSearchHeader extends React.Component {
 
     render () {
         return (
-            <div className="search-wrapper header-element">
+            <div className="search-wrapper header-element header-element--search">
 
                 <div className="show-for-desktop">
                     <CourseSearchForm onSubmit={this.onSubmit} formClass=""/>

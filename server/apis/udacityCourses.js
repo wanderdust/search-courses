@@ -12,6 +12,14 @@ const getUdacityCourses = (testUrl) => {
                     return null;
                 }
 
+                const capitalizeFirstLetter = (string) => {
+                    return string.charAt(0).toUpperCase() + string.slice(1);
+                }
+
+                const parseMarkDown = (string) => {
+                    return string.replace(/###/g, '\$& ');
+                }
+
                 const includesDuration = () => {
                     const expected_duration = !!course.expected_duration;
                     const expected_duration_unit = !!course.expected_duration_unit;
@@ -29,10 +37,16 @@ const getUdacityCourses = (testUrl) => {
                     platform: "Udacity",
                     image: course.image,
                     logo: "udacity-logo.png",
-                    syllabus: course.syllabus,
+                    syllabus: parseMarkDown(course.syllabus),
                     level: course.level,
                     platform: "Udacity",
-                    aboutPlatform: "",
+                    difficulty: capitalizeFirstLetter(course.level),
+                    aboutPlatform: 
+                        `Our mission is to democratize education through the
+                        offering of world-classhigher education opportunities that are accessible,
+                        flexible, and economical. Virtually anyone on the planet with an internet
+                        connection and a commitment to self-empowerment through learning can come to Udacity,
+                        master a suite of job-ready skills, and pursue rewarding employment.`,
                     certificate: false
                 }
             }).filter((course) => course);
