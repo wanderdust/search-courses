@@ -1,0 +1,16 @@
+.uc-banner {
+    font-size: $font-size-small;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: yellow;
+    text-align: center;
+}
+
+
+//Desktop
+@media (min-width: $desktop-breakpoint) {
+    .uc-banner {
+        font-size: $font-size-large;
+    }
+}

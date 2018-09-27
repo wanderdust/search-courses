@@ -11,12 +11,14 @@ import Footer from "../components/Footer";
 import SearchResultsPage from "../components/SearchResultsPage";
 import ContactPage from "../components/ContactPage";
 import { CourseInfoPage } from "../components/CourseInfoPage";
+import PageUnderConstructionBanner from "../components/PageUnderConstructionBanner";
 
 export const history = createHistory();
 
 const AppRouter = () => (
     <Router history={history}>
         <div className="app__container">
+            <PageUnderConstructionBanner />
             <Header history={history} />
             <div className="body-content content-container">
                 <Switch>

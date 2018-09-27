@@ -53,7 +53,7 @@ export class ContactPage extends React.Component {
 
     render () {
         return (
-            <div>
+            <div className="contact-form-container">
               <form
                 className="contact-form"
                 onKeyUp={this.isFormValidated.bind(this)}
