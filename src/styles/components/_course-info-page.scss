@@ -6,6 +6,7 @@
 
 .col {
     margin: $m-size;
+    word-wrap: break-word;
 }
 
 .col--right {
@@ -44,9 +45,20 @@
     margin-top: $xl-size;
 }
 
+.syllabus {
+    padding-left: $xs-size;
+}
+
 .syllabus > h2, .syllabus > h3, .syllabus > h4 {
-    font-size: 2rem;
+    font-weight: 0;
+    font-size: 1.9rem;
     margin: $s-size 0;
+}
+
+.syllabus ul, .course-description ul {
+    list-style-type: "- ";
+    margin: $s-size 0;
+    padding: 0 $s-size;
 }
 
 //Desktop

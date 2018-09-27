@@ -8,7 +8,7 @@ const CourseDescription = ({description, syllabus, platform, about}) => {
             {!!description &&
                 <div className="description-block">
                     <h2>About this course</h2>
-                    <ReactMarkdown escapeHtml={false} source={description} />
+                    <ReactMarkdown escapeHtml={false} className="course-description" source={description} />
                 </div>
             }
             

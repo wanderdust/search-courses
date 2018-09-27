@@ -7,12 +7,12 @@ export const MainPageData = (props) => {
            <DataCard
             image={"/../../images/icons/search-icon-outline.svg"}
             title={"Search"}
-            description={"Search courses from many different websites."}
+            description={"Search online courses from many different websites."}
             />
            <DataCard
             image={"/../../images/icons/visibility-icon.svg"}
             title={"Compare"}
-            description={"Compare and find the right course for you."}
+            description={"Compare and find the right online course for you."}
            />
            <DataCard
             image={"/../../images/icons/academic-icon-outline.svg"}

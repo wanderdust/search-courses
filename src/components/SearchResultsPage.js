@@ -12,7 +12,7 @@ export const SearchResultsPage = (props) => {
         {props.hasFoundResults === "pending" && <LoadingPage /> }
         {props.hasFoundResults ? (
                 <div className="search-results-page">
-                    {props.coursesLength > 0  && <SearchResultsPageTop />}
+                    {props.coursesLength > 0  && <SearchResultsPageTop location={props.location}/>}
                     <CourseList match={props.match} location={props.location} history={props.history}/>
                     <PagesLinks match={props.match} location={props.location}/>
                 </div>
