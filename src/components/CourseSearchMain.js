@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import { startSetCourses } from "../actions/courses";
 import { setSearchQuery } from "../actions/filters";
 import CourseSearchForm from "./CourseSearchForm";
 
@@ -9,8 +8,10 @@ export class CourseSearchMain extends React.Component {
         this.props.setSearchQuery("");
     };
     onSubmit = (textFilter) => {
-        this.props.startSetCourses(textFilter);
-        this.props.history.push(`/search/query/${this.props.currentPage}`);
+        this.props.history.push({
+            pathname: `/search/1/`,
+            search: `?category=query&query=${textFilter.split(" ").join("%")}`
+        });
     };
     render () {
         return (
@@ -26,13 +27,8 @@ export class CourseSearchMain extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => ({
-    currentPage: state.filters.currentPage
-});
-
 const mapDispatchToProps = (dispatch) => ({
-    startSetCourses: (textFilter) => dispatch(startSetCourses(textFilter)),
     setSearchQuery: (textFilter) => dispatch(setSearchQuery(textFilter))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CourseSearchMain);
+export default connect(undefined, mapDispatchToProps)(CourseSearchMain);

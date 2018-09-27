@@ -21,7 +21,7 @@ const AppRouter = () => (
             <div className="body-content content-container">
                 <Switch>
                     <Route path="/" component={MainPage} exact={true} />
-                    <Route path="/search/:category/:page" component={SearchResultsPage} />
+                    <Route path="/search/:page" component={SearchResultsPage} />
                     <Route path="/course/:id" component={CourseInfoPage} />
                     <Route path="/contact" component={ContactPage} exact={true} />
                     <Route component={NotFoundPage} />

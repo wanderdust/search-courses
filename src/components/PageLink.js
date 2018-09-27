@@ -1,25 +1,27 @@
 import React from "react";
-import { NavLink } from 'react-router-dom'
 import { connect } from "react-redux";
 import { setCurrentPage } from "../actions/filters";
 
 export class PageLink extends React.Component {
     handleOnClick = (e) => {
-        const currentPage = parseInt(e.target.innerHTML, 10);
+        const currentPage = + e.target.text;
+        this.props.history.push(`/search/${currentPage}/${this.props.location.search}`);
         this.props.setCurrentPage(currentPage);
-        
     };
+
+    //Checks which link needs to be active.
+    isCurrentPage = () => {
+        return this.props.pageNumber == this.props.currentPage;
+    }
 
     render () {
         return (
-            <NavLink
-                activeClassName="page-link--active"
-                className="page-link button button--link"
-                to={`/search/${this.props.currentCategory}/${this.props.pageNumber}`}
-                onClick={(this.handleOnClick)}
+            <a
+                className={`page-link button button--link ${this.isCurrentPage() ? "page-link--active" : ""}`}
+                onClick={this.handleOnClick}
             >
                 {this.props.pageNumber}
-            </NavLink>
+            </a>
         )
     }
 };
@@ -32,7 +34,6 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
     setCurrentPage: (page) => dispatch(setCurrentPage(page))
 });
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(PageLink);
 

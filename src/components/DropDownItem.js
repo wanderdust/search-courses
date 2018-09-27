@@ -1,13 +1,13 @@
 import React from "react";
-import { connect } from "react-redux";
-import { startSetCourses } from "../actions/courses";
-import { setCurrentCategory } from "../actions/filters";
 
 export class DropDownItem extends React.Component {
     handleOnClick = () => {
-        this.props.startSetCourses(this.props.tags);
-        this.props.setCurrentCategory(this.props.name);
-        this.props.history.push(`/search/${this.props.purpose}/${this.props.currentPage}`);
+        const search = this.props.tags.split(" ").join("%");
+
+        this.props.history.push({
+            pathname: `/search/1/`,
+            search: `?category=${this.props.purpose}&query=${search}`
+        });
     }
 
     render () {
@@ -24,13 +24,4 @@ export class DropDownItem extends React.Component {
     }
 };
 
-const mapStateToProps = (state) => ({
-    currentPage: state.filters.currentPage
-});
-
-const mapDispatchToProps = (dispatch) => ({
-    startSetCourses: (textFilter) => dispatch(startSetCourses(textFilter)),
-    setCurrentCategory: (category) => dispatch(setCurrentCategory(category))
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(DropDownItem);
+export default DropDownItem;

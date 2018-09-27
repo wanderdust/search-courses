@@ -41,6 +41,7 @@
     "normalize.css": "^8.0.0",
     "npm": "^6.3.0",
     "numeral": "^2.0.6",
+    "query-string": "^6.1.0",
     "raf": "3.3.2",
     "react": "^16.4.2",
     "react-addons-shallow-compare": "^15.6.2",

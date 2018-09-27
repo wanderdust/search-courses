@@ -13,8 +13,8 @@ export const SearchResultsPage = (props) => {
         {props.hasFoundResults ? (
                 <div className="search-results-page">
                     {props.coursesLength > 0  && <SearchResultsPageTop />}
-                    <CourseList />
-                    <PagesLinks />
+                    <CourseList match={props.match} location={props.location} history={props.history}/>
+                    <PagesLinks match={props.match} location={props.location}/>
                 </div>
             ) : <NoResultsFoundPage /> 
         }

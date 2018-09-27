@@ -11,30 +11,30 @@ export class PagesLinks extends React.Component  {
 
     willShowNext = () => {
         const hasSuperiorLength = this.props.pagesLinks.length > this.numberOfVisiblePages;
-        const isLastPageLinkNotVisible = this.props.currentPage <= this.props.pagesLinks.length - 2;
+        const isLastPageLinkNotVisible = +this.props.match.params.page <= +this.props.pagesLinks.length - 2;
 
         return hasSuperiorLength && isLastPageLinkNotVisible;
     }
 
     willShowPrev = () => {
-        const hasSuperiorLength = this.props.pagesLinks.length > this.numberOfVisiblePages;
-        const isFirstPageLinkNotVisible = this.props.currentPage >= 4;
+        const hasSuperiorLength = this.props.pagesLinks.length > +this.numberOfVisiblePages;
+        const isFirstPageLinkNotVisible = +this.props.match.params.page >= 4;
 
         return hasSuperiorLength && isFirstPageLinkNotVisible;
     }
 
     goToNextPage = () => {
         const nextPage = this.props.currentPage + 1;
-
-        this.props.setCurrentPage(nextPage);
-        history.push(`/search/${this.props.currentCategory}/${nextPage}`);
+         
+        history.push(`/search/${nextPage}/${this.props.location.search}`);
+        this.props.setCurrentPage(nextPage);  
     }
 
     goToPrevPage = () => {
         const prevPage = this.props.currentPage - 1;
 
+        history.push(`/search/${prevPage}/${this.props.location.search}`);
         this.props.setCurrentPage(prevPage);
-        history.push(`/search/${this.props.currentCategory}/${prevPage}`);
     }
     
     render () {
@@ -51,7 +51,7 @@ export class PagesLinks extends React.Component  {
                     }
                     {this.props.visiblePagination.map((pageLink) => (
                         <li key={pageLink} className="">
-                            <PageLink pageNumber={pageLink}/>
+                            <PageLink history={history} location={this.props.location} pageNumber={pageLink}/>
                         </li>
                     ))}
                     {this.willShowNext() && <li className="page-link button button--link page-link--disabled ">...</li> }

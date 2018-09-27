@@ -30,13 +30,13 @@ export const categories = [
             {
                 id: uid(),
                 name: "C#",
-                purpose: "c-sharp",
-                tags: "C\#",
+                purpose: "C#",
+                tags: "C\# C sharp",
             },
             {
                 id: uid(),
                 name: "C++",
-                purpose: "c-plus-plus",
+                purpose: "C-plus-plus",
                 tags: "c\+\+",
             },
             {
