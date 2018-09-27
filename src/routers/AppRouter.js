@@ -18,6 +18,7 @@ export const history = createHistory();
 const AppRouter = () => (
     <Router history={history}>
         <div className="app__container">
+            <PageUnderConstructionBanner />
             <Header history={history} />
             <div className="body-content content-container">
                 <Switch>

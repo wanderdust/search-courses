@@ -11,20 +11,20 @@ export const categories = [
             {
                 id: uid(),
                 name: "Javascript",
-                purpose: "javascript",
+                purpose: "Javascript",
                 tags: "javascript frontend front-end web-developer",
                 subTopics: null
             },
             {
                 id: uid(),
                 name: "Python",
-                purpose: "python",
+                purpose: "Python",
                 tags: "python",
             },
             {
                 id: uid(),
                 name: "Java",
-                purpose: "java",
+                purpose: "Java",
                 tags: "java",
             },
             {
@@ -36,37 +36,37 @@ export const categories = [
             {
                 id: uid(),
                 name: "C++",
-                purpose: "C-plus-plus",
+                purpose: "C plus plus",
                 tags: "c\+\+",
             },
             {
                 id: uid(),
                 name: "Swift",
-                purpose: "swift",
+                purpose: "Swift",
                 tags: "swift",
             },
             {
                 id: uid(),
                 name: "PHP",
-                purpose: "php",
+                purpose: "PHP",
                 tags: "php",
             },
             {
                 id: uid(),
                 name: "Ruby",
-                purpose: "ruby",
+                purpose: "Ruby",
                 tags: "ruby",
             },
             {
                 id: uid(),
                 name: "Node.js",
-                purpose: "node-js",
+                purpose: "Node.js",
                 tags: "node.js node",
             },
             {
                 id: uid(),
                 name: "Games developer",
-                purpose: "videogame-developer",
+                purpose: "Games Developer",
                 tags: "videogames unity games",
             }
         ]
@@ -81,35 +81,35 @@ export const categories = [
             {
                 id: uid(),
                 name: "Sales",
-                purpose: "sales",
+                purpose: "Sales",
                 tags: "sales",
                 subTopics: null
             },
             {
                 id: uid(),
                 name: "Accounting",
-                purpose: "accounting",
+                purpose: "Accounting",
                 tags: "accounting",
                 subTopics: null
             },
             {
                 id: uid(),
                 name: "Marketing",
-                purpose: "marketing",
+                purpose: "Marketing",
                 tags: "marketing analytics product seo adwords social advertising ad",
                 subTopics: null
             },
             {
                 id: uid(),
                 name: "Enterpreneurship",
-                purpose: "enterpreneurship",
+                purpose: "Enterpreneurship",
                 tags: "enterpreneurship enterpreneur startup start-up",
                 subTopics: null
             },
             {
                 id: uid(),
                 name: "Finance",
-                purpose: "finance",
+                purpose: "Finance",
                 tags: "finance finances",
                 subTopics: null
             }
@@ -125,42 +125,42 @@ export const categories = [
     {
         id: uid(),
         name: "Design",
-        purpose: "design",
+        purpose: "Design",
         tags: "css scss sass typography drawing illustration photoshop UI UX palette",
         icon: "design-icon",
         subTopics: [
             {
                 id: uid(),
                 name: "Web design",
-                purpose: "web-design",
+                purpose: "Web Design",
                 tags: "web website css responsive ui ux sass scss",
                 subTopics: null
             },
             {
                 id: uid(),
                 name: "Photoshop",
-                purpose: "photoshop",
+                purpose: "Photoshop",
                 tags: "photoshop",
                 subTopics: null
             },
             {
                 id: uid(),
                 name: "Illustrator",
-                purpose: "illustrator",
+                purpose: "Illustrator",
                 tags: "illustrator",
                 subTopics: null
             },
             {
                 id: uid(),
                 name: "Logo design",
-                purpose: "logo-design",
+                purpose: "Logo Design",
                 tags: "logo logotype",
                 subTopics: null
             },
             {
                 id: uid(),
                 name: "Drawing",
-                purpose: "drawing",
+                purpose: "Drawing",
                 tags: "draw drawing color colour paint",
                 subTopics: null
             }
@@ -176,49 +176,49 @@ export const categories = [
     {
         id: uid(),
         name: "Photography",
-        purpose: "photography",
+        purpose: "Photography",
         tags: "photography portrait lightroom photoshop cameras DSLR finalCut editing",
         icon: "photography-icon"
     },
     {
         id: uid(),
         name: "Music",
-        purpose: "languages",
+        purpose: "Languages",
         tags: "music instrument harmonica trombone guitar bass drums blues rock soul pop",
         icon: "music-icon"
     },
     {   
         id: uid(),
         name: "Health & Fitness",
-        purpose: "health-fitness",
+        purpose: "Health and fitness",
         tags: "fitness dance yoga nutrition meditation sports gym dance running jogging running tennis football basketball golf boxing relaxing relax vegan vegetarian",
         icon: "health-icon",
         subTopics: [
             {
                 id: uid(),
                 name: "Fitness",
-                purpose: "fitness",
+                purpose: "Fitness",
                 tags: "fitness",
                 subTopics: null
             },
             {
                 id: uid(),
                 name: "Yoga",
-                purpose: "yoga",
+                purpose: "Yoga",
                 tags: "yoga",
                 subTopics: null
             },
             {
                 id: uid(),
                 name: "Nutrition",
-                purpose: "nutrition",
+                purpose: "Nutrition",
                 tags: "nutrition vegetarian vegan cooking cook",
                 subTopics: null
             },
             {
                 id: uid(),
                 name: "Sports",
-                purpose: "sports",
+                purpose: "Sports",
                 tags: "tennis golf running basketball boxing gym cycling swimming bicicle",
                 subTopics: null
             }
@@ -227,28 +227,28 @@ export const categories = [
     {
         id: uid(),
         name: "Academic studies",
-        purpose: "academic-studies",
+        purpose: "Academic-studies",
         tags: "math science humanities school algebra geometry ",
         icon: "academic-icon",
         subTopics: [
             {
                 id: uid(),
                 name: "Math",
-                purpose: "math",
+                purpose: "Math",
                 tags: "math algebra geometry",
                 subTopics: null
             },
             {
                 id: uid(),
                 name: "Social sciences",
-                purpose: "science",
+                purpose: "Science",
                 tags: "economics accounting psicology law",
                 subTopics: null
             },
             {
                 id: uid(),
                 name: "Art & Humanities",
-                purpose: "art-humanities",
+                purpose: "Art and Humanities",
                 tags: "art humanities history",
                 subTopics: null
             }
@@ -257,7 +257,7 @@ export const categories = [
     {
         id: uid(),
         name: "Languages",
-        purpose: "languages",
+        purpose: "Languages",
         tags: "speak spanish german arabic japanese portuguese chinese russian latin hebrew italian",
         icon: "languages-icon"
     }
