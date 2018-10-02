@@ -8,7 +8,9 @@ export class ContactPage extends React.Component {
         email: "",
         text: "",
         isFormValidated: false,
-        error: false
+        error: false,
+        formSendInProgress: false,
+        isMessageSent: false
     }
 
     onNameChange (e) {
@@ -37,16 +39,18 @@ export class ContactPage extends React.Component {
 
     handleOnSubmit (e) {
         e.preventDefault();
+        this.setState(() => ({formSendInProgress: true}));
 
         axios.post("/api/contactus", {
             name: this.state.name,
             email: this.state.email,
             text: this.state.text
         }).then((res) => {
-            this.setState(() => ({error: false}));
-            this.props.history.push("/");
+            this.setState(() => ({formSendInProgress: false}));
+            this.setState(() => ({isMessageSent: true}));
         }).catch((err) => {
             this.setState(() => ({error: true}));
+            this.setState(() => ({formSendInProgress: false}));
             console.log("Error sending email");
         });
     }
@@ -83,8 +87,11 @@ export class ContactPage extends React.Component {
                         className="textarea contact-form__input"
                     />
                      <div>
-                        <button className="button" type="submit" disabled={!this.state.isFormValidated} >Send</button>
+                        <button className="button" type="submit" disabled={!this.state.isFormValidated || this.state.formSendInProgress} >
+                            {this.state.formSendInProgress ? "Sending..." : "Send"} 
+                        </button>
                     </div>
+                    {this.state.isMessageSent && <p className="success-message">Your message has been sent! We will get back to you as soon as possible</p>}
               </form>
             </div>
         );

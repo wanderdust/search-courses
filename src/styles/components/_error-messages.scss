@@ -2,4 +2,12 @@
     color: red;
     font-style: italic;
     padding: $s-size 0;
+    flex-wrap: wrap;
+}
+
+.success-message {
+    color: $green;
+    font-style: italic;
+    padding: $s-size 0;
+    flex-wrap: wrap;
 }
