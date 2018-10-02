@@ -1,5 +1,6 @@
 import React from "react";
-import axios from "axios"
+import axios from "axios";
+import {ReactTitle} from 'react-meta-tags';
 
 
 export class ContactPage extends React.Component {
@@ -58,41 +59,43 @@ export class ContactPage extends React.Component {
     render () {
         return (
             <div className="contact-form-container">
-              <form
-                className="contact-form"
-                onKeyUp={this.isFormValidated.bind(this)}
-                onSubmit={this.handleOnSubmit.bind(this)}
-                >
-                    <h2>Contact form</h2>
-                    {this.state.error && <p className="error-message">Error while sending your message</p>}
-                    <input
-                        type="text"
-                        value={this.state.name}
-                        onChange={this.onNameChange.bind(this)}
-                        placeholder="Your name *"
-                        className="text-input contact-form__input"
-                    />
-                    <input
-                        type="text"
-                        value={this.state.email}
-                        onChange={this.onEmailChange.bind(this)}
-                        placeholder="Your email adress *"
-                        className="text-input contact-form__input"
-                    />
-                    <textarea
-                        type="textarea"
-                        value={this.state.text}
-                        onChange={this.onTextChange.bind(this)}
-                        placeholder="Type your message here... *"
-                        className="textarea contact-form__input"
-                    />
-                     <div>
-                        <button className="button" type="submit" disabled={!this.state.isFormValidated || this.state.formSendInProgress} >
-                            {this.state.formSendInProgress ? "Sending..." : "Send"} 
-                        </button>
-                    </div>
-                    {this.state.isMessageSent && <p className="success-message">Your message has been sent! We will get back to you as soon as possible</p>}
-              </form>
+                <ReactTitle title="CourseSearch | Contact us"/>
+                
+                <form
+                    className="contact-form"
+                    onKeyUp={this.isFormValidated.bind(this)}
+                    onSubmit={this.handleOnSubmit.bind(this)}
+                    >
+                        <h2>Contact form</h2>
+                        {this.state.error && <p className="error-message">Error while sending your message</p>}
+                        <input
+                            type="text"
+                            value={this.state.name}
+                            onChange={this.onNameChange.bind(this)}
+                            placeholder="Your name *"
+                            className="text-input contact-form__input"
+                        />
+                        <input
+                            type="text"
+                            value={this.state.email}
+                            onChange={this.onEmailChange.bind(this)}
+                            placeholder="Your email adress *"
+                            className="text-input contact-form__input"
+                        />
+                        <textarea
+                            type="textarea"
+                            value={this.state.text}
+                            onChange={this.onTextChange.bind(this)}
+                            placeholder="Type your message here... *"
+                            className="textarea contact-form__input"
+                        />
+                        <div>
+                            <button className="button" type="submit" disabled={!this.state.isFormValidated || this.state.formSendInProgress} >
+                                {this.state.formSendInProgress ? "Sending..." : "Send"} 
+                            </button>
+                        </div>
+                        {this.state.isMessageSent && <p className="success-message">Your message has been sent! We will get back to you as soon as possible</p>}
+                </form>
             </div>
         );
     }

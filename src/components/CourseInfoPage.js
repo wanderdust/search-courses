@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import {ReactTitle} from 'react-meta-tags';
 import CourseInfoDataBlock from "../components/CourseInfoDataBlock";
 import LoadingPage from "../components/LoadingPage";
 
@@ -55,8 +56,9 @@ export class CourseInfoPage extends React.Component {
     render () {
         return (
             <div>
+                <ReactTitle title="CourseSearch | Online course details"/>
+
                 {!this.state.pageLoaded ? <LoadingPage /> : <CourseInfoDataBlock {...this.state} />}
-                
             </div>
         );
     }
