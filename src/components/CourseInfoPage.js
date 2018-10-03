@@ -56,7 +56,7 @@ export class CourseInfoPage extends React.Component {
     render () {
         return (
             <div>
-                <ReactTitle title="CourseSearch | Online course details"/>
+                <ReactTitle title={`${this.state.title} | CourseSearch`}/>
 
                 {!this.state.pageLoaded ? <LoadingPage /> : <CourseInfoDataBlock {...this.state} />}
             </div>

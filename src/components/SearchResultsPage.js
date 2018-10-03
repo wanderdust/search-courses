@@ -10,7 +10,7 @@ import LoadingPage from "./LoadingPage";
 export const SearchResultsPage = (props) => {
     return (
         <div>
-            <ReactTitle title="CourseSearch | Search online courses"/>
+            <ReactTitle title="Search online courses | CourseSearch"/>
             
             {props.hasFoundResults === "pending" && <LoadingPage /> }
             {props.hasFoundResults ? (

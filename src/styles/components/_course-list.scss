@@ -82,6 +82,10 @@
     width: auto;
 }
 
+.course-card--short {
+    margin-top: $s-size;
+}
+
 
 //Desktop
 @media (min-width: $desktop-breakpoint) {

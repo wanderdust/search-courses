@@ -10,6 +10,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SearchResultsPage from "../components/SearchResultsPage";
 import ContactPage from "../components/ContactPage";
+import ProviderPage from "../components/ProviderPage";
 import { CourseInfoPage } from "../components/CourseInfoPage";
 import PageUnderConstructionBanner from "../components/PageUnderConstructionBanner";
 
@@ -26,6 +27,7 @@ const AppRouter = () => (
                     <Route path="/search/:page" component={SearchResultsPage} />
                     <Route path="/course/:id" component={CourseInfoPage} />
                     <Route path="/contact" component={ContactPage} exact={true} />
+                    <Route path="/provider/:provider" component={ProviderPage} exact={true} />
                     <Route component={NotFoundPage} />
                 </Switch>
             </div>

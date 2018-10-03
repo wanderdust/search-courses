@@ -42,7 +42,7 @@ export class CourseList extends React.Component {
                 <div className="course-list">
                 
                     {this.props.currentPageCourses.map((course) =>(
-                        <CourseListItem key={course.id} course={course}/>
+                        <CourseListItem key={course.id} course={course} isShortVersion={false}/>
                     ))}
                 </div>
             </div>

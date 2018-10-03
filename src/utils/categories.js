@@ -4,7 +4,7 @@ export const categories = [
     {   
         id: uid(),
         name: "Programming",
-        purpose: "programming",
+        purpose: "Programming",
         tags: "programming java javascript python computing web developer developer dev frontend backend app e-business videogames node.js node typescript php ios windows server database sql mysql ruby android git",
         icon: "programming-icon",
         subTopics: [

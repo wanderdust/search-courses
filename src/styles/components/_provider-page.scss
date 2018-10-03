@@ -1,0 +1,15 @@
+.provider-page-title {
+    padding: $m-size;
+    color: darken($green, 10%);
+    > h1 {
+        font-size: $font-size-x-large;
+    }
+}
+
+//Desktop
+@media (min-width: $desktop-breakpoint) {
+    .provider-page-title > h1 {
+        font-size: 3rem;
+    }
+    
+}

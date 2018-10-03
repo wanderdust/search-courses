@@ -9,12 +9,14 @@ const { database } = require("./firebase/firebase");
 
 const { getVisibleCourses } = require("./selectors/courses");
 const { updateInterval } = require("./updater/updateInterval");
-const { sendEmail } = require("./utils/sendEmail")
+const { sendEmail } = require("./utils/sendEmail");
+const { getCoursesByProvider } = require("./selectors/courseByProvider");
 
 
 app.use(express.static(publicPath));
 app.use(bodyParser.json());
 
+//GET courses filtered by query.
 app.get("/api/courseslist", (req, res) => {
     const textFilter = req.query.text;
     
@@ -27,6 +29,7 @@ app.get("/api/courseslist", (req, res) => {
     });
 });
 
+//GET a specific course by id.
 app.get("/api/course/:courseId", (req, res) => {
     const courseId = req.params.courseId;
     
@@ -35,7 +38,20 @@ app.get("/api/course/:courseId", (req, res) => {
     });
 });
 
-//Sends an email to me.
+//GET courses filtered by provider
+app.get("/api/courses/:provider", (req, res) => {
+    const provider = req.params.provider;
+
+    getCoursesByProvider(provider)
+        .then((courseList) => {
+            res.status(200).send({coursesByProvider: courseList});
+        })
+        .catch((err) => {
+            res.status(400).send({Error: "An error has ocurred"})
+        });
+})
+
+//POST Sends an email to me.
 app.post("/api/contactus", (req, res) => {
    sendEmail(req, res);
 });
