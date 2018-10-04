@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import {ReactTitle} from 'react-meta-tags';
+import MetaTags from 'react-meta-tags';
 import CourseInfoDataBlock from "../components/CourseInfoDataBlock";
 import LoadingPage from "../components/LoadingPage";
 
@@ -56,7 +56,13 @@ export class CourseInfoPage extends React.Component {
     render () {
         return (
             <div>
-                <ReactTitle title={`${this.state.title} | CourseSearch`}/>
+                <MetaTags>
+                    <title> {this.state.price == 0 ? "Free": ""} Online Course: {this.state.title} from {this.state.platform} | CourseSearch</title>
+                    <meta name="description" content={`${this.state.shortSummary}`} />
+                    <meta property="og:title" content={`${this.state.price == 0 ? "Free": ""} Online Course: ${this.state.title} from ${this.state.platform} | CourseSearch`} />
+                    <meta property="og:url" content={`https://www.coursesearch.net/${this.props.match.params.id}`}/>
+                    <meta name="twitter:title" content={`${this.state.price == 0 ? "Free": ""} Online Course: ${this.state.title} from ${this.state.platform} | CourseSearch`}/>
+                </MetaTags>
 
                 {!this.state.pageLoaded ? <LoadingPage /> : <CourseInfoDataBlock {...this.state} />}
             </div>
@@ -65,4 +71,4 @@ export class CourseInfoPage extends React.Component {
 };
 
 export default CourseInfoPage;
-
+ 

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import {ReactTitle} from 'react-meta-tags';
+import MetaTags from 'react-meta-tags';
 import CourseList from "./CourseList";
 import PagesLinks from "./PagesLinks";
 import SearchResultsPageTop from "./SearchResultsPageTop";
@@ -10,7 +10,14 @@ import LoadingPage from "./LoadingPage";
 export const SearchResultsPage = (props) => {
     return (
         <div>
-            <ReactTitle title="Search online courses | CourseSearch"/>
+            <MetaTags>
+                <title>Search online courses | CourseSearch</title>
+                <meta name="description" content="Search and compare thousands of online FREE courses and MOOCs from the best platforms on Course Search." />
+                <meta property="og:title" content="Find and Compare Free online Courses and MOOCs | CourseSearch" />
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content="https://www.coursesearch.net"/>
+                <meta name="twitter:title" content="Find and Compare Free online Courses and MOOCs | CourseSearch"/>
+            </MetaTags>
             
             {props.hasFoundResults === "pending" && <LoadingPage /> }
             {props.hasFoundResults ? (

@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import {ReactTitle} from 'react-meta-tags';
+import MetaTags from 'react-meta-tags';
 
 
 export class ContactPage extends React.Component {
@@ -59,7 +59,13 @@ export class ContactPage extends React.Component {
     render () {
         return (
             <div className="contact-form-container">
-                <ReactTitle title="CourseSearch | Contact us"/>
+                <MetaTags>
+                    <title>Contact Us | CourseSearch</title>
+                    <meta name="description" content="Do you have any questions? Get in contact with us." />
+                    <meta property="og:title" content="Contact Us | CourseSearch" />
+                    <meta property="og:url" content="https://www.coursesearch.net/contact"/>
+                    <meta name="twitter:title" content="Contact Us | CourseSearch"/>
+                </MetaTags>
                 
                 <form
                     className="contact-form"

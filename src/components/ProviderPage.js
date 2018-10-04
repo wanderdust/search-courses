@@ -1,5 +1,5 @@
 import React from "react";
-import {ReactTitle} from 'react-meta-tags';
+import MetaTags from 'react-meta-tags';
 import axios from "axios";
 import CourseListItem from "./CourseListItem";
 
@@ -44,7 +44,13 @@ export class SearchResultsPage extends React.Component {
     render () {
         return (
             <div>
-                <ReactTitle title={`${this.state.provider} courses | CourseSearch`}/>
+                <MetaTags>
+                    <title>{this.state.coursesLength} Online Courses from {this.state.provider} | CourseSearch</title>
+                    <meta name="description" content={`Find the best ${this.state.provider} courses from this list`} />
+                    <meta property="og:title" content={`Online Courses from ${this.state.provider} | CourseSearch`} />
+                    <meta property="og:url" content={`https://www.coursesearch.net/provider/${this.state.provider}`}/>
+                    <meta name="twitter:title" content={`Online Courses from ${this.state.provider} | CourseSearch`}/>
+                </MetaTags>
     
                 <div className="provider-page__title">
                     <h1>Courses from {this.state.provider}</h1>
