@@ -22,8 +22,8 @@ class Footer extends React.Component {
                     </div>
                     <div>
                         <h3>Quick Links</h3>
-                        <Link to="/search/1/?category=Javascript&query=javascript%frontend%front-end%web-developer">
-                            <p>Learn Javascript</p>
+                        <Link to="/search/1/?category=Programming&query=programming%java%javascript%python%developer%frontend%backend%app%android%node.js%node%react%vue%react.js%angular%git">
+                            <p>Learn Programming</p>
                         </Link>
                         <Link to="/search/1/?category=Python&query=python">
                             <p>Learn Python</p>
@@ -34,8 +34,11 @@ class Footer extends React.Component {
                         <Link to="/search/1/?category=Design&query=css%scss%sass%typography%drawing%illustration%photoshop%UI%UX%palette">
                             <p>Learn Design</p>
                         </Link>
-                        <Link to="/search/1/?category=query&query=Machine%Learning">
+                        <Link to="/search/1/?category=Machine%Learning&query=Machine%Learning%AI%artificial%intelligence%deep%learning">
                             <p>Learn Machine Learning</p>
+                        </Link>
+                        <Link to="/search/1/?category=Enterpreneurship&query=startup%enterpreneurship%enterpreneur%self%employed">
+                            <p>Learn Enterpreneurship</p>
                         </Link>
                     </div>
                     <div>

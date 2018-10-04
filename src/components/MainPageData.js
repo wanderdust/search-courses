@@ -8,12 +8,12 @@ export const MainPageData = (props) => {
                 <DataCard
                     image={"/../../images/icons/search-icon-outline.svg"}
                     title={"Search"}
-                    description={"Search MOOC and online courses from many different platforms."}
+                    description={"Search MOOCs and online courses from the top platforms and universities."}
                     />
                 <DataCard
                     image={"/../../images/icons/visibility-icon.svg"}
                     title={"Compare"}
-                    description={"Compare and find the right online course for you."}
+                    description={"Compare and find the online classes that best suit you."}
                 />
                 <DataCard
                     image={"/../../images/icons/academic-icon-outline.svg"}
