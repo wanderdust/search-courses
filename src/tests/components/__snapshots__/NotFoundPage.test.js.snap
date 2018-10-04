@@ -4,6 +4,9 @@ exports[`should render 404 page correctly 1`] = `
 <div
   className="failed-search-wrapper"
 >
+  <ReactTitle
+    title="404 Page Not Found | CourseSearch"
+  />
   <div
     className="failed-search"
   >
@@ -28,7 +31,7 @@ exports[`should render 404 page correctly 1`] = `
         <p
           className="show-for-desktop"
         >
-          Let's return to the 
+          Let's return to the 
         </p>
         <Link
           replace={false}

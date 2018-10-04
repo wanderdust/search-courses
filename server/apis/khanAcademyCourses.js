@@ -35,7 +35,6 @@ const getKhanAcademyCourses = (testUrl) => {
                     logo: "khan-academy-logo.png",
                     syllabus,
                     level: "",
-                    platform: "Khan Academy",
                     difficulty: "",
                     aboutPlatform: 
                         `Khan Academy offers practice exercises, instructional videos,

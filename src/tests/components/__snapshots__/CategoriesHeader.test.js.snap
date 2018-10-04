@@ -7,7 +7,7 @@ exports[`should render CategoriesHeader correctly 1`] = `
   <div
     className="search-results-page__top__title"
   >
-    Category: 
+    : 
     <span>
       Programming
     </span>

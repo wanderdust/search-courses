@@ -2,7 +2,7 @@
 
 exports[`should render the CourseListItem correctly 1`] = `
 <div
-  className="course-card-wrapper"
+  className="course-card-wrapper "
 >
   <Link
     replace={false}

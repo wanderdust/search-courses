@@ -1,4 +1,4 @@
-.provider-page-title {
+.provider-page__title {
     padding: $m-size;
     color: darken($green, 10%);
     > h1 {
@@ -6,9 +6,13 @@
     }
 }
 
+.provider-page__course-list {
+    margin-bottom: $m-size;
+}
+
 //Desktop
 @media (min-width: $desktop-breakpoint) {
-    .provider-page-title > h1 {
+    .provider-page__title > h1 {
         font-size: 3rem;
     }
     

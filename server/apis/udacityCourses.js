@@ -39,7 +39,6 @@ const getUdacityCourses = (testUrl) => {
                     logo: "udacity-logo.png",
                     syllabus: parseMarkDown(course.syllabus),
                     level: course.level,
-                    platform: "Udacity",
                     difficulty: capitalizeFirstLetter(course.level),
                     aboutPlatform: 
                         `Our mission is to democratize education through the

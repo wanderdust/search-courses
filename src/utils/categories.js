@@ -61,7 +61,13 @@ export const categories = [
                 id: uid(),
                 name: "Node.js",
                 purpose: "Node.js",
-                tags: "node.js node",
+                tags: "node.js node npm",
+            },
+            {
+                id: uid(),
+                name: "Machine Learning",
+                purpose: "Machine Learning",
+                tags: "machine learning python deep artificial intelligence",
             },
             {
                 id: uid(),

@@ -9,8 +9,6 @@ const props = {
 let wrapper, handleOnClick, startSetCourses, setCurrentCategory, history;
 
 beforeEach(() => {
-    startSetCourses = jest.fn();
-    setCurrentCategory = jest.fn();
     history = {push: jest.fn()};
     wrapper = shallow(
             <DropDownItem
@@ -28,6 +26,5 @@ test("should render DropDownItem correctly", () => {
 
 test("should call handleOnClick on button click", () => {
     wrapper.find("div").simulate("click");
-    expect(startSetCourses).toHaveBeenCalledWith(props.tags);
-    expect(setCurrentCategory).toHaveBeenCalledWith(props.name);
+    expect(history.push).toHaveBeenCalled();
 });

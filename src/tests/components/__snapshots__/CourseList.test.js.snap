@@ -18,6 +18,7 @@ exports[`should render the CourseList correctly 1`] = `
           "urlToCourse": "some_url",
         }
       }
+      isShortVersion={false}
       key="1"
     />
     <CourseListItem
@@ -33,6 +34,7 @@ exports[`should render the CourseList correctly 1`] = `
           "urlToCourse": "some_url",
         }
       }
+      isShortVersion={false}
       key="2"
     />
     <CourseListItem
@@ -48,6 +50,7 @@ exports[`should render the CourseList correctly 1`] = `
           "urlToCourse": "some_url",
         }
       }
+      isShortVersion={false}
       key="3"
     />
   </div>

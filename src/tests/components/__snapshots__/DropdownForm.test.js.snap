@@ -21,7 +21,7 @@ exports[`should render DropDownForm correctly 1`] = `
     textAlign={null}
     toggle={
       <div
-        className="icon-container"
+        className="icon-container pointer"
         onClick={[Function]}
       >
         <img
@@ -50,7 +50,7 @@ exports[`should render DropDownForm correctly 1`] = `
         nested="reverse"
         openOnMouseover={true}
         toggle={
-          <Connect(DropDownItem)
+          <DropDownItem
             history={
               Object {
                 "action": "POP",
@@ -124,7 +124,7 @@ exports[`should render DropDownForm correctly 1`] = `
           key="some_random_uid"
         >
            
-          <Connect(DropDownItem)
+          <DropDownItem
             history={
               Object {
                 "action": "POP",
@@ -157,7 +157,7 @@ exports[`should render DropDownForm correctly 1`] = `
           key="some_random_uid"
         >
            
-          <Connect(DropDownItem)
+          <DropDownItem
             history={
               Object {
                 "action": "POP",
@@ -189,7 +189,7 @@ exports[`should render DropDownForm correctly 1`] = `
           key="some_random_uid"
         >
            
-          <Connect(DropDownItem)
+          <DropDownItem
             history={
               Object {
                 "action": "POP",
@@ -221,7 +221,7 @@ exports[`should render DropDownForm correctly 1`] = `
           key="some_random_uid"
         >
            
-          <Connect(DropDownItem)
+          <DropDownItem
             history={
               Object {
                 "action": "POP",
@@ -253,7 +253,7 @@ exports[`should render DropDownForm correctly 1`] = `
           key="some_random_uid"
         >
            
-          <Connect(DropDownItem)
+          <DropDownItem
             history={
               Object {
                 "action": "POP",
@@ -285,7 +285,7 @@ exports[`should render DropDownForm correctly 1`] = `
           key="some_random_uid"
         >
            
-          <Connect(DropDownItem)
+          <DropDownItem
             history={
               Object {
                 "action": "POP",
@@ -327,7 +327,7 @@ exports[`should render DropDownForm correctly 1`] = `
         nested="reverse"
         openOnMouseover={true}
         toggle={
-          <Connect(DropDownItem)
+          <DropDownItem
             history={
               Object {
                 "action": "POP",
@@ -371,7 +371,7 @@ exports[`should render DropDownForm correctly 1`] = `
           key="some_random_uid"
         >
            
-          <Connect(DropDownItem)
+          <DropDownItem
             history={
               Object {
                 "action": "POP",
@@ -407,7 +407,7 @@ exports[`should render DropDownForm correctly 1`] = `
     >
       <div>
         <li>
-          <Connect(DropDownItem)
+          <DropDownItem
             history={
               Object {
                 "action": "POP",
@@ -441,7 +441,7 @@ exports[`should render DropDownForm correctly 1`] = `
     >
       <div>
         <li>
-          <Connect(DropDownItem)
+          <DropDownItem
             history={
               Object {
                 "action": "POP",
@@ -475,7 +475,7 @@ exports[`should render DropDownForm correctly 1`] = `
     >
       <div>
         <li>
-          <Connect(DropDownItem)
+          <DropDownItem
             history={
               Object {
                 "action": "POP",
@@ -509,7 +509,7 @@ exports[`should render DropDownForm correctly 1`] = `
     >
       <div>
         <li>
-          <Connect(DropDownItem)
+          <DropDownItem
             history={
               Object {
                 "action": "POP",
@@ -543,7 +543,7 @@ exports[`should render DropDownForm correctly 1`] = `
     >
       <div>
         <li>
-          <Connect(DropDownItem)
+          <DropDownItem
             history={
               Object {
                 "action": "POP",
@@ -577,7 +577,7 @@ exports[`should render DropDownForm correctly 1`] = `
     >
       <div>
         <li>
-          <Connect(DropDownItem)
+          <DropDownItem
             history={
               Object {
                 "action": "POP",
@@ -611,7 +611,7 @@ exports[`should render DropDownForm correctly 1`] = `
     >
       <div>
         <li>
-          <Connect(DropDownItem)
+          <DropDownItem
             history={
               Object {
                 "action": "POP",

@@ -44,13 +44,13 @@ export class SearchResultsPage extends React.Component {
     render () {
         return (
             <div>
-                <ReactTitle title={`${this.state.provider} | CourseSearch`}/>
+                <ReactTitle title={`${this.state.provider} courses | CourseSearch`}/>
     
-                <div className="provider-page-title">
+                <div className="provider-page__title">
                     <h1>Courses from {this.state.provider}</h1>
                     {!!this.state.coursesLength && <h3>{this.state.coursesLength} courses found</h3>}
                 </div>
-                <div>
+                <div className="provider-page__course-list">
                     {this.state.courseList.map((course) =>(
                         <CourseListItem key={course.id} course={course} isShortVersion={true}/>
                     ))}
