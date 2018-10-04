@@ -12,10 +12,12 @@ const CourseDescription = ({description, syllabus, platform, about}) => {
                 </div>
             }
             
-            <div className="description-block">
-                <h2 className="header-title" >What you will learn</h2>
-                <ReactMarkdown escapeHtml={false} className="syllabus" source={syllabus} />
-            </div>
+            {!!syllabus &&
+                <div className="description-block">
+                    <h2 className="header-title" >What you will learn</h2>
+                    <ReactMarkdown escapeHtml={false} className="syllabus" source={syllabus} />
+                </div>
+            }
             <div className="description-block">
                 <h2 className="header-title">About {platform}</h2>
                 <p>{about}</p>
@@ -56,10 +58,15 @@ const CourseInfoDataBlock = (props) => {
                         <p className="bold">Platform:</p>
                         <p className="summary-details__item__data"> {props.platform}</p>
                     </div>
-                    <div className="summary-details__item">
-                        <p className="bold">Duration:</p>
-                        <p className="summary-details__item__data"> {props.duration}</p>
-                    </div>
+                    
+                    {
+                        !!props.duration &&
+                        <div className="summary-details__item">
+                            <p className="bold">Duration:</p>
+                            <p className="summary-details__item__data"> {props.duration}</p>
+                        </div>
+                    }
+                    
                     {
                         !!props.difficulty && 
                         <div className="summary-details__item">
