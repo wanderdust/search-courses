@@ -7,17 +7,17 @@ const CourseDescription = ({description, syllabus, platform, about}) => {
         <div>
             {!!description &&
                 <div className="description-block">
-                    <h2>About this course</h2>
+                    <h2 className="header-title">About this course</h2>
                     <ReactMarkdown escapeHtml={false} className="course-description" source={description} />
                 </div>
             }
             
             <div className="description-block">
-                <h2>What you will learn</h2>
+                <h2 className="header-title" >What you will learn</h2>
                 <ReactMarkdown escapeHtml={false} className="syllabus" source={syllabus} />
             </div>
             <div className="description-block">
-                <h2>About {platform}</h2>
+                <h2 className="header-title">About {platform}</h2>
                 <p>{about}</p>
             </div>
         </div>

@@ -16,8 +16,13 @@
     border-radius: 5px;
 }
 
+.header-title {
+    color: $dark-green;
+}
+
 .title-header-block > h1 {
     font-size: $font-size-x-large;
+    color: $dark-green;
 }
 
 .summary-details {
@@ -49,7 +54,8 @@
     padding-left: $xs-size;
 }
 
-.syllabus > h2, .syllabus > h3, .syllabus > h4 {
+.syllabus > h1, .syllabus > h2, .syllabus > h3, .syllabus > h4 {
+    color: $dark-green;
     font-weight: 0;
     font-size: 1.9rem;
     margin: $s-size 0;
@@ -60,6 +66,7 @@
     margin: $s-size 0;
     padding: 0 $s-size;
 }
+
 
 //Desktop
 @media (min-width: $desktop-breakpoint) {
@@ -78,6 +85,7 @@
 
     .col--right {
         min-width: 360px;
+        max-width: 400px;
     }
 }
 

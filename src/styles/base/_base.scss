@@ -38,10 +38,15 @@ a {
 
 .bold {
     font-weight: bold;
+    color: $dark-green;
 }
 
 .image {
     max-width: 100%;
     height: auto;
     flex: 1;
+}
+
+h1, h2, .title {
+    color: $dark-green;
 }
