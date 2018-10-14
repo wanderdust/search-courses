@@ -66,13 +66,15 @@ app.post("/api/contactus", (req, res) => {
    sendEmail(req, res);
 });
 
+//Always send index.html regardless of the route.
+app.get("*", (req, res) => {
+    res.sendFile(path.join(publicPath, "index.html"));
+});
+
 //Updates the database
 updateInterval();
 
-//Always send index.html regardless of the route.
-app.get("/", (req, res) => {
-    res.sendFile(path.join(publicPath, "index.html"));
-});
+
 
 app.listen(port, () => {
     console.log(`Server is up!`);

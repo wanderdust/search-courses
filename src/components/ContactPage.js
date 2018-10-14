@@ -96,7 +96,7 @@ export class ContactPage extends React.Component {
                             className="textarea contact-form__input"
                         />
                         <div>
-                            <button className="button" type="submit" disabled={!this.state.isFormValidated || this.state.formSendInProgress} >
+                            <button className="button" type="submit" disabled={!this.state.isFormValidated || this.state.formSendInProgress || this.state.isMessageSent} >
                                 {this.state.formSendInProgress ? "Sending..." : "Send"} 
                             </button>
                         </div>
