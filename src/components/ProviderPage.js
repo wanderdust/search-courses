@@ -2,12 +2,14 @@ import React from "react";
 import MetaTags from 'react-meta-tags';
 import axios from "axios";
 import CourseListItem from "./CourseListItem";
+import LoadingPage from "./LoadingPage";
 
 export class SearchResultsPage extends React.Component {
     state = {
         provider: "",
         courseList: [],
-        coursesLength: undefined
+        coursesLength: undefined,
+        courseListFetched: false
     }
 
     componentDidMount () {
@@ -32,7 +34,8 @@ export class SearchResultsPage extends React.Component {
 
                 this.setState(() => ({
                     courseList: coursesByProvider,
-                    coursesLength: coursesByProvider.length
+                    coursesLength: coursesByProvider.length,
+                    courseListFetched: true
                 }));
             });
     }
@@ -56,6 +59,7 @@ export class SearchResultsPage extends React.Component {
                     <h1>Courses from {this.state.provider}</h1>
                     {!!this.state.coursesLength && <h3>{this.state.coursesLength} courses found</h3>}
                 </div>
+                {!this.state.courseListFetched && <LoadingPage /> }
                 <div className="provider-page__course-list">
                     {this.state.courseList.map((course) =>(
                         <CourseListItem key={course.id} course={course} isShortVersion={true}/>

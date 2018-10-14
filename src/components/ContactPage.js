@@ -30,11 +30,11 @@ export class ContactPage extends React.Component {
     }
 
     isFormValidated () {
-        const isNameFieldEmpty = this.state.name.trim() === "";
+        const isNameFieldNotEmpty = this.state.name.trim() !== "";
         const isEmailValidated = /^.+@.+\..+$/.test(this.state.email);
-        const isTextFieldEmpty = this.state.text.trim() === "";
+        const isTextFieldNotEmpty = this.state.text.trim() !== "";
 
-        const isFormValidated = isEmailValidated && !isNameFieldEmpty && !isTextFieldEmpty;
+        const isFormValidated = isEmailValidated && isNameFieldNotEmpty && isTextFieldNotEmpty;
         this.setState(() => ({isFormValidated}));
     }
 

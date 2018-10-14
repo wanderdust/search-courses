@@ -32,9 +32,10 @@ app.get("/api/courseslist", (req, res) => {
     getVisibleCourses(textFilter).then((courses) => {
         const hasFoundResults = courses.length > 0;
     
-        res.send({courseList: courses, hasFoundResults});
+        res.status(200).send({courseList: courses, hasFoundResults});
     }).catch((error) => {
-        console.log(error);
+        res.status(200).send({courseList: [], hasFoundResults: false, error});
+        console.log("error")
     });
 });
 
