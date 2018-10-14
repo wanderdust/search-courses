@@ -80,6 +80,7 @@ module.exports = (env) => {
         // Webpack server for development.
         devServer: {
             contentBase: path.join(__dirname, "public"),
+            https: isProduction,
             // We tell the server we will be using React for routing and not the server.
             historyApiFallback: true,
             publicPath: "/dist/",
