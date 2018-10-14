@@ -1,6 +1,7 @@
 const path = require("path");
 const bodyParser = require('body-parser');
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const publicPath = path.join(__dirname, "..", "public");
 const port = process.env.PORT || 3000;
@@ -11,10 +12,17 @@ const { getVisibleCourses } = require("./selectors/courses");
 const { updateInterval } = require("./updater/updateInterval");
 const { sendEmail } = require("./utils/sendEmail");
 const { getCoursesByProvider } = require("./selectors/courseByProvider");
+const { forceSsl } = require("./middleware/forceSsl");
 
 
 app.use(express.static(publicPath));
 app.use(bodyParser.json());
+app.use(cors({origin: process.env.CORS_ORIGIN}));
+
+//Redirects http to https on production only.
+if (process.env.NODE_ENV === 'production') {
+    app.use(forceSsl);  
+};
 
 //GET courses filtered by query.
 app.get("/api/courseslist", (req, res) => {
