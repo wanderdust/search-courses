@@ -14,15 +14,16 @@ const { sendEmail } = require("./utils/sendEmail");
 const { getCoursesByProvider } = require("./selectors/courseByProvider");
 const { forceSsl } = require("./middleware/forceSsl");
 
+//Redirects http to https on production only.
+if (process.env.NODE_ENV === 'production') {
+    app.use(forceSsl);  
+};
 
 app.use(express.static(publicPath));
 app.use(bodyParser.json());
 app.use(cors({origin: process.env.CORS_ORIGIN}));
 
-//Redirects http to https on production only.
-if (process.env.NODE_ENV === 'production') {
-    app.use(forceSsl);  
-};
+
 
 //GET courses filtered by query.
 app.get("/api/courseslist", (req, res) => {
@@ -68,7 +69,7 @@ app.post("/api/contactus", (req, res) => {
 updateInterval();
 
 //Always send index.html regardless of the route.
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
     res.sendFile(path.join(publicPath, "index.html"));
 });
 
