@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import SearchResultsPage from "../components/SearchResultsPage";
 import ContactPage from "../components/ContactPage";
 import ProviderPage from "../components/ProviderPage";
+import PrivacyPolicies from "../components/PrivacyPolicies";
 import { CourseInfoPage } from "../components/CourseInfoPage";
 import PageUnderConstructionBanner from "../components/PageUnderConstructionBanner";
 
@@ -27,6 +28,7 @@ const AppRouter = () => (
                     <Route path="/course/:id" component={CourseInfoPage} />
                     <Route path="/contact" component={ContactPage} exact={true} />
                     <Route path="/provider/:provider" component={ProviderPage} exact={true} />
+                    <Route path="/about/privacy-policies" component={PrivacyPolicies} exact={true} />
                     <Route component={NotFoundPage} />
                 </Switch>
             </div>
