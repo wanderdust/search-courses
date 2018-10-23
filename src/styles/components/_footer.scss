@@ -23,6 +23,10 @@
     h3 {
         margin: $s-size 0;
     }
+
+    a > p:hover {
+        text-decoration: underline;
+    }
 }
 
 .footer__copyright {

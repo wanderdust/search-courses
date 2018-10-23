@@ -1,5 +1,6 @@
 import React from "react";
 import MetaTags from 'react-meta-tags';
+import PrivacyPolicyText from "./PrivacyPolicyText";
 
 
 export const PrivacyPolies = (props) => {
@@ -10,12 +11,7 @@ export const PrivacyPolies = (props) => {
                 <meta name="description" content="CourseSearch Privacy policies." />
             </MetaTags>
             
-            <h1>Privacy Policy</h1>
-
-            <div className="text-container">
-                <h3 className="title">What information do we collect?</h3>
-                <p>blah...</p>
-            </div>
+            <PrivacyPolicyText/>
         </div>
     );
 };
