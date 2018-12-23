@@ -24,6 +24,7 @@ const getKhanAcademyCourses = (testUrl) => {
                 }).join("\n");
 
                 return {
+                    available: true,
                     title: `${course.parent_title} - ${course.title}`,
                     shortSummary: course.description,
                     fullDescription: "",
@@ -40,7 +41,8 @@ const getKhanAcademyCourses = (testUrl) => {
                         `Khan Academy offers practice exercises, instructional videos,
                         and a personalized learning dashboard that empower learners to 
                         study at their own pace in and outside of the classroom.`,
-                    certificate: false
+                    certificate: false,
+                    tags: ""
                 }
             });
         })

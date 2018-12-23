@@ -18,7 +18,7 @@ const getApiData = () => {
 
 const courseUpdater = (courses) => {
     console.log("Updating database data...");
-
+    
     database.ref('courses/').set(null);
     courses.forEach((course) => {
         database.ref(`courses/`).push(course).catch((e) => {
@@ -29,6 +29,6 @@ const courseUpdater = (courses) => {
 };
 
 module.exports = {
-    courseUpdater,
+    courseUpdater, 
     getApiData
 };
