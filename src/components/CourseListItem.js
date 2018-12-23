@@ -20,7 +20,7 @@ const CourseListItem = ({course, isShortVersion}) => {
 
                     <div className="course-card__content__footer">
                         <div className="course-card__content__footer__data">
-                            <div><p className="title">{course.price === 0 ? "Free" : course.price}</p></div>
+                            <div><p className="title">{course.showPrice}</p></div>
 
                             { course.duration != "" &&
                                 <div className="">

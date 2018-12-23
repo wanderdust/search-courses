@@ -5,7 +5,8 @@ const { database } = require("../firebase/firebase");
 
 const getApiData = () => {
     return Promise.all([
-        getUdacityCourses(),
+        getUdacityCourses("courses"),
+        getUdacityCourses("degrees"),
         getKhanAcademyCourses()
     ])
     .then((courses) => {
@@ -18,7 +19,7 @@ const getApiData = () => {
 
 const courseUpdater = (courses) => {
     console.log("Updating database data...");
-    
+
     database.ref('courses/').set(null);
     courses.forEach((course) => {
         database.ref(`courses/`).push(course).catch((e) => {

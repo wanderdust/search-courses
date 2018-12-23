@@ -41,6 +41,7 @@ export class CourseInfoPage extends React.Component {
                     syllabus: course.syllabus,
                     urlToCourse: course.urlToCourse,
                     price: course.price,
+                    showPrice: course.showPrice,
                     duration: course.duration,
                     platform: course.platform,
                     about: course.aboutPlatform,

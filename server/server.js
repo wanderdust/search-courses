@@ -63,7 +63,7 @@ app.get("/api/courses/:provider", (req, res) => {
 
 //POST Sends an email to me.
 app.post("/api/contactus", (req, res) => {
-   sendEmail(req, res);
+   sendEmail(req, res); 
 });
 
 //Always send index.html regardless of the route.

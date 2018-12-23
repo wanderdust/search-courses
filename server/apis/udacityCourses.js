@@ -1,22 +1,51 @@
 const axios = require("axios");
 
-const getUdacityCourses = (testUrl) => {
-    const url = testUrl || "https://www.udacity.com/public-api/v1/courses";
-    
+const getUdacityCourses = (urlEntry, testUrl) => {
+    const url = testUrl || `https://www.udacity.com/public-api/v1/catalog`;
+
     return axios.get(url, {
         timeout: 500000
         })
-        .then((res) => {
-            return res.data.courses.map((course) =>  {
+        .then(async (res) => {
+            let courses = [];
+            countryCode = await axios.get("https://geode.udacity.com/")
+                .then(({data}) => data.countryCode)
+                .catch((e) => e);
+            
+            countryCurrency = await axios.get("http://country.io/currency.json")
+                .then(({data}) => data[countryCode])
+            
+            for (course of res.data[urlEntry]) {
                 // Returns null so we can discard it later with filter.
                 if (course.title === "" || course.short_summary === "" || !course.available) {
-                    return null;
+                    continue;
                 }
+                let coursePrice = {showPrice: "Free", intPrice: 0};
+                let certificate = false;
 
-                if (course.key.includes("cx")) {
-                    course_id = course.related_degree_keys[0]
-                    price_url = `https://braavos.udacity.com/api/prices?item=urn:x-udacity:item:node:${course_id}&price_sheet=regular&currency=USD`
-                    // course_price =  axios.get(price_url).then(({data}) => data.results[0].price.original_amount_display).catch((e) => console.log(e))
+                // Identify if it is a udacitys nanodegree
+                if (course.key.includes("nd")) {
+                    let course_id = course.key;
+                    let price_base_url = "https://braavos.udacity.com/api/prices";
+                    let price_query_params = `?item=urn:x-udacity:item:node:${course_id}&price_sheet=regular&currency=${countryCurrency}`;
+                    let price_url = price_base_url + price_query_params;
+                    certificate = true;
+
+                    coursePrice = await axios.get(price_url)
+                        .then(({data}) => {
+                            price = 0
+                            if (data.results.length > 0) {
+                                // FOrmating the price. It comes without decimal points.
+                                intPrice = `${data.results[0].price.original_amount}`;
+                                intPrice = intPrice.slice(0, (intPrice.length - 2));
+   
+                                price = {
+                                    showPrice: data.results[0].price.original_amount_display,
+                                    intPrice
+                                }
+                            }
+                            return price
+                        });
                 }
 
                 const capitalizeFirstLetter = (string) => {
@@ -35,12 +64,13 @@ const getUdacityCourses = (testUrl) => {
                 const duration = includesDuration() ? `${course.expected_duration} ${course.expected_duration_unit}` : "";
 
                 
-                return {
+                my_course = {
                     available: course.available,
                     title: course.title,
                     shortSummary: course.short_summary != undefined ? course.short_summary : "",
                     fullDescription: course.summary.replace(/^#*#/, '$1 $2'),
-                    price: 0,
+                    price:  coursePrice.intPrice,
+                    showPrice: coursePrice.showPrice,
                     duration,
                     urlToCourse: "https://www.udacity.com/course/" + course.slug,
                     platform: "Udacity",
@@ -55,10 +85,14 @@ const getUdacityCourses = (testUrl) => {
                         flexible, and economical. Virtually anyone on the planet with an internet
                         connection and a commitment to self-empowerment through learning can come to Udacity,
                         master a suite of job-ready skills, and pursue rewarding employment.`,
-                    certificate: false,
+                    certificate: certificate,
                     tags: course.tags
                 }
-            }).filter((course) =>  course != null);
+                courses.push(my_course)
+                
+            }
+
+            return courses;
         })
         .catch((e) => {
             console.log("Unable to fetch udacity data");

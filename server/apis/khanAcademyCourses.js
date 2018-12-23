@@ -16,6 +16,8 @@ const getKhanAcademyCourses = (testUrl) => {
 
             const courses = [].concat(...topics);
 
+            console.log("khan academy", courses.length)
+            
             return courses.map((course) => {
                 const duration = course.children.length !== 0 ? `${course.children.length} classes` : "";
 
@@ -29,6 +31,7 @@ const getKhanAcademyCourses = (testUrl) => {
                     shortSummary: course.description,
                     fullDescription: "",
                     price: 0,
+                    showPrice: "Free",
                     duration,
                     urlToCourse: course.ka_url,
                     platform: "Khan Academy",
@@ -47,7 +50,6 @@ const getKhanAcademyCourses = (testUrl) => {
             });
         })
         .catch((e) => {
-            console.log("unable to fetch khan academy data");
             return [];
         });
 };

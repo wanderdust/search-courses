@@ -48,7 +48,7 @@ const CourseInfoDataBlock = (props) => {
                 </div>
 
                 <div className="summary-details">
-                    <h2>{props.price == 0 ? "Free" : props.price}</h2>
+                    <h2>{props.showPrice}</h2>
                     <a className="summary-details__link-to-course summary-details__item" href={props.urlToCourse} target="_blank">
                         <button className="button">
                             View course
