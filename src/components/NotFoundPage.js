@@ -7,9 +7,6 @@ export const NotFoundPage = () => (
         <MetaTags>
             <title>Page not found | CourseSearch</title>
             <meta name="description" content="404 this page does not exist" />
-            <meta property="og:title" content="Page not found | CourseSearch" />
-            <meta property="og:url" content="https://www.coursesearch.net"/>
-            <meta name="twitter:title" content="Page not found | CourseSearch"/>
         </MetaTags>
 
         <div className="failed-search">

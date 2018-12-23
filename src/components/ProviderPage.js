@@ -50,9 +50,6 @@ export class SearchResultsPage extends React.Component {
                 <MetaTags>
                     <title>{this.state.coursesLength} Online Courses from {this.state.provider} | CourseSearch</title>
                     <meta name="description" content={`Find the best ${this.state.provider} courses from this list`} />
-                    <meta property="og:title" content={`Online Courses from ${this.state.provider} | CourseSearch`} />
-                    <meta property="og:url" content={`https://www.coursesearch.net/provider/${this.state.provider}`}/>
-                    <meta name="twitter:title" content={`Online Courses from ${this.state.provider} | CourseSearch`}/>
                 </MetaTags>
     
                 <div className="provider-page__title">

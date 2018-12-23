@@ -9,9 +9,6 @@ export const MainPage = (props) => {
             <MetaTags>
                 <title>CourseSearch | Find & compare the best free online Courses & MOOC</title>
                 <meta name="description" content="Search and compare thousands of online FREE courses and MOOCs from the best platforms on Course Search." />
-                <meta property="og:title" content="Find and Compare Free online Courses and MOOCs | CourseSearch" />
-                <meta property="og:url" content="https://www.coursesearch.net"/>
-                <meta name="twitter:title" content="Find and Compare Free online Courses and MOOCs | CourseSearch"/>
             </MetaTags>
         
             <CourseSearchMain {...props} />

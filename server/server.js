@@ -72,7 +72,7 @@ app.get("*", (req, res) => {
 });
 
 //Updates the database
-updateInterval();
+//updateInterval();
 
 
 

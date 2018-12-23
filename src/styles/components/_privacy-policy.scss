@@ -1,3 +1,22 @@
 .text-container {
-    padding: $xl-size 10rem;
+    padding: $m-size;
+}
+
+.text-container > h1,
+.text-container > h2 {
+    text-align: center;
+}
+
+//Desktop
+@media (min-width: $desktop-breakpoint) {
+    .text-container {
+        padding: $xl-size 10rem;
+        text-align: left;
+    }
+
+    .text-container > h1,
+    .text-container > h2 {
+        text-align: left;
+    }
+    
 }
