@@ -82,6 +82,7 @@ module.exports = (env) => {
             contentBase: path.join(__dirname, "public"),
             // We tell the server we will be using React for routing and not the server.
             historyApiFallback: true,
+            disableHostCheck: true,
             publicPath: "/dist/",
             proxy: {
                 "/api": "http://localhost:3000"

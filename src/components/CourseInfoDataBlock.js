@@ -44,7 +44,7 @@ const CourseInfoDataBlock = (props) => {
 
             <div className="col col--right">
                 <div className="icon-container">
-                    <img className="course-image" src={props.image} alt="course image"/>
+                    <img className="course-image image-full" src={props.image} alt="course image"/>
                 </div>
 
                 <div className="summary-details">
