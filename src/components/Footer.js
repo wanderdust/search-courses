@@ -55,7 +55,9 @@ class Footer extends React.Component {
                     <div className="footer__copyright">
 
                         <div>
-                            <span>Copyright &#169; Coursesearch</span>
+                            <span>Coursesearch is <a href="https://github.com/wanderdust/search-courses">open source</a> and maintained by
+                                <a href="https://github.com/wanderdust"> Pablo</a>
+                            </span>
                         </div>
                         <div className="footer__copyright__privacy">
 

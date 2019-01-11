@@ -5,8 +5,8 @@ const { courses } = require("../fixtures/courses");
 beforeEach((done) => {
     const courseData = {};
 
-    courses.forEach(({ id, title, description, price, duration, urlToCourse, platform }) => {
-        courseData[id] = { title, description, price, duration, urlToCourse, platform };
+    courses.forEach(({ id, title, fullDescription, price, duration, urlToCourse, platform }) => {
+        courseData[id] = { title, fullDescription, price, duration, urlToCourse, platform };
     });
 
     database.ref(`courses`).set(courseData).then(() => done());

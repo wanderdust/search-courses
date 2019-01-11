@@ -20,7 +20,9 @@ exports[`should render the CourseListItem correctly 1`] = `
     <div
       className="course-card__content"
     >
-      <h4>
+      <h4
+        className="title"
+      >
         Learn react
       </h4>
       <p
@@ -33,14 +35,16 @@ exports[`should render the CourseListItem correctly 1`] = `
           className="course-card__content__footer__data"
         >
           <div>
-            <p>
-              300
-            </p>
+            <p
+              className="title"
+            />
           </div>
           <div
             className=""
           >
-            <p>
+            <p
+              className="title"
+            >
               2
             </p>
           </div>

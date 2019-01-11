@@ -19,7 +19,7 @@ describe("GET /api/course/:id", () => {
             .get("/api/course/1")
             .expect(200)
             .expect((res) => {
-                expect(res.body.course.description).toBe("this course is from test data. Angular");
+                expect(res.body.course.fullDescription).toBe("this course is from test data. Angular");
             })
             .end(done)
     }, 20000);

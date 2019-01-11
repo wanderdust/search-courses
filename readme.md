@@ -3,6 +3,8 @@ Live: [CourseSearch](http://www.coursesearch.net/)
 ## CourseSearch
 CourseSearch is a web-app where you can search online courses from many different providers, and find the one that suits you best!
 
+This is an open source project.
+
 # How to set up:
 
 1. Install all packages with the command:

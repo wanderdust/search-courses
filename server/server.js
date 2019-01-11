@@ -35,7 +35,6 @@ app.get("/api/courseslist", (req, res) => {
         res.status(200).send({courseList: courses, hasFoundResults});
     }).catch((error) => {
         res.status(200).send({courseList: [], hasFoundResults: false, error});
-        console.log("error")
     });
 });
 

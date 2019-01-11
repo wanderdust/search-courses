@@ -7,8 +7,8 @@ let testCourses, expectedResult;
 beforeEach(() => {
     database.ref('courses/').set(null);
 
-    testCourses = courses.map(({title, description, price, duration, urlToCourse, platform}) => {
-        return {title, description, price, duration, urlToCourse, platform}
+    testCourses = courses.map(({title, fullDescription, price, duration, urlToCourse, platform}) => {
+        return {title, fullDescription, price, duration, urlToCourse, platform}
     });
 
     expectedResult = testCourses.map((course) => {

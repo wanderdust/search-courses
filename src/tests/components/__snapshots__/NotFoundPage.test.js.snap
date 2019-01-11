@@ -4,9 +4,15 @@ exports[`should render 404 page correctly 1`] = `
 <div
   className="failed-search-wrapper"
 >
-  <ReactTitle
-    title="404 Page Not Found | CourseSearch"
-  />
+  <MetaTags>
+    <title>
+      Page not found | CourseSearch
+    </title>
+    <meta
+      content="404 this page does not exist"
+      name="description"
+    />
+  </MetaTags>
   <div
     className="failed-search"
   >

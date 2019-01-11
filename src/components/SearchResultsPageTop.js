@@ -6,13 +6,12 @@ import queryString from "query-string";
 
 
 export const SearchResultsPageTop = (props) => {
-    const parsedLink = () => {
-        const parsed = queryString.parse(props.location.search)
-            .query
-            .split("%")
-            .join(" ");
+    const extractQuery = (flag) => {
+        return queryString.parse(props.location.search)[flag];
+    }
 
-        return parsed;
+    const parsedUrl = (url) => {
+        return url.split("%").join(" ");
     }
 
     return (
@@ -20,8 +19,8 @@ export const SearchResultsPageTop = (props) => {
             <div>
                 {
                     props.category !== "query" ?
-                    <CategoriesHeader title={"Category"} category={props.category}/> : 
-                    <CategoriesHeader title={"Search"} category={parsedLink()}/> 
+                    <CategoriesHeader title={"Category"} category={parsedUrl(extractQuery("category"))}/> : 
+                    <CategoriesHeader title={"Search"} category={parsedUrl(extractQuery("query"))}/> 
                 }
                 <h4 className="search-results-page__top__title">{props.coursesLength} courses found</h4>
             </div>
@@ -32,7 +31,7 @@ export const SearchResultsPageTop = (props) => {
     );
 };
 
-const mapStateToProps = (state, props) => ({
+const mapStateToProps = (state) => ({
     coursesLength: state.courses.courseList.length,
     category: state.filters.currentCategory
 });

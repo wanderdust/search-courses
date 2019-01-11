@@ -2,9 +2,19 @@
 
 exports[`should render the CourseList correctly 1`] = `
 <div>
-  <ReactTitle
-    title=" | CourseSearch"
-  />
+  <MetaTags>
+    <title>
+       
+      Free
+       Online Course: 
+       from 
+       | CourseSearch
+    </title>
+    <meta
+      content=""
+      name="description"
+    />
+  </MetaTags>
   <LoadingPage />
 </div>
 `;

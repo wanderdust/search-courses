@@ -1,12 +1,11 @@
 const { getUdacityCourses } = require("../apis/udacityCourses");
 const { getKhanAcademyCourses } = require("../apis/khanAcademyCourses");
-const { FilterByText } = require("../selectors/filterByText");
 const { database } = require("../firebase/firebase");
 
 const getApiData = () => {
     return Promise.all([
-        getUdacityCourses("courses"),
-        getUdacityCourses("degrees"),
+        getUdacityCourses(undefined, "courses"),
+        getUdacityCourses(undefined, "degrees"),
         getKhanAcademyCourses()
     ])
     .then((courses) => {

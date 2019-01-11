@@ -4,9 +4,15 @@ exports[`should render expense dashboard page correctly 1`] = `
 <div
   className="main-page"
 >
-  <ReactTitle
-    title="CourseSearch | Find & compare the best free online Courses & MOOC"
-  />
+  <MetaTags>
+    <title>
+      CourseSearch | Find & compare the best free online Courses & MOOC
+    </title>
+    <meta
+      content="Search and compare thousands of online FREE courses and MOOCs from the best platforms on Course Search."
+      name="description"
+    />
+  </MetaTags>
   <Connect(CourseSearchMain) />
   <MainPageData />
 </div>

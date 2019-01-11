@@ -1,33 +1,63 @@
 const courses = [
     {
         title: "Learn angular",
-        description: "this course is from test data. Angular",
+        fullDescription: "this course is from test data. Angular",
         price: "300",
         duration: "",
         urlToCourse: "some_url",
         platform: "udacity",
         numberOfKeywordsMatched: expect.anything(),
-        id: 1
+        id: 1,
+        available: true,
+        shortSummary: "This course is about learning anuglar and blah",
+        image: "",
+        logo: "udacity-logo.png",
+        syllabus: "some long syllabus describing contents of the course",
+        level: "begginer",
+        difficulty: "easy",
+        aboutPlatform: "This platform is blah blah",
+        certificate: false,
+        tags: "angular"
     },
     {
         title: "Advanced Java and",
-        description: "some description guacamole",
+        fullDescription: "some fullDescription guacamole",
         price: "50",
         duration: "",
         urlToCourse: "some_url",
         platform: "udemy",
         numberOfKeywordsMatched: expect.anything(),
-        id: 2
+        id: 2,
+        available: true,
+        shortSummary: "This course is about learning guacamole and blah",
+        image: "",
+        logo: "udacity-logo.png",
+        syllabus: "some long syllabus describing contents of the course",
+        level: "begginer",
+        difficulty: "easy",
+        aboutPlatform: "This platform is blah blah",
+        certificate: false,
+        tags: "angular"
     },
     {
         title: "Angular.js and Guacamole",
-        description: "some description",
+        fullDescription: "some description",
         price: "100",
         duration: "",
         urlToCourse: "some_url",
         platform: "khan academy",
         numberOfKeywordsMatched: expect.anything(),
-        id:3
+        id:3,
+        available: true,
+        shortSummary: "This course is about learning anuglar and guacamole blah",
+        image: "",
+        logo: "udacity-logo.png",
+        syllabus: "some long syllabus describing contents of the course",
+        level: "begginer",
+        difficulty: "easy",
+        aboutPlatform: "This platform is blah blah",
+        certificate: false,
+        tags: "angular"
     }
 ];
 
