@@ -8,6 +8,8 @@ CourseSearch is a web-app where you can search online courses from many differen
 
 This is an open source project, and everybody is welcome to contribute.
 
+The website is built with React, and node.js!
+
 ## How to set up:
 
 1. Install all packages with the command:

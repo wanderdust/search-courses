@@ -13,11 +13,11 @@
     flex-direction: column;
     text-align:center;
     align-items: center;
-    color: lighten($green, 2%);
+    color: $dark-gray;
 }
 
 .data-card__title {
-    color: darken($green, 5%);
+    color: $dark-gray;
 }
 
 

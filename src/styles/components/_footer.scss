@@ -37,6 +37,10 @@
     flex-direction: column-reverse;
     align-items: center;
 
+    a {
+        text-decoration: underline;
+    }
+
 }
 
 .footer__copyright__privacy {
