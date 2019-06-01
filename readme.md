@@ -1,4 +1,3 @@
-Live: [www.coursesearch.net/](http://www.coursesearch.net/)
 
 ## CourseSearch
 
@@ -13,12 +12,14 @@ The website is built with React, and node.js!
 ## How to set up:
 
 1. Install all packages with the command:
+
 ```npm install```
 
 2. Start dev server with:
+
 ```npm run dev-server```
 
-Now a development server should be up on localhost:8080 updating with any changes.
+Now a development server should be up on `localhost:8080` updating with any changes.
 
 #### Other useful commands:
 
