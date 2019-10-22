@@ -5,31 +5,43 @@
 }
 
 .course-card-wrapper {
-    margin-top: $l-size;
 
     //Option A
     // border-radius: 1rem;
-    // box-shadow: $full-shadow;
     
     // Option B
     border-bottom: lighten($gray, 40%) 1px solid;
+    transition: all 0.15s ease-out;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+
+@media (min-width: $desktop-breakpoint) {
+    .course-card-wrapper {
+        border-bottom: 0;
+        margin-bottom: $l-size;
+    }
+    
+    .course-card-wrapper:hover,
+    .course-card-wrapper:focus {
+        box-shadow: $full-shadow;
+        transition: all 0.15s ease-out;
+    }
 }
 
 .course-card-wrapper > a {
     padding: $s-size;
     display: flex;
     flex-direction: row;
+    align-items: center;
     transition: background .3s ease;
     &:hover {
-        background-color: darken($off-white, 2%);
+        background-color: white;
     }
 }
 
 .course-card__img-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: $s-size 0 0 $s-size;
     min-width: 100px;
     max-width: 100px;
     height: 56px;
