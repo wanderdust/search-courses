@@ -8,7 +8,15 @@
     line-height: 1;
     padding: $s-size;
     text-decoration: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+.button:hover,
+.button:focus {
+    background: darken($green, 5%);
+    transition: all .2s ease-out;
 }
 
 .button--search {

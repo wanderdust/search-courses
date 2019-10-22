@@ -12,8 +12,8 @@
 .col--right {
     box-shadow: $full-shadow;
     height: 100%;
-    padding: 5px;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .image-full {
@@ -33,9 +33,16 @@
     padding: $s-size;
 }
 
+.summary-details h2 {
+    margin-top: 0;
+}
+
 .summary-details__item {
-    margin: $s-size 0;
     display: flex;
+}
+
+.summary-details__item:not(:last-child) {
+    margin-bottom: $s-size;
 }
 
 .summary-details__item__data {
