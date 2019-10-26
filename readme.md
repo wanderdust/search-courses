@@ -11,28 +11,34 @@ The website is built with React, and node.js!
 
 ## How to set up:
 
+### Development
+
 1. Install all packages with the command:
 
 ```npm install```
 
-2. Start dev server with:
+2. Run a development server on `localhost:8080`. This server will update automatically with any changes made:
 
 ```npm run dev-server```
 
-Now a development server should be up on `localhost:8080` updating with any changes.
+### Production
+
+1. Build master to the most recent version of changes. Do this every time you want to any changes made in **production**:
+
+```npm run build:prod```
+
+2. Start production server on `localhost:3000`. This will show the final results of any changes made in development.
+
+```npm start```
 
 #### Other useful commands:
 
-* Start production server:
-```npm start```
+* For manual development build run:
 
-* For development build run:
 ```npm run build:dev```
 
-* For production build run:
-```npm run build:prod```
-
 * You can run test suites with:
+
 ```npm run test```
 
 Check [package.json](./package.json) for more info.
