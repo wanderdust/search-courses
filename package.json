@@ -62,7 +62,7 @@
     "style-loader": "^0.21.0",
     "uid": "^0.0.2",
     "uuid": "^3.2.1",
-    "validator": "^10.10.0",
+    "validator": "^13.7.0",
     "webpack": "4.19.0"
   },
   "devDependencies": {
